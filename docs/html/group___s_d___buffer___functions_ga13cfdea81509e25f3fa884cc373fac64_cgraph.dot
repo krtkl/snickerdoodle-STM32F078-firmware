@@ -1,9 +1,0 @@
-digraph "sd_char_buff_getc_to"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node5 [label="sd_char_buff_getc_to",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node6 [label="sd_char_read_end_cb",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___s_d___buffer___functions.html#ga0c63bf277b3d8da1bff703815f5b9f3c",tooltip="Read Command End Callback User defined function executed when a read operation is completed..."];
-}

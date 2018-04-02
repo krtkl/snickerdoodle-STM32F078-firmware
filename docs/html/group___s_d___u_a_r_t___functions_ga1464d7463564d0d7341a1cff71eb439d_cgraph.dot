@@ -1,9 +1,0 @@
-digraph "sd_uart_irqhandler"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node2 [label="sd_uart_irqhandler",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3 [label="sd_uart_err_cb",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___s_d___u_a_r_t.html#gafc595787c83c748d767ac49596be144e",tooltip="Handle UART errors. "];
-}

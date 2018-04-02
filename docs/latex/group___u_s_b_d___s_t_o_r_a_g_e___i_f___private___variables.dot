@@ -1,9 +1,0 @@
-digraph "USBD_STORAGE_IF_Private_Variables"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir=LR;
-  Node0 [label="USBD_STORAGE_IF_Private\l_Variables",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node1 [label="USBD_STORAGE",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___u_s_b_d___s_t_o_r_a_g_e.html",tooltip="usbd core module "];
-  Node1->Node0 [shape=plaintext, dir="back", style="solid"];
-}

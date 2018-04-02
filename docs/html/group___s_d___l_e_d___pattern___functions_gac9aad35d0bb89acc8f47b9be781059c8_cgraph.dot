@@ -1,9 +1,0 @@
-digraph "sd_led_solid"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node13 [label="sd_led_solid",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node13 -> Node14 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node14 [label="sd_led_set_pattern",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___s_d___l_e_d___functions.html#ga5641c6ed41cf81ecbd2d61731a412667",tooltip="LED set pattern Set pattern for LED output. "];
-}

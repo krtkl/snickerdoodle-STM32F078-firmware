@@ -1,9 +1,0 @@
-digraph "USBD_DESC_Exported_Variables"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir=LR;
-  Node1 [label="USB_DESC",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___u_s_b___d_e_s_c.html",tooltip="general defines for the usb device library file "];
-  Node0 [label="USBD_DESC_Exported\l_Variables",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node1->Node0 [shape=plaintext, dir="back", style="solid"];
-}
