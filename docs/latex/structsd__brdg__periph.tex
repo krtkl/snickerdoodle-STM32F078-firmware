@@ -1,0 +1,97 @@
+\hypertarget{structsd__brdg__periph}{}\section{sd\+\_\+brdg\+\_\+periph Struct Reference}
+\label{structsd__brdg__periph}\index{sd\+\_\+brdg\+\_\+periph@{sd\+\_\+brdg\+\_\+periph}}
+
+
+S\+PI bridged peripheral structure.  
+
+
+
+
+{\ttfamily \#include $<$sd\+\_\+spi\+\_\+bridge.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structsd__brdg__periph_a5c1b56e6bccc2a95dbddf1a08e56e87d}{opcode}}
+\item 
+void($\ast$ \mbox{\hyperlink{structsd__brdg__periph_aec4538eb2e2fde52ffec4fac4a0bd319}{init}} )(struct \mbox{\hyperlink{structsd__brdg__periph}{sd\+\_\+brdg\+\_\+periph}} $\ast$, uint8\+\_\+t)
+\item 
+void($\ast$ \mbox{\hyperlink{structsd__brdg__periph_ab4adff8c7b7a317918d0b431eb60e072}{run}} )(struct \mbox{\hyperlink{structsd__brdg__periph}{sd\+\_\+brdg\+\_\+periph}} $\ast$, uint8\+\_\+t)
+\item 
+void($\ast$ \mbox{\hyperlink{structsd__brdg__periph_a3a401b0e690cda398c6ce64d867feda2}{term}} )(struct \mbox{\hyperlink{structsd__brdg__periph}{sd\+\_\+brdg\+\_\+periph}} $\ast$, uint8\+\_\+t)
+\item 
+struct \mbox{\hyperlink{structsd__brdg__cmd}{sd\+\_\+brdg\+\_\+cmd}} $\ast$ \mbox{\hyperlink{structsd__brdg__periph_a61d7114c96c2ffeb66ccd43c213f627a}{cmd}}
+\item 
+size\+\_\+t \mbox{\hyperlink{structsd__brdg__periph_ac22750af690786710910e812b5b2bbc6}{ncmds}}
+\item 
+struct \mbox{\hyperlink{structsd__brdg__op}{sd\+\_\+brdg\+\_\+op}} $\ast$ \mbox{\hyperlink{structsd__brdg__periph_a7458a4047dbd2051adedf73a30ce284f}{operation}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structsd__brdg__periph_a1e6927fa1486224044e568f9c370519b}{id}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structsd__brdg__periph_a1b0c7bd4d79798ef4e0ce23894c9aeb2}{state}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+S\+PI bridged peripheral structure. 
+
+\subsection{Field Documentation}
+\mbox{\Hypertarget{structsd__brdg__periph_a61d7114c96c2ffeb66ccd43c213f627a}\label{structsd__brdg__periph_a61d7114c96c2ffeb66ccd43c213f627a}} 
+\index{sd\+\_\+brdg\+\_\+periph@{sd\+\_\+brdg\+\_\+periph}!cmd@{cmd}}
+\index{cmd@{cmd}!sd\+\_\+brdg\+\_\+periph@{sd\+\_\+brdg\+\_\+periph}}
+\subsubsection{\texorpdfstring{cmd}{cmd}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structsd__brdg__cmd}{sd\+\_\+brdg\+\_\+cmd}}$\ast$ cmd}
+
+Peripheral command pointer \mbox{\Hypertarget{structsd__brdg__periph_a1e6927fa1486224044e568f9c370519b}\label{structsd__brdg__periph_a1e6927fa1486224044e568f9c370519b}} 
+\index{sd\+\_\+brdg\+\_\+periph@{sd\+\_\+brdg\+\_\+periph}!id@{id}}
+\index{id@{id}!sd\+\_\+brdg\+\_\+periph@{sd\+\_\+brdg\+\_\+periph}}
+\subsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily uint8\+\_\+t id}
+
+Peripheral ID (for duplicate peripherals, channels, etc.) \mbox{\Hypertarget{structsd__brdg__periph_aec4538eb2e2fde52ffec4fac4a0bd319}\label{structsd__brdg__periph_aec4538eb2e2fde52ffec4fac4a0bd319}} 
+\index{sd\+\_\+brdg\+\_\+periph@{sd\+\_\+brdg\+\_\+periph}!init@{init}}
+\index{init@{init}!sd\+\_\+brdg\+\_\+periph@{sd\+\_\+brdg\+\_\+periph}}
+\subsubsection{\texorpdfstring{init}{init}}
+{\footnotesize\ttfamily void($\ast$ init) (struct \mbox{\hyperlink{structsd__brdg__periph}{sd\+\_\+brdg\+\_\+periph}} $\ast$, uint8\+\_\+t)}
+
+Peripheral initialization function \mbox{\Hypertarget{structsd__brdg__periph_ac22750af690786710910e812b5b2bbc6}\label{structsd__brdg__periph_ac22750af690786710910e812b5b2bbc6}} 
+\index{sd\+\_\+brdg\+\_\+periph@{sd\+\_\+brdg\+\_\+periph}!ncmds@{ncmds}}
+\index{ncmds@{ncmds}!sd\+\_\+brdg\+\_\+periph@{sd\+\_\+brdg\+\_\+periph}}
+\subsubsection{\texorpdfstring{ncmds}{ncmds}}
+{\footnotesize\ttfamily size\+\_\+t ncmds}
+
+Number of commands \mbox{\Hypertarget{structsd__brdg__periph_a5c1b56e6bccc2a95dbddf1a08e56e87d}\label{structsd__brdg__periph_a5c1b56e6bccc2a95dbddf1a08e56e87d}} 
+\index{sd\+\_\+brdg\+\_\+periph@{sd\+\_\+brdg\+\_\+periph}!opcode@{opcode}}
+\index{opcode@{opcode}!sd\+\_\+brdg\+\_\+periph@{sd\+\_\+brdg\+\_\+periph}}
+\subsubsection{\texorpdfstring{opcode}{opcode}}
+{\footnotesize\ttfamily uint8\+\_\+t opcode}
+
+Peripheral code \mbox{\Hypertarget{structsd__brdg__periph_a7458a4047dbd2051adedf73a30ce284f}\label{structsd__brdg__periph_a7458a4047dbd2051adedf73a30ce284f}} 
+\index{sd\+\_\+brdg\+\_\+periph@{sd\+\_\+brdg\+\_\+periph}!operation@{operation}}
+\index{operation@{operation}!sd\+\_\+brdg\+\_\+periph@{sd\+\_\+brdg\+\_\+periph}}
+\subsubsection{\texorpdfstring{operation}{operation}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structsd__brdg__op}{sd\+\_\+brdg\+\_\+op}}$\ast$ operation}
+
+Current operation \mbox{\Hypertarget{structsd__brdg__periph_ab4adff8c7b7a317918d0b431eb60e072}\label{structsd__brdg__periph_ab4adff8c7b7a317918d0b431eb60e072}} 
+\index{sd\+\_\+brdg\+\_\+periph@{sd\+\_\+brdg\+\_\+periph}!run@{run}}
+\index{run@{run}!sd\+\_\+brdg\+\_\+periph@{sd\+\_\+brdg\+\_\+periph}}
+\subsubsection{\texorpdfstring{run}{run}}
+{\footnotesize\ttfamily void($\ast$ run) (struct \mbox{\hyperlink{structsd__brdg__periph}{sd\+\_\+brdg\+\_\+periph}} $\ast$, uint8\+\_\+t)}
+
+Peripheral run function \mbox{\Hypertarget{structsd__brdg__periph_a1b0c7bd4d79798ef4e0ce23894c9aeb2}\label{structsd__brdg__periph_a1b0c7bd4d79798ef4e0ce23894c9aeb2}} 
+\index{sd\+\_\+brdg\+\_\+periph@{sd\+\_\+brdg\+\_\+periph}!state@{state}}
+\index{state@{state}!sd\+\_\+brdg\+\_\+periph@{sd\+\_\+brdg\+\_\+periph}}
+\subsubsection{\texorpdfstring{state}{state}}
+{\footnotesize\ttfamily uint32\+\_\+t state}
+
+Peripheral state \mbox{\Hypertarget{structsd__brdg__periph_a3a401b0e690cda398c6ce64d867feda2}\label{structsd__brdg__periph_a3a401b0e690cda398c6ce64d867feda2}} 
+\index{sd\+\_\+brdg\+\_\+periph@{sd\+\_\+brdg\+\_\+periph}!term@{term}}
+\index{term@{term}!sd\+\_\+brdg\+\_\+periph@{sd\+\_\+brdg\+\_\+periph}}
+\subsubsection{\texorpdfstring{term}{term}}
+{\footnotesize\ttfamily void($\ast$ term) (struct \mbox{\hyperlink{structsd__brdg__periph}{sd\+\_\+brdg\+\_\+periph}} $\ast$, uint8\+\_\+t)}
+
+Peripheral terminate function 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/russellbush/\+Documents/\+Software/snickerdoodle-\/\+S\+T\+M32-\/firmware/\+Inc/\mbox{\hyperlink{sd__spi__bridge_8h}{sd\+\_\+spi\+\_\+bridge.\+h}}\end{DoxyCompactItemize}

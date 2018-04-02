@@ -1,0 +1,13 @@
+digraph "Platform Definitions"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir=LR;
+  Node0 [label="Platform Definitions",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 [label="WL18xx Antenna Selection",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___s_d___antenna___select.html"];
+  Node1 [label="Platform Configuration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___s_d___platform.html",tooltip="Platform specific board level configuration and control. "];
+  Node3 [label="Device Firmware Upgrade",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___s_d___d_f_u___defines.html"];
+  Node1->Node0 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node2 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node3 [shape=plaintext, dir="back", style="solid"];
+}

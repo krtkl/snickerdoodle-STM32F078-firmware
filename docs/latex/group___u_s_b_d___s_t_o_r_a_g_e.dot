@@ -1,0 +1,31 @@
+digraph "USBD_STORAGE"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir=LR;
+  Node3 [label="USBD_STORAGE_Private\l_Defines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___u_s_b_d___s_t_o_r_a_g_e___private___defines.html"];
+  Node9 [label="USBD_STORAGE_Exported\l_Types",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___u_s_b_d___s_t_o_r_a_g_e___exported___types.html"];
+  Node8 [label="USBD_STORAGE_Exported\l_Defines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___u_s_b_d___s_t_o_r_a_g_e___exported___defines.html"];
+  Node5 [label="USBD_STORAGE_IF_Private\l_Variables",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___u_s_b_d___s_t_o_r_a_g_e___i_f___private___variables.html"];
+  Node12 [label="USBD_STORAGE_Exported\l_FunctionsPrototype",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___u_s_b_d___s_t_o_r_a_g_e___exported___functions_prototype.html"];
+  Node6 [label="USBD_STORAGE_IF_Exported\l_Variables",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___u_s_b_d___s_t_o_r_a_g_e___i_f___exported___variables.html"];
+  Node7 [label="USBD_STORAGE_Private\l_FunctionPrototypes",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___u_s_b_d___s_t_o_r_a_g_e___private___function_prototypes.html"];
+  Node1 [label="STM32_USB_OTG_DEVICE\l_LIBRARY",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___s_t_m32___u_s_b___o_t_g___d_e_v_i_c_e___l_i_b_r_a_r_y.html"];
+  Node2 [label="USBD_STORAGE_Private\l_TypesDefinitions",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___u_s_b_d___s_t_o_r_a_g_e___private___types_definitions.html"];
+  Node11 [label="USBD_STORAGE_Exported\l_Variables",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___u_s_b_d___s_t_o_r_a_g_e___exported___variables.html"];
+  Node10 [label="USBD_STORAGE_Exported\l_Macros",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___u_s_b_d___s_t_o_r_a_g_e___exported___macros.html"];
+  Node0 [label="USBD_STORAGE",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node4 [label="USBD_STORAGE_Private\l_Macros",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___u_s_b_d___s_t_o_r_a_g_e___private___macros.html"];
+  Node1->Node0 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node2 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node3 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node4 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node5 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node6 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node7 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node8 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node9 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node10 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node11 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node12 [shape=plaintext, dir="back", style="solid"];
+}

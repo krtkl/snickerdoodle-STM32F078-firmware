@@ -1,0 +1,17 @@
+digraph "I2C"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir=LR;
+  Node4 [label="I2C Definitions",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___s_d___i2_c___defines.html"];
+  Node0 [label="I2C",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 [label="I2C Private Variables",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___s_d___i2_c___private___variables.html"];
+  Node5 [label="I2C Types",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___s_d___i2_c___types.html"];
+  Node3 [label="I2C Functions",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___s_d___i2_c___functions.html"];
+  Node2 [label="I2C Exported Variables",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___s_d___i2_c___exported___variables.html"];
+  Node0->Node1 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node2 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node3 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node4 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node5 [shape=plaintext, dir="back", style="solid"];
+}

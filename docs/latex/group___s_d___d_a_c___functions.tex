@@ -1,0 +1,52 @@
+\hypertarget{group___s_d___d_a_c___functions}{}\section{D\+AC Functions}
+\label{group___s_d___d_a_c___functions}\index{D\+A\+C Functions@{D\+A\+C Functions}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___s_d___d_a_c___functions_gadb857b0938b79cf9ba37b3bcb5a530ae}{sd\+\_\+dac\+\_\+init}} (void)
+\begin{DoxyCompactList}\small\item\em D\+AC Initialization Configure digital-\/to-\/analog converter peripheral and channels. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___s_d___d_a_c___functions_gacd409f887681168e93817e8a5485d74b}\label{group___s_d___d_a_c___functions_gacd409f887681168e93817e8a5485d74b}} 
+void {\bfseries H\+A\+L\+\_\+\+D\+A\+C\+\_\+\+Msp\+Init} (D\+A\+C\+\_\+\+Handle\+Type\+Def $\ast$hdac)
+\item 
+\mbox{\Hypertarget{group___s_d___d_a_c___functions_ga4caf761f179e82f99674ef63643340f3}\label{group___s_d___d_a_c___functions_ga4caf761f179e82f99674ef63643340f3}} 
+void {\bfseries H\+A\+L\+\_\+\+D\+A\+C\+\_\+\+Msp\+De\+Init} (D\+A\+C\+\_\+\+Handle\+Type\+Def $\ast$hdac)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group___s_d___d_a_c___functions_gadb857b0938b79cf9ba37b3bcb5a530ae}\label{group___s_d___d_a_c___functions_gadb857b0938b79cf9ba37b3bcb5a530ae}} 
+\index{D\+A\+C Functions@{D\+A\+C Functions}!sd\+\_\+dac\+\_\+init@{sd\+\_\+dac\+\_\+init}}
+\index{sd\+\_\+dac\+\_\+init@{sd\+\_\+dac\+\_\+init}!D\+A\+C Functions@{D\+A\+C Functions}}
+\subsubsection{\texorpdfstring{sd\+\_\+dac\+\_\+init()}{sd\_dac\_init()}}
+{\footnotesize\ttfamily void sd\+\_\+dac\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\mbox{\hyperlink{sd__dac_8c}{Src/sd\+\_\+dac.\+c}}$>$}
+
+
+
+D\+AC Initialization Configure digital-\/to-\/analog converter peripheral and channels. 
+
+D\+AC Initialization
+
+D\+AC channel O\+U\+T1 config
+
+D\+AC channel O\+U\+T2 config
+\begin{DoxyCode}
+68 \{
+69     DAC\_ChannelConfTypeDef sConfig;
+70 
+74     hdac.Instance = DAC;
+75     HAL\_DAC\_Init(&hdac);
+76 
+79     sConfig.DAC\_Trigger = DAC\_TRIGGER\_NONE;
+80     sConfig.DAC\_OutputBuffer = DAC\_OUTPUTBUFFER\_ENABLE;
+81     HAL\_DAC\_ConfigChannel(&hdac, &sConfig, DAC\_CHANNEL\_1);
+82 
+86     HAL\_DAC\_ConfigChannel(&hdac, &sConfig, DAC\_CHANNEL\_2);
+87 \}
+\end{DoxyCode}

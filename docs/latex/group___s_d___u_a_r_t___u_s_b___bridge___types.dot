@@ -1,0 +1,9 @@
+digraph "UART USB Bridge Types"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir=LR;
+  Node0 [label="UART USB Bridge Types",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 [label="UART to USB Bridge",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___s_d___u_a_r_t___u_s_b___bridge.html",tooltip="snickerdoodle UART to USB bridge functions "];
+  Node1->Node0 [shape=plaintext, dir="back", style="solid"];
+}

@@ -1,0 +1,92 @@
+\hypertarget{sd__adc_8c}{}\section{Src/sd\+\_\+adc.c File Reference}
+\label{sd__adc_8c}\index{Src/sd\+\_\+adc.\+c@{Src/sd\+\_\+adc.\+c}}
+
+
+Analog to Digital Conversion.  
+
+
+{\ttfamily \#include \char`\"{}stm32f0xx\+\_\+hal.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}std\+\_\+defs.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sd\+\_\+adc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sd\+\_\+led.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sd\+\_\+led\+\_\+pattern.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}usbd\+\_\+cdc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sd\+\_\+usbd\+\_\+cdc\+\_\+if.\+h\char`\"{}}\newline
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structsd__adc__bound}{sd\+\_\+adc\+\_\+bound}}
+\item 
+struct \mbox{\hyperlink{structsd__adc__cmd}{sd\+\_\+adc\+\_\+cmd}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries A\+D\+C\+\_\+\+V\+R\+EF}~(3.\+300\+F)
+\item 
+\#define {\bfseries A\+D\+C\+\_\+\+M\+AX}~(4095\+U)
+\item 
+\#define {\bfseries N\+A\+D\+C\+\_\+\+C\+H\+A\+N\+N\+E\+LS}~(9\+U)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+enum sd\+\_\+adc\+\_\+err \mbox{\hyperlink{group___s_d___a_d_c___functions_ga1189f478e64b9aeb4d4ebd4c73e0394e}{sd\+\_\+adc\+\_\+dev\+\_\+init}} (struct \mbox{\hyperlink{structsd__adc__dev}{sd\+\_\+adc\+\_\+dev}} $\ast$dev, A\+D\+C\+\_\+\+Handle\+Type\+Def $\ast$adc)
+\begin{DoxyCompactList}\small\item\em A\+DC Device Initialization. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_d___a_d_c___functions_ga1a0d46dabe915346e428a46b9f943879}{sd\+\_\+adc\+\_\+init}} (void)
+\item 
+void \mbox{\hyperlink{group___s_d___a_d_c___functions_gaa30863492d5c3103e3e8ce8a63dadd07}{H\+A\+L\+\_\+\+A\+D\+C\+\_\+\+Msp\+Init}} (A\+D\+C\+\_\+\+Handle\+Type\+Def $\ast$hadc)
+\item 
+void {\bfseries H\+A\+L\+\_\+\+A\+D\+C\+\_\+\+Msp\+De\+Init} (A\+D\+C\+\_\+\+Handle\+Type\+Def $\ast$hadc)
+\item 
+void \mbox{\hyperlink{group___s_d___a_d_c___functions_ga78d41bf72512fd19ce879a78f158cb42}{sd\+\_\+adc\+\_\+watchdog\+\_\+enable}} (void)
+\begin{DoxyCompactList}\small\item\em A\+DC Watchdog Enable. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_d___a_d_c___functions_ga54804db19c825e0ec5e991ffa4f34123}{sd\+\_\+adc\+\_\+irqhandler}} (struct \mbox{\hyperlink{structsd__adc__dev}{sd\+\_\+adc\+\_\+dev}} $\ast$dev)
+\begin{DoxyCompactList}\small\item\em A\+DC Interrupt Handler Handle interrupt events on the A\+DC peripheral. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_d___a_d_c___functions_ga152fa7d6af28e9a27f32b00ac179f478}{sd\+\_\+adc\+\_\+print}} (void)
+\begin{DoxyCompactList}\small\item\em Print the A\+DC Values. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_d___a_d_c___functions_gac3a9e92d1ff530dcaae393eb513bdb57}{sd\+\_\+adc\+\_\+monitor}} (struct \mbox{\hyperlink{structsd__adc__dev}{sd\+\_\+adc\+\_\+dev}} $\ast$dev)
+\begin{DoxyCompactList}\small\item\em Check A\+DC Limits. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static A\+D\+C\+\_\+\+Handle\+Type\+Def {\bfseries hadc}
+\item 
+static uint8\+\_\+t {\bfseries adc\+\_\+print\+\_\+buf} \mbox{[}256\mbox{]}
+\item 
+static struct \mbox{\hyperlink{structsd__adc__cmd}{sd\+\_\+adc\+\_\+cmd}} {\bfseries adc\+\_\+tab} \mbox{[}N\+A\+D\+C\+\_\+\+C\+H\+A\+N\+N\+E\+LS\mbox{]}
+\item 
+static struct \mbox{\hyperlink{structsd__adc__cmd}{sd\+\_\+adc\+\_\+cmd}} $\ast$ {\bfseries adc\+\_\+chan} = adc\+\_\+tab
+\item 
+struct \mbox{\hyperlink{structsd__adc__dev}{sd\+\_\+adc\+\_\+dev}} {\bfseries adc\+\_\+dev}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Analog to Digital Conversion. 
+
+\begin{DoxyAuthor}{Author}
+R. Bush  \href{mailto:bush@krtkl.com}{\tt bush@krtkl.\+com} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+v1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2016 June 30 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Free\+B\+SD
+\end{DoxyCopyright}
+Copyright (c) 2016, krtkl inc. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+
+
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\end{DoxyEnumerate}
+
+T\+H\+IS S\+O\+F\+T\+W\+A\+RE IS P\+R\+O\+V\+I\+D\+ED BY T\+HE C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+E\+RS A\+ND C\+O\+N\+T\+R\+I\+B\+U\+T\+O\+RS \char`\"{}\+A\+S I\+S\char`\"{} A\+ND A\+NY E\+X\+P\+R\+E\+SS OR I\+M\+P\+L\+I\+ED W\+A\+R\+R\+A\+N\+T\+I\+ES, I\+N\+C\+L\+U\+D\+I\+NG, B\+UT N\+OT L\+I\+M\+I\+T\+ED TO, T\+HE I\+M\+P\+L\+I\+ED W\+A\+R\+R\+A\+N\+T\+I\+ES OF M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+TY A\+ND F\+I\+T\+N\+E\+SS F\+OR A P\+A\+R\+T\+I\+C\+U\+L\+AR P\+U\+R\+P\+O\+SE A\+RE D\+I\+S\+C\+L\+A\+I\+M\+ED. IN NO E\+V\+E\+NT S\+H\+A\+LL T\+HE C\+O\+P\+Y\+R\+I\+G\+HT O\+W\+N\+ER OR C\+O\+N\+T\+R\+I\+B\+U\+T\+O\+RS BE L\+I\+A\+B\+LE F\+OR A\+NY D\+I\+R\+E\+CT, I\+N\+D\+I\+R\+E\+CT, I\+N\+C\+I\+D\+E\+N\+T\+AL, S\+P\+E\+C\+I\+AL, E\+X\+E\+M\+P\+L\+A\+RY, OR C\+O\+N\+S\+E\+Q\+U\+E\+N\+T\+I\+AL D\+A\+M\+A\+G\+ES (I\+N\+C\+L\+U\+D\+I\+NG, B\+UT N\+OT L\+I\+M\+I\+T\+ED TO, P\+R\+O\+C\+U\+R\+E\+M\+E\+NT OF S\+U\+B\+S\+T\+I\+T\+U\+TE G\+O\+O\+DS OR S\+E\+R\+V\+I\+C\+ES; L\+O\+SS OF U\+SE, D\+A\+TA, OR P\+R\+O\+F\+I\+TS; OR B\+U\+S\+I\+N\+E\+SS I\+N\+T\+E\+R\+R\+U\+P\+T\+I\+ON) H\+O\+W\+E\+V\+ER C\+A\+U\+S\+ED A\+ND ON A\+NY T\+H\+E\+O\+RY OF L\+I\+A\+B\+I\+L\+I\+TY, W\+H\+E\+T\+H\+ER IN C\+O\+N\+T\+R\+A\+CT, S\+T\+R\+I\+CT L\+I\+A\+B\+I\+L\+I\+TY, OR T\+O\+RT (I\+N\+C\+L\+U\+D\+I\+NG N\+E\+G\+L\+I\+G\+E\+N\+CE OR O\+T\+H\+E\+R\+W\+I\+SE) A\+R\+I\+S\+I\+NG IN A\+NY W\+AY O\+UT OF T\+HE U\+SE OF T\+H\+IS S\+O\+F\+T\+W\+A\+RE, E\+V\+EN IF A\+D\+V\+I\+S\+ED OF T\+HE P\+O\+S\+S\+I\+B\+I\+L\+I\+TY OF S\+U\+CH D\+A\+M\+A\+GE.
+
+The views and conclusions contained in the software and documentation are those of the authors and should not be interpreted as representing official policies, either expressed or implied, of the Free\+B\+SD Project. 

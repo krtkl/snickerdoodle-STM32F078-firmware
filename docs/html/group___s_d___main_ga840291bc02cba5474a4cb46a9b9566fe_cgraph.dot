@@ -1,0 +1,28 @@
+digraph "main"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="main",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node0 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="SystemClock_Config",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___s_d___main.html#ga70af21c671abfcc773614a9a4f63d920",tooltip="System Clock Configuration Configure and initialize the main, systick, timer and peripheral clocks..."];
+  Node0 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="sd_gpio_init",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___s_d___g_p_i_o___functions.html#ga8e151b8cf065d8de5eb8f4908b18072b",tooltip="GPIO Initialization Configure pins as analog, input, output, event_out and EXTI. "];
+  Node0 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="sd_boot_select",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___s_d___platform.html#ga28381c9d642f66d9a6968ff7406a63d4",tooltip="Boot selection. "];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="sd_boot_get_button\l_state",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___s_d___platform.html#ga0d7f90ea76b8ffd5d714122177f84b3b",tooltip="Get button press state. "];
+  Node3 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="sd_boot_timer_expired",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___s_d___platform.html#ga12d2befc51ccaa811a666d7eca5761ff",tooltip="Check if boot timer has expired. "];
+  Node3 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="sd_dfu_start",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___s_d___d_f_u.html#ga405f1d2a69e1cf1f3d1ddbcbc3063651",tooltip="Enter Device Firmware Upgrade Mode Prepare device to enter system memory by disabling peripheral cloc..."];
+  Node0 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="sd_adc_init",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___s_d___a_d_c___functions.html#ga1a0d46dabe915346e428a46b9f943879"];
+  Node0 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="sd_i2c1_init",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___s_d___i2_c___functions.html#ga47b7e9401e2826acc6b03f258dc644a9",tooltip="I2C1 Initialization Initialize low-level hardware peripheral and set device handle. "];
+  Node8 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="sd_i2c_dev_init",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___s_d___i2_c___functions.html#ga5ca9adea5de20505761f892603bf8805",tooltip="Initialize I2C channel Initialize I2C channel with a peripheral handle and set the device as ready..."];
+  Node0 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="sd_i2c2_init",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___s_d___i2_c___functions.html#ga8ae735df0c54e25588a526d9a92d3a69",tooltip="I2C2 Initialization Initialize low-level hardware peripheral and set device handle. "];
+  Node10 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

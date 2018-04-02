@@ -1,0 +1,65 @@
+\hypertarget{sd__buffer_8c}{}\section{Src/sd\+\_\+buffer.c File Reference}
+\label{sd__buffer_8c}\index{Src/sd\+\_\+buffer.\+c@{Src/sd\+\_\+buffer.\+c}}
+
+
+Circular buffers.  
+
+
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}stm32f0xx\+\_\+hal.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sd\+\_\+buffer.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group___s_d___buffer___types_ga012d8a07d989f00e3f9c4a2f62743de4}{sd\+\_\+buff\+\_\+err}} \mbox{\hyperlink{group___s_d___buffer___functions_ga5c105cd566aea7ca95c4b9702b083cc1}{sd\+\_\+char\+\_\+buff\+\_\+init}} (struct \mbox{\hyperlink{structsd__cbuf}{sd\+\_\+cbuf}} $\ast$buff, uint32\+\_\+t size, uint8\+\_\+t $\ast$pbuff)
+\begin{DoxyCompactList}\small\item\em Initialize Character Buffer. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group___s_d___buffer___types_ga012d8a07d989f00e3f9c4a2f62743de4}{sd\+\_\+buff\+\_\+err}} \mbox{\hyperlink{group___s_d___buffer___functions_ga1b12fdfcd944d5f41960209072dbda59}{sd\+\_\+doub\+\_\+buff\+\_\+init}} (struct \mbox{\hyperlink{structsd__doub__buff}{sd\+\_\+doub\+\_\+buff}} $\ast$buff, uint32\+\_\+t size, uint8\+\_\+t $\ast$$\ast$pbuff)
+\begin{DoxyCompactList}\small\item\em Initialize Double Buffer. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group___s_d___buffer___types_ga012d8a07d989f00e3f9c4a2f62743de4}{sd\+\_\+buff\+\_\+err}} \mbox{\hyperlink{group___s_d___buffer___functions_gac8f2c2617479d49b27397bab04154ec9}{sd\+\_\+char\+\_\+buff\+\_\+putc}} (struct \mbox{\hyperlink{structsd__cbuf}{sd\+\_\+cbuf}} $\ast$buffer, uint8\+\_\+t data)
+\begin{DoxyCompactList}\small\item\em Put Character in Buffer Write a character to the buffer. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group___s_d___buffer___types_ga012d8a07d989f00e3f9c4a2f62743de4}{sd\+\_\+buff\+\_\+err}} \mbox{\hyperlink{group___s_d___buffer___functions_gabe452c7248eb96b220e17402b476bc09}{sd\+\_\+char\+\_\+buff\+\_\+putc\+\_\+to}} (struct \mbox{\hyperlink{structsd__cbuf}{sd\+\_\+cbuf}} $\ast$buffer, uint8\+\_\+t data, uint32\+\_\+t timeout)
+\begin{DoxyCompactList}\small\item\em Put Character in Buffer with Timeout Write a character to the buffer with a timeout. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group___s_d___buffer___types_ga012d8a07d989f00e3f9c4a2f62743de4}{sd\+\_\+buff\+\_\+err}} \mbox{\hyperlink{group___s_d___buffer___functions_ga4e78b9eaa502531cda91c47a1b5ea801}{sd\+\_\+char\+\_\+buff\+\_\+write}} (struct \mbox{\hyperlink{structsd__cbuf}{sd\+\_\+cbuf}} $\ast$buffer, uint8\+\_\+t $\ast$data, uint32\+\_\+t len)
+\begin{DoxyCompactList}\small\item\em Write Data to Buffer Write a specified length of characters from a data pointer to the buffer. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group___s_d___buffer___types_ga012d8a07d989f00e3f9c4a2f62743de4}{sd\+\_\+buff\+\_\+err}} \mbox{\hyperlink{group___s_d___buffer___functions_ga5b3ed30243636338cb55dcc9403534b9}{sd\+\_\+char\+\_\+buff\+\_\+read}} (struct \mbox{\hyperlink{structsd__cbuf}{sd\+\_\+cbuf}} $\ast$buff, uint8\+\_\+t $\ast$data, uint32\+\_\+t $\ast$len)
+\begin{DoxyCompactList}\small\item\em Read Length of Characters from Buffer Copy a specified length of the buffer to a pointer. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group___s_d___buffer___types_ga012d8a07d989f00e3f9c4a2f62743de4}{sd\+\_\+buff\+\_\+err}} \mbox{\hyperlink{group___s_d___buffer___functions_ga8229d1047f8af8841205582a55bae473}{sd\+\_\+char\+\_\+buff\+\_\+getc}} (struct \mbox{\hyperlink{structsd__cbuf}{sd\+\_\+cbuf}} $\ast$buff, uint8\+\_\+t $\ast$data)
+\begin{DoxyCompactList}\small\item\em Get Character from Buffer Get a single character from the buffer. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group___s_d___buffer___types_ga012d8a07d989f00e3f9c4a2f62743de4}{sd\+\_\+buff\+\_\+err}} \mbox{\hyperlink{group___s_d___buffer___functions_ga13cfdea81509e25f3fa884cc373fac64}{sd\+\_\+char\+\_\+buff\+\_\+getc\+\_\+to}} (struct \mbox{\hyperlink{structsd__cbuf}{sd\+\_\+cbuf}} $\ast$buff, uint8\+\_\+t $\ast$data, uint32\+\_\+t timeout)
+\begin{DoxyCompactList}\small\item\em Get Character from Buffer with Timeout Get a single character from the buffer with a timeout if the buffer is locked. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group___s_d___buffer___types_ga012d8a07d989f00e3f9c4a2f62743de4}{sd\+\_\+buff\+\_\+err}} \mbox{\hyperlink{group___s_d___buffer___functions_gafc321e2e66659aca104810f576224745}{sd\+\_\+buff\+\_\+reset}} (struct \mbox{\hyperlink{structsd__cbuf}{sd\+\_\+cbuf}} $\ast$buff)
+\begin{DoxyCompactList}\small\item\em Reset buffer Resets the in and out indexes of the buffer (without removing contents of the buffer) to the start of the buffer. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+weak void \mbox{\hyperlink{group___s_d___buffer___functions_ga62eae3c0c1cbe53dbb549106668fa24c}{sd\+\_\+char\+\_\+write\+\_\+end\+\_\+cb}} (struct \mbox{\hyperlink{structsd__cbuf}{sd\+\_\+cbuf}} $\ast$buff)
+\begin{DoxyCompactList}\small\item\em Write Command End Callback User defined function executed when a write operation is completed. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+weak void \mbox{\hyperlink{group___s_d___buffer___functions_ga17d8b9804dc4f2cbfbf03a5c23d227e7}{sd\+\_\+char\+\_\+read\+\_\+end\+\_\+cb}} (struct \mbox{\hyperlink{structsd__cbuf}{sd\+\_\+cbuf}} $\ast$buff)
+\begin{DoxyCompactList}\small\item\em Read Command End Callback User defined function executed when a read operation is completed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Circular buffers. 
+
+\begin{DoxyAuthor}{Author}
+R. Bush  \href{mailto:bush@krtkl.com}{\tt bush@krtkl.\+com} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+v1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2016 March 28 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Free\+B\+SD
+\end{DoxyCopyright}
+Copyright (c) 2016, krtkl inc. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+
+
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\end{DoxyEnumerate}
+
+T\+H\+IS S\+O\+F\+T\+W\+A\+RE IS P\+R\+O\+V\+I\+D\+ED BY T\+HE C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+E\+RS A\+ND C\+O\+N\+T\+R\+I\+B\+U\+T\+O\+RS \char`\"{}\+A\+S I\+S\char`\"{} A\+ND A\+NY E\+X\+P\+R\+E\+SS OR I\+M\+P\+L\+I\+ED W\+A\+R\+R\+A\+N\+T\+I\+ES, I\+N\+C\+L\+U\+D\+I\+NG, B\+UT N\+OT L\+I\+M\+I\+T\+ED TO, T\+HE I\+M\+P\+L\+I\+ED W\+A\+R\+R\+A\+N\+T\+I\+ES OF M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+TY A\+ND F\+I\+T\+N\+E\+SS F\+OR A P\+A\+R\+T\+I\+C\+U\+L\+AR P\+U\+R\+P\+O\+SE A\+RE D\+I\+S\+C\+L\+A\+I\+M\+ED. IN NO E\+V\+E\+NT S\+H\+A\+LL T\+HE C\+O\+P\+Y\+R\+I\+G\+HT O\+W\+N\+ER OR C\+O\+N\+T\+R\+I\+B\+U\+T\+O\+RS BE L\+I\+A\+B\+LE F\+OR A\+NY D\+I\+R\+E\+CT, I\+N\+D\+I\+R\+E\+CT, I\+N\+C\+I\+D\+E\+N\+T\+AL, S\+P\+E\+C\+I\+AL, E\+X\+E\+M\+P\+L\+A\+RY, OR C\+O\+N\+S\+E\+Q\+U\+E\+N\+T\+I\+AL D\+A\+M\+A\+G\+ES (I\+N\+C\+L\+U\+D\+I\+NG, B\+UT N\+OT L\+I\+M\+I\+T\+ED TO, P\+R\+O\+C\+U\+R\+E\+M\+E\+NT OF S\+U\+B\+S\+T\+I\+T\+U\+TE G\+O\+O\+DS OR S\+E\+R\+V\+I\+C\+ES; L\+O\+SS OF U\+SE, D\+A\+TA, OR P\+R\+O\+F\+I\+TS; OR B\+U\+S\+I\+N\+E\+SS I\+N\+T\+E\+R\+R\+U\+P\+T\+I\+ON) H\+O\+W\+E\+V\+ER C\+A\+U\+S\+ED A\+ND ON A\+NY T\+H\+E\+O\+RY OF L\+I\+A\+B\+I\+L\+I\+TY, W\+H\+E\+T\+H\+ER IN C\+O\+N\+T\+R\+A\+CT, S\+T\+R\+I\+CT L\+I\+A\+B\+I\+L\+I\+TY, OR T\+O\+RT (I\+N\+C\+L\+U\+D\+I\+NG N\+E\+G\+L\+I\+G\+E\+N\+CE OR O\+T\+H\+E\+R\+W\+I\+SE) A\+R\+I\+S\+I\+NG IN A\+NY W\+AY O\+UT OF T\+HE U\+SE OF T\+H\+IS S\+O\+F\+T\+W\+A\+RE, E\+V\+EN IF A\+D\+V\+I\+S\+ED OF T\+HE P\+O\+S\+S\+I\+B\+I\+L\+I\+TY OF S\+U\+CH D\+A\+M\+A\+GE.
+
+The views and conclusions contained in the software and documentation are those of the authors and should not be interpreted as representing official policies, either expressed or implied, of the Free\+B\+SD Project. 

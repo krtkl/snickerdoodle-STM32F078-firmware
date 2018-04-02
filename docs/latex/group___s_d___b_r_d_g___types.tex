@@ -1,0 +1,74 @@
+\hypertarget{group___s_d___b_r_d_g___types}{}\section{S\+PI Bridge Types}
+\label{group___s_d___b_r_d_g___types}\index{S\+P\+I Bridge Types@{S\+P\+I Bridge Types}}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structsd__brdg__spi__dev}{sd\+\_\+brdg\+\_\+spi\+\_\+dev}}
+\begin{DoxyCompactList}\small\item\em S\+PI bridge device structure. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structsd__brdg__cmd}{sd\+\_\+brdg\+\_\+cmd}}
+\begin{DoxyCompactList}\small\item\em S\+PI bridge peripheral command structure. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structsd__brdg__op}{sd\+\_\+brdg\+\_\+op}}
+\begin{DoxyCompactList}\small\item\em S\+PI brdige peripheral operation structure. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structsd__brdg__periph}{sd\+\_\+brdg\+\_\+periph}}
+\begin{DoxyCompactList}\small\item\em S\+PI bridged peripheral structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___s_d___b_r_d_g___types_ga9f6844ada9a6ffbaa3705965aaff6988}\label{group___s_d___b_r_d_g___types_ga9f6844ada9a6ffbaa3705965aaff6988}} 
+enum {\bfseries sd\+\_\+brdg\+\_\+state} \{ {\bfseries S\+D\+\_\+\+B\+R\+D\+G\+\_\+\+P\+E\+R\+I\+PH}, 
+{\bfseries S\+D\+\_\+\+B\+R\+D\+G\+\_\+\+G\+E\+T\+\_\+\+C\+MD}, 
+{\bfseries S\+D\+\_\+\+B\+R\+D\+G\+\_\+\+E\+X\+E\+C\+\_\+\+C\+MD}, 
+{\bfseries S\+D\+\_\+\+B\+R\+D\+G\+\_\+\+D\+O\+NE}
+ \}
+\item 
+enum \mbox{\hyperlink{group___s_d___b_r_d_g___types_gaa60a189c7c824797307ab14f0c594610}{sd\+\_\+brdg\+\_\+cmd\+\_\+state}} \{ \mbox{\hyperlink{group___s_d___b_r_d_g___types_ggaa60a189c7c824797307ab14f0c594610a53d0e736864a72c399401b041b2ed480}{S\+D\+\_\+\+B\+R\+D\+G\+\_\+\+C\+M\+D\+\_\+\+S\+ET}}, 
+\mbox{\hyperlink{group___s_d___b_r_d_g___types_ggaa60a189c7c824797307ab14f0c594610a10ff89b58f2416dfdda70109dd4af893}{S\+D\+\_\+\+B\+R\+D\+G\+\_\+\+C\+M\+D\+\_\+\+C\+O\+N\+F\+IG}}, 
+\mbox{\hyperlink{group___s_d___b_r_d_g___types_ggaa60a189c7c824797307ab14f0c594610ab7fed0c59ac43c49153a351b573400f4}{S\+D\+\_\+\+B\+R\+D\+G\+\_\+\+C\+M\+D\+\_\+\+I\+N\+IT}}, 
+\mbox{\hyperlink{group___s_d___b_r_d_g___types_ggaa60a189c7c824797307ab14f0c594610a8ad37d4a1369795a68e6c8745a93898b}{S\+D\+\_\+\+B\+R\+D\+G\+\_\+\+C\+M\+D\+\_\+\+R\+UN}}
+ \}
+\begin{DoxyCompactList}\small\item\em S\+PI bridge command state enumeration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{group___s_d___b_r_d_g___types_gaa60a189c7c824797307ab14f0c594610}\label{group___s_d___b_r_d_g___types_gaa60a189c7c824797307ab14f0c594610}} 
+\index{S\+P\+I Bridge Types@{S\+P\+I Bridge Types}!sd\+\_\+brdg\+\_\+cmd\+\_\+state@{sd\+\_\+brdg\+\_\+cmd\+\_\+state}}
+\index{sd\+\_\+brdg\+\_\+cmd\+\_\+state@{sd\+\_\+brdg\+\_\+cmd\+\_\+state}!S\+P\+I Bridge Types@{S\+P\+I Bridge Types}}
+\subsubsection{\texorpdfstring{sd\+\_\+brdg\+\_\+cmd\+\_\+state}{sd\_brdg\_cmd\_state}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group___s_d___b_r_d_g___types_gaa60a189c7c824797307ab14f0c594610}{sd\+\_\+brdg\+\_\+cmd\+\_\+state}}}
+
+
+
+{\ttfamily \#include $<$\mbox{\hyperlink{sd__spi__bridge_8h}{/\+Users/russellbush/\+Documents/\+Software/snickerdoodle-\/\+S\+T\+M32-\/firmware/\+Inc/sd\+\_\+spi\+\_\+bridge.\+h}}$>$}
+
+
+
+S\+PI bridge command state enumeration. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+\_\+\+B\+R\+D\+G\+\_\+\+C\+M\+D\+\_\+\+S\+ET@{S\+D\+\_\+\+B\+R\+D\+G\+\_\+\+C\+M\+D\+\_\+\+S\+ET}!S\+P\+I Bridge Types@{S\+P\+I Bridge Types}}\index{S\+P\+I Bridge Types@{S\+P\+I Bridge Types}!S\+D\+\_\+\+B\+R\+D\+G\+\_\+\+C\+M\+D\+\_\+\+S\+ET@{S\+D\+\_\+\+B\+R\+D\+G\+\_\+\+C\+M\+D\+\_\+\+S\+ET}}}\mbox{\Hypertarget{group___s_d___b_r_d_g___types_ggaa60a189c7c824797307ab14f0c594610a53d0e736864a72c399401b041b2ed480}\label{group___s_d___b_r_d_g___types_ggaa60a189c7c824797307ab14f0c594610a53d0e736864a72c399401b041b2ed480}} 
+S\+D\+\_\+\+B\+R\+D\+G\+\_\+\+C\+M\+D\+\_\+\+S\+ET&Command has been set \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+\_\+\+B\+R\+D\+G\+\_\+\+C\+M\+D\+\_\+\+C\+O\+N\+F\+IG@{S\+D\+\_\+\+B\+R\+D\+G\+\_\+\+C\+M\+D\+\_\+\+C\+O\+N\+F\+IG}!S\+P\+I Bridge Types@{S\+P\+I Bridge Types}}\index{S\+P\+I Bridge Types@{S\+P\+I Bridge Types}!S\+D\+\_\+\+B\+R\+D\+G\+\_\+\+C\+M\+D\+\_\+\+C\+O\+N\+F\+IG@{S\+D\+\_\+\+B\+R\+D\+G\+\_\+\+C\+M\+D\+\_\+\+C\+O\+N\+F\+IG}}}\mbox{\Hypertarget{group___s_d___b_r_d_g___types_ggaa60a189c7c824797307ab14f0c594610a10ff89b58f2416dfdda70109dd4af893}\label{group___s_d___b_r_d_g___types_ggaa60a189c7c824797307ab14f0c594610a10ff89b58f2416dfdda70109dd4af893}} 
+S\+D\+\_\+\+B\+R\+D\+G\+\_\+\+C\+M\+D\+\_\+\+C\+O\+N\+F\+IG&Configure the command \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+\_\+\+B\+R\+D\+G\+\_\+\+C\+M\+D\+\_\+\+I\+N\+IT@{S\+D\+\_\+\+B\+R\+D\+G\+\_\+\+C\+M\+D\+\_\+\+I\+N\+IT}!S\+P\+I Bridge Types@{S\+P\+I Bridge Types}}\index{S\+P\+I Bridge Types@{S\+P\+I Bridge Types}!S\+D\+\_\+\+B\+R\+D\+G\+\_\+\+C\+M\+D\+\_\+\+I\+N\+IT@{S\+D\+\_\+\+B\+R\+D\+G\+\_\+\+C\+M\+D\+\_\+\+I\+N\+IT}}}\mbox{\Hypertarget{group___s_d___b_r_d_g___types_ggaa60a189c7c824797307ab14f0c594610ab7fed0c59ac43c49153a351b573400f4}\label{group___s_d___b_r_d_g___types_ggaa60a189c7c824797307ab14f0c594610ab7fed0c59ac43c49153a351b573400f4}} 
+S\+D\+\_\+\+B\+R\+D\+G\+\_\+\+C\+M\+D\+\_\+\+I\+N\+IT&Command initializing \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+\_\+\+B\+R\+D\+G\+\_\+\+C\+M\+D\+\_\+\+R\+UN@{S\+D\+\_\+\+B\+R\+D\+G\+\_\+\+C\+M\+D\+\_\+\+R\+UN}!S\+P\+I Bridge Types@{S\+P\+I Bridge Types}}\index{S\+P\+I Bridge Types@{S\+P\+I Bridge Types}!S\+D\+\_\+\+B\+R\+D\+G\+\_\+\+C\+M\+D\+\_\+\+R\+UN@{S\+D\+\_\+\+B\+R\+D\+G\+\_\+\+C\+M\+D\+\_\+\+R\+UN}}}\mbox{\Hypertarget{group___s_d___b_r_d_g___types_ggaa60a189c7c824797307ab14f0c594610a8ad37d4a1369795a68e6c8745a93898b}\label{group___s_d___b_r_d_g___types_ggaa60a189c7c824797307ab14f0c594610a8ad37d4a1369795a68e6c8745a93898b}} 
+S\+D\+\_\+\+B\+R\+D\+G\+\_\+\+C\+M\+D\+\_\+\+R\+UN&Command running \\
+\hline
+
+\end{DoxyEnumFields}
+
+\begin{DoxyCode}
+99                        \{
+100     \mbox{\hyperlink{group___s_d___b_r_d_g___types_ggaa60a189c7c824797307ab14f0c594610a53d0e736864a72c399401b041b2ed480}{SD\_BRDG\_CMD\_SET}},     
+101     \mbox{\hyperlink{group___s_d___b_r_d_g___types_ggaa60a189c7c824797307ab14f0c594610a10ff89b58f2416dfdda70109dd4af893}{SD\_BRDG\_CMD\_CONFIG}},       
+102     \mbox{\hyperlink{group___s_d___b_r_d_g___types_ggaa60a189c7c824797307ab14f0c594610ab7fed0c59ac43c49153a351b573400f4}{SD\_BRDG\_CMD\_INIT}},       
+\end{DoxyCode}

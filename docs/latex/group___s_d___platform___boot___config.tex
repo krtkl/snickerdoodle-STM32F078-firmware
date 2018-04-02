@@ -1,0 +1,328 @@
+\hypertarget{group___s_d___platform___boot___config}{}\section{Zynq Boot Configuration}
+\label{group___s_d___platform___boot___config}\index{Zynq Boot Configuration@{Zynq Boot Configuration}}
+
+
+Zynq processing subsystem boot configuration.  
+
+
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___s_d___platform___boot___config_gad7a6663ba74657a3939e7a9701db0454}{sd\+\_\+zynq\+\_\+clk\+\_\+enable}} (uint8\+\_\+t enable)
+\begin{DoxyCompactList}\small\item\em Zynq Clock Enable Enables the main clock source for the Zynq A\+PU. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_d___platform___boot___config_ga527ae13356897e13098f309174444556}{sd\+\_\+zynq\+\_\+jtag\+\_\+enable}} (uint8\+\_\+t enable)
+\begin{DoxyCompactList}\small\item\em Zynq J\+T\+AG Enable Enables the J\+T\+AG interface for programming the PS or PL. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_d___platform___boot___config_ga5f6e21d454cec1f66957897103dafe85}{sd\+\_\+wl\+\_\+clk\+\_\+enable}} (uint8\+\_\+t enable)
+\begin{DoxyCompactList}\small\item\em Wireless Clock Enable Enable the wireless module 32k\+Hz clock source. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_d___platform___boot___config_ga0f06bff92025356b589e3cfdae8ddcb7}{sd\+\_\+bt\+\_\+enable}} (uint8\+\_\+t enable)
+\begin{DoxyCompactList}\small\item\em Bluetooth Enable Enable the Bluetooth interface on the wireless module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_d___platform___boot___config_ga759f86160fc8d270309fc2a74e4139e3}{sd\+\_\+zynq\+\_\+boot\+\_\+config}} (enum \mbox{\hyperlink{group___s_d___platform_ga06667de95c86bfcdef8bcc8ab13cb2d4}{sd\+\_\+zynq\+\_\+boot}} boot)
+\begin{DoxyCompactList}\small\item\em Zynq Boot Config Outputs boot select pins to zynq for desired boot media source. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_d___platform___boot___config_ga65b13e7293170788758e4f8cd8512326}{sd\+\_\+zynq\+\_\+reset}} (void)
+\begin{DoxyCompactList}\small\item\em Zynq Reset Reset the Zynq A\+PU. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_d___platform___boot___config_gaaaa432cbbf3382d321107a38a56b9bef}{sd\+\_\+zynq\+\_\+disable}} (void)
+\begin{DoxyCompactList}\small\item\em Disable Zynq Power Disable the Zynq power rails by setting the enable pin low. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_d___platform___boot___config_gac30b9aa0032a9a8598735242c7cfa5bc}{sd\+\_\+zynq\+\_\+enable}} (void)
+\begin{DoxyCompactList}\small\item\em Enable Zynq Power Enable the Zynq power rails by setting the enable pin high. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Zynq processing subsystem boot configuration. 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group___s_d___platform___boot___config_ga0f06bff92025356b589e3cfdae8ddcb7}\label{group___s_d___platform___boot___config_ga0f06bff92025356b589e3cfdae8ddcb7}} 
+\index{Zynq Boot Configuration@{Zynq Boot Configuration}!sd\+\_\+bt\+\_\+enable@{sd\+\_\+bt\+\_\+enable}}
+\index{sd\+\_\+bt\+\_\+enable@{sd\+\_\+bt\+\_\+enable}!Zynq Boot Configuration@{Zynq Boot Configuration}}
+\subsubsection{\texorpdfstring{sd\+\_\+bt\+\_\+enable()}{sd\_bt\_enable()}}
+{\footnotesize\ttfamily void sd\+\_\+bt\+\_\+enable (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{enable }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\mbox{\hyperlink{sd__platform_8c}{Src/sd\+\_\+platform.\+c}}$>$}
+
+
+
+Bluetooth Enable Enable the Bluetooth interface on the wireless module. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enable} & State to set for Bluetooth interface \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyCode}
+160 \{
+161     GPIO\_PinState en = enable ? GPIO\_PIN\_SET : GPIO\_PIN\_RESET;
+162     
+163     HAL\_GPIO\_WritePin(WL18xx\_BT\_EN\_GPIO\_Port, 
+164               WL18xx\_BT\_EN\_Pin, en);
+165 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group___s_d___platform___boot___config_ga5f6e21d454cec1f66957897103dafe85}\label{group___s_d___platform___boot___config_ga5f6e21d454cec1f66957897103dafe85}} 
+\index{Zynq Boot Configuration@{Zynq Boot Configuration}!sd\+\_\+wl\+\_\+clk\+\_\+enable@{sd\+\_\+wl\+\_\+clk\+\_\+enable}}
+\index{sd\+\_\+wl\+\_\+clk\+\_\+enable@{sd\+\_\+wl\+\_\+clk\+\_\+enable}!Zynq Boot Configuration@{Zynq Boot Configuration}}
+\subsubsection{\texorpdfstring{sd\+\_\+wl\+\_\+clk\+\_\+enable()}{sd\_wl\_clk\_enable()}}
+{\footnotesize\ttfamily void sd\+\_\+wl\+\_\+clk\+\_\+enable (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{enable }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\mbox{\hyperlink{sd__platform_8c}{Src/sd\+\_\+platform.\+c}}$>$}
+
+
+
+Wireless Clock Enable Enable the wireless module 32k\+Hz clock source. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enable} & State to set for clock \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyCode}
+144 \{
+145     GPIO\_PinState en = enable ? GPIO\_PIN\_SET : GPIO\_PIN\_RESET;
+146 
+147     HAL\_GPIO\_WritePin(WL\_32KHZ\_CLK\_EN\_GPIO\_Port, 
+148               WL\_32KHZ\_CLK\_EN\_Pin, en);
+149 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group___s_d___platform___boot___config_ga759f86160fc8d270309fc2a74e4139e3}\label{group___s_d___platform___boot___config_ga759f86160fc8d270309fc2a74e4139e3}} 
+\index{Zynq Boot Configuration@{Zynq Boot Configuration}!sd\+\_\+zynq\+\_\+boot\+\_\+config@{sd\+\_\+zynq\+\_\+boot\+\_\+config}}
+\index{sd\+\_\+zynq\+\_\+boot\+\_\+config@{sd\+\_\+zynq\+\_\+boot\+\_\+config}!Zynq Boot Configuration@{Zynq Boot Configuration}}
+\subsubsection{\texorpdfstring{sd\+\_\+zynq\+\_\+boot\+\_\+config()}{sd\_zynq\_boot\_config()}}
+{\footnotesize\ttfamily void sd\+\_\+zynq\+\_\+boot\+\_\+config (\begin{DoxyParamCaption}\item[{enum \mbox{\hyperlink{group___s_d___platform_ga06667de95c86bfcdef8bcc8ab13cb2d4}{sd\+\_\+zynq\+\_\+boot}}}]{boot }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\mbox{\hyperlink{sd__platform_8c}{Src/sd\+\_\+platform.\+c}}$>$}
+
+
+
+Zynq Boot Config Outputs boot select pins to zynq for desired boot media source. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em boot} & Value defining boot pin outputs \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyCode}
+178 \{
+179     GPIO\_PinState mio4\_out, mio5\_out;
+180   
+181     \textcolor{keywordflow}{switch} (boot) \{
+182     \textcolor{keywordflow}{case} \mbox{\hyperlink{group___s_d___platform_gga06667de95c86bfcdef8bcc8ab13cb2d4aa0c510b780474f1292f04a8b7b987a76}{SD\_ZYNQ\_BOOT\_JTAG}}:
+183         mio4\_out = GPIO\_PIN\_RESET;      \textcolor{comment}{/* 0 */}
+184         mio5\_out = GPIO\_PIN\_RESET;      \textcolor{comment}{/* 0 */}
+185         \textcolor{keywordflow}{break};
+186     
+187     \textcolor{keywordflow}{case} \mbox{\hyperlink{group___s_d___platform_gga06667de95c86bfcdef8bcc8ab13cb2d4ad270040d99cf171dc127ebca46e82c54}{SD\_ZYNQ\_BOOT\_NAND}}:
+188         mio4\_out = GPIO\_PIN\_SET;    \textcolor{comment}{/* 1 */}
+189         mio5\_out = GPIO\_PIN\_RESET;      \textcolor{comment}{/* 0 */}
+190         \textcolor{keywordflow}{break};
+191     
+192     \textcolor{keywordflow}{case} \mbox{\hyperlink{group___s_d___platform_gga06667de95c86bfcdef8bcc8ab13cb2d4a85166851f8dac48bd3b4261debe97472}{SD\_ZYNQ\_BOOT\_QSPI}}:
+193         mio4\_out = GPIO\_PIN\_RESET;      \textcolor{comment}{/* 0 */}
+194         mio5\_out = GPIO\_PIN\_SET;    \textcolor{comment}{/* 1 */}
+195         \textcolor{keywordflow}{break};
+196     
+197     \textcolor{keywordflow}{case} \mbox{\hyperlink{group___s_d___platform_gga06667de95c86bfcdef8bcc8ab13cb2d4af1351df506cd9586ffcd35813fa3f5f9}{SD\_ZYNQ\_BOOT\_SD}}:
+198         mio4\_out = GPIO\_PIN\_SET;    \textcolor{comment}{/* 1 */}
+199         mio5\_out = GPIO\_PIN\_SET;    \textcolor{comment}{/* 1 */}
+200         \textcolor{keywordflow}{break};
+201     \}
+202  
+203     \textcolor{comment}{/* Write boot select pins */}
+204     HAL\_GPIO\_WritePin(MIO4\_BOOT\_SELECT\_GPIO\_Port,
+205               MIO4\_BOOT\_SELECT\_Pin,
+206               mio4\_out);
+207     
+208     HAL\_GPIO\_WritePin(MIO5\_BOOT\_SELECT\_GPIO\_Port, 
+209               MIO5\_BOOT\_SELECT\_Pin,
+210               mio5\_out);
+211 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group___s_d___platform___boot___config_gad7a6663ba74657a3939e7a9701db0454}\label{group___s_d___platform___boot___config_gad7a6663ba74657a3939e7a9701db0454}} 
+\index{Zynq Boot Configuration@{Zynq Boot Configuration}!sd\+\_\+zynq\+\_\+clk\+\_\+enable@{sd\+\_\+zynq\+\_\+clk\+\_\+enable}}
+\index{sd\+\_\+zynq\+\_\+clk\+\_\+enable@{sd\+\_\+zynq\+\_\+clk\+\_\+enable}!Zynq Boot Configuration@{Zynq Boot Configuration}}
+\subsubsection{\texorpdfstring{sd\+\_\+zynq\+\_\+clk\+\_\+enable()}{sd\_zynq\_clk\_enable()}}
+{\footnotesize\ttfamily void sd\+\_\+zynq\+\_\+clk\+\_\+enable (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{enable }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\mbox{\hyperlink{sd__platform_8c}{Src/sd\+\_\+platform.\+c}}$>$}
+
+
+
+Zynq Clock Enable Enables the main clock source for the Zynq A\+PU. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enable} & State to set for clock \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyCode}
+111 \{
+112     GPIO\_PinState en = enable ? GPIO\_PIN\_SET : GPIO\_PIN\_RESET;
+113     
+114     HAL\_GPIO\_WritePin(ZYNQ\_CLK\_EN\_GPIO\_Port, 
+115               ZYNQ\_CLK\_EN\_Pin, en);
+116 
+117 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group___s_d___platform___boot___config_gaaaa432cbbf3382d321107a38a56b9bef}\label{group___s_d___platform___boot___config_gaaaa432cbbf3382d321107a38a56b9bef}} 
+\index{Zynq Boot Configuration@{Zynq Boot Configuration}!sd\+\_\+zynq\+\_\+disable@{sd\+\_\+zynq\+\_\+disable}}
+\index{sd\+\_\+zynq\+\_\+disable@{sd\+\_\+zynq\+\_\+disable}!Zynq Boot Configuration@{Zynq Boot Configuration}}
+\subsubsection{\texorpdfstring{sd\+\_\+zynq\+\_\+disable()}{sd\_zynq\_disable()}}
+{\footnotesize\ttfamily void sd\+\_\+zynq\+\_\+disable (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\mbox{\hyperlink{sd__platform_8c}{Src/sd\+\_\+platform.\+c}}$>$}
+
+
+
+Disable Zynq Power Disable the Zynq power rails by setting the enable pin low. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em butt} & Button used to trigger this function \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyCode}
+240 \{
+241     HAL\_GPIO\_WritePin(ZYNQ\_POWER\_EN\_GPIO\_Port,
+242                 ZYNQ\_POWER\_EN\_Pin, GPIO\_PIN\_RESET);
+243     \mbox{\hyperlink{group___s_d___l_e_d___pattern___functions_gaee88ed175473585caa9ae05d5b66f993}{sd\_led\_rapid}}(&\mbox{\hyperlink{group___s_d___l_e_d___exported___variables_gae551cefd341794956c9c2a06a4782ae9}{app\_led}});
+244 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group___s_d___platform___boot___config_gac30b9aa0032a9a8598735242c7cfa5bc}\label{group___s_d___platform___boot___config_gac30b9aa0032a9a8598735242c7cfa5bc}} 
+\index{Zynq Boot Configuration@{Zynq Boot Configuration}!sd\+\_\+zynq\+\_\+enable@{sd\+\_\+zynq\+\_\+enable}}
+\index{sd\+\_\+zynq\+\_\+enable@{sd\+\_\+zynq\+\_\+enable}!Zynq Boot Configuration@{Zynq Boot Configuration}}
+\subsubsection{\texorpdfstring{sd\+\_\+zynq\+\_\+enable()}{sd\_zynq\_enable()}}
+{\footnotesize\ttfamily void sd\+\_\+zynq\+\_\+enable (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\mbox{\hyperlink{sd__platform_8c}{Src/sd\+\_\+platform.\+c}}$>$}
+
+
+
+Enable Zynq Power Enable the Zynq power rails by setting the enable pin high. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em butt} & Button used to trigger this function \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyCode}
+255 \{
+256     HAL\_GPIO\_WritePin(ZYNQ\_POWER\_EN\_GPIO\_Port,
+257                 ZYNQ\_POWER\_EN\_Pin, GPIO\_PIN\_SET);
+258                 
+259     \mbox{\hyperlink{group___s_d___l_e_d___functions_ga1a7bb12d105f503fec86d069725f6591}{sd\_led\_reset}}(&\mbox{\hyperlink{group___s_d___l_e_d___exported___variables_gae551cefd341794956c9c2a06a4782ae9}{app\_led}});
+260 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group___s_d___platform___boot___config_ga527ae13356897e13098f309174444556}\label{group___s_d___platform___boot___config_ga527ae13356897e13098f309174444556}} 
+\index{Zynq Boot Configuration@{Zynq Boot Configuration}!sd\+\_\+zynq\+\_\+jtag\+\_\+enable@{sd\+\_\+zynq\+\_\+jtag\+\_\+enable}}
+\index{sd\+\_\+zynq\+\_\+jtag\+\_\+enable@{sd\+\_\+zynq\+\_\+jtag\+\_\+enable}!Zynq Boot Configuration@{Zynq Boot Configuration}}
+\subsubsection{\texorpdfstring{sd\+\_\+zynq\+\_\+jtag\+\_\+enable()}{sd\_zynq\_jtag\_enable()}}
+{\footnotesize\ttfamily void sd\+\_\+zynq\+\_\+jtag\+\_\+enable (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{enable }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\mbox{\hyperlink{sd__platform_8c}{Src/sd\+\_\+platform.\+c}}$>$}
+
+
+
+Zynq J\+T\+AG Enable Enables the J\+T\+AG interface for programming the PS or PL. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enable} & State to set for J\+T\+AG interface \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyCode}
+128 \{
+129     GPIO\_PinState en = enable ? GPIO\_PIN\_SET : GPIO\_PIN\_RESET;
+130 
+131     HAL\_GPIO\_WritePin(ZYNQ\_JTAG\_NRST\_GPIO\_Port, 
+132               ZYNQ\_JTAG\_NRST\_Pin, en);
+133 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group___s_d___platform___boot___config_ga65b13e7293170788758e4f8cd8512326}\label{group___s_d___platform___boot___config_ga65b13e7293170788758e4f8cd8512326}} 
+\index{Zynq Boot Configuration@{Zynq Boot Configuration}!sd\+\_\+zynq\+\_\+reset@{sd\+\_\+zynq\+\_\+reset}}
+\index{sd\+\_\+zynq\+\_\+reset@{sd\+\_\+zynq\+\_\+reset}!Zynq Boot Configuration@{Zynq Boot Configuration}}
+\subsubsection{\texorpdfstring{sd\+\_\+zynq\+\_\+reset()}{sd\_zynq\_reset()}}
+{\footnotesize\ttfamily void sd\+\_\+zynq\+\_\+reset (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\mbox{\hyperlink{sd__platform_8c}{Src/sd\+\_\+platform.\+c}}$>$}
+
+
+
+Zynq Reset Reset the Zynq A\+PU. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyCode}
+222 \{
+223     \mbox{\hyperlink{group___s_d___platform___boot___config_gaaaa432cbbf3382d321107a38a56b9bef}{sd\_zynq\_disable}}();
+224     
+225     \textcolor{comment}{/* A Short wait */}
+226     HAL\_Delay(100);
+227     
+228     \mbox{\hyperlink{group___s_d___platform___boot___config_gac30b9aa0032a9a8598735242c7cfa5bc}{sd\_zynq\_enable}}();
+229 \}
+\end{DoxyCode}

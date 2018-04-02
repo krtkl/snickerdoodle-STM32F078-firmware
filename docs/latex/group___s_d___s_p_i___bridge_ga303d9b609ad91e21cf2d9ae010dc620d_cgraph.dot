@@ -1,0 +1,9 @@
+digraph "sd_spbr_rx_isr"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node12 [label="sd_spbr_rx_isr",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node12 -> Node13 [color="midnightblue",fontsize="10",style="solid"];
+  Node13 [label="sd_spbr_find_device",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___s_d___s_p_i___bridge.html#gaf2de23902fa458c64da619f83a31d7ec",tooltip="SPI Bridge Find Device Searches a sentinel terminated table pointed to by head for a matching ID and ..."];
+}

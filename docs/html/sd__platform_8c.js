@@ -1,0 +1,28 @@
+var sd__platform_8c =
+[
+    [ "SD_PLATFORM_DFU_BOOT", "group___s_d___platform.html#gaed22fc6c832ec83bcc4aa35bace12970", null ],
+    [ "SD_PLATFORM_NORMAL_BOOT", "group___s_d___platform.html#ga086665d90c28883d36a12fa61ad26eaf", null ],
+    [ "HAL_GPIO_EXTI_Callback", "group___s_d___platform.html#gaf02d5f52d29caba0ba168f5c53539c8f", null ],
+    [ "sd_boot_get_button_state", "group___s_d___platform.html#ga0d7f90ea76b8ffd5d714122177f84b3b", null ],
+    [ "sd_boot_select", "group___s_d___platform.html#ga28381c9d642f66d9a6968ff7406a63d4", null ],
+    [ "sd_boot_timer_expired", "group___s_d___platform.html#ga12d2befc51ccaa811a666d7eca5761ff", null ],
+    [ "sd_bt_enable", "group___s_d___platform___boot___config.html#ga0f06bff92025356b589e3cfdae8ddcb7", null ],
+    [ "sd_dfu_start", "group___s_d___d_f_u.html#ga405f1d2a69e1cf1f3d1ddbcbc3063651", null ],
+    [ "sd_uart_usb_bridge_init", "group___s_d___u_a_r_t___u_s_b___bridge.html#gaa03f4625c66a0fe3be62a6aead8ac2ba", null ],
+    [ "sd_uart_usb_transmit", "group___s_d___u_a_r_t___u_s_b___bridge.html#ga7277fee3051720471dd68980c4928cbc", null ],
+    [ "sd_wl18xx_ant_config", "group___s_d___platform___w_l18xx___ant.html#ga3d09a16b4b68ce526bd3eddba77b655c", null ],
+    [ "sd_wl_clk_enable", "group___s_d___platform___boot___config.html#ga5f6e21d454cec1f66957897103dafe85", null ],
+    [ "sd_zynq_boot_config", "group___s_d___platform___boot___config.html#ga759f86160fc8d270309fc2a74e4139e3", null ],
+    [ "sd_zynq_clk_enable", "group___s_d___platform___boot___config.html#gad7a6663ba74657a3939e7a9701db0454", null ],
+    [ "sd_zynq_disable", "group___s_d___platform___boot___config.html#gaaaa432cbbf3382d321107a38a56b9bef", null ],
+    [ "sd_zynq_enable", "group___s_d___platform___boot___config.html#gac30b9aa0032a9a8598735242c7cfa5bc", null ],
+    [ "sd_zynq_jtag_enable", "group___s_d___platform___boot___config.html#ga527ae13356897e13098f309174444556", null ],
+    [ "sd_zynq_reset", "group___s_d___platform___boot___config.html#ga65b13e7293170788758e4f8cd8512326", null ],
+    [ "cons_buff", "group___s_d___platform___variables.html#ga3806775e16d4988e597b07388bf0c26d", null ],
+    [ "cons_dbuff", "group___s_d___platform___variables.html#gab1427a377589df62b3cedc5dae7d1d7a", null ],
+    [ "hci_params_buff", "group___s_d___platform___variables.html#gab7c02f3f6c00933734e1e19e7d2f99d8", null ],
+    [ "uart1_rx_buff", "group___s_d___platform___variables.html#ga51337e7af0399a1e581d3d5f4f36e339", null ],
+    [ "uart1_rx_cbuff", "group___s_d___platform___variables.html#gaf4d9d903e4183910ee6764d902948a15", null ],
+    [ "uart2_rx_buff", "group___s_d___platform___variables.html#ga3c26ef62b04f8b01eb21a42368e16071", null ],
+    [ "uart2_rx_cbuff", "group___s_d___platform___variables.html#ga6727cd344d3e2e695b8a5aff466c529b", null ]
+];

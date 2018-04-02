@@ -1,0 +1,207 @@
+\hypertarget{group___s_d___g_p_i_o___functions}{}\section{G\+P\+IO Functions}
+\label{group___s_d___g_p_i_o___functions}\index{G\+P\+I\+O Functions@{G\+P\+I\+O Functions}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___s_d___g_p_i_o___functions_ga8e151b8cf065d8de5eb8f4908b18072b}{sd\+\_\+gpio\+\_\+init}} (void)
+\begin{DoxyCompactList}\small\item\em G\+P\+IO Initialization Configure pins as analog, input, output, event\+\_\+out and E\+X\+TI. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_d___g_p_i_o___functions_gad80abe67b4fa71703ee86cfc9c6f98ce}{sd\+\_\+gpio\+\_\+exti\+\_\+irqhandler}} (uint16\+\_\+t G\+P\+I\+O\+\_\+\+Pin)
+\begin{DoxyCompactList}\small\item\em Handle E\+X\+TI interrupt request. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group___s_d___g_p_i_o___functions_gad80abe67b4fa71703ee86cfc9c6f98ce}\label{group___s_d___g_p_i_o___functions_gad80abe67b4fa71703ee86cfc9c6f98ce}} 
+\index{G\+P\+I\+O Functions@{G\+P\+I\+O Functions}!sd\+\_\+gpio\+\_\+exti\+\_\+irqhandler@{sd\+\_\+gpio\+\_\+exti\+\_\+irqhandler}}
+\index{sd\+\_\+gpio\+\_\+exti\+\_\+irqhandler@{sd\+\_\+gpio\+\_\+exti\+\_\+irqhandler}!G\+P\+I\+O Functions@{G\+P\+I\+O Functions}}
+\subsubsection{\texorpdfstring{sd\+\_\+gpio\+\_\+exti\+\_\+irqhandler()}{sd\_gpio\_exti\_irqhandler()}}
+{\footnotesize\ttfamily void sd\+\_\+gpio\+\_\+exti\+\_\+irqhandler (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{G\+P\+I\+O\+\_\+\+Pin }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\mbox{\hyperlink{sd__gpio_8c}{Src/sd\+\_\+gpio.\+c}}$>$}
+
+
+
+Handle E\+X\+TI interrupt request. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pin} & Specifies the G\+P\+IO pin connected to E\+X\+TI line \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyCode}
+199 \{
+200     \textcolor{comment}{/* EXTI line interrupt detected */}
+201     \textcolor{keywordflow}{if} (\_\_HAL\_GPIO\_EXTI\_GET\_IT(GPIO\_Pin) != RESET) \{
+202         \_\_HAL\_GPIO\_EXTI\_CLEAR\_IT(GPIO\_Pin);
+203         HAL\_GPIO\_EXTI\_Callback(GPIO\_Pin);
+\end{DoxyCode}
+\mbox{\Hypertarget{group___s_d___g_p_i_o___functions_ga8e151b8cf065d8de5eb8f4908b18072b}\label{group___s_d___g_p_i_o___functions_ga8e151b8cf065d8de5eb8f4908b18072b}} 
+\index{G\+P\+I\+O Functions@{G\+P\+I\+O Functions}!sd\+\_\+gpio\+\_\+init@{sd\+\_\+gpio\+\_\+init}}
+\index{sd\+\_\+gpio\+\_\+init@{sd\+\_\+gpio\+\_\+init}!G\+P\+I\+O Functions@{G\+P\+I\+O Functions}}
+\subsubsection{\texorpdfstring{sd\+\_\+gpio\+\_\+init()}{sd\_gpio\_init()}}
+{\footnotesize\ttfamily void sd\+\_\+gpio\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\mbox{\hyperlink{sd__gpio_8c}{Src/sd\+\_\+gpio.\+c}}$>$}
+
+
+
+G\+P\+IO Initialization Configure pins as analog, input, output, event\+\_\+out and E\+X\+TI. 
+
+Configure the J2 pins ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+ Configure boot select pins ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+ Configure wireless 32k\+Hz clock, Zynq power, and Zynq clock pins, configure watchdog timer and I\$$^\wedge$2\$C switch reset pins. ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+ Configure button pins and Zynq power good pin ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+ Configure Zynq programming init pin ~\newline
+~\newline
+~\newline
+~\newline
+ Configure Zynq programming status pins ~\newline
+~\newline
+~\newline
+ Configure antenna select pins ~\newline
+~\newline
+ Configure Bluetooth enable pin ~\newline
+ Configure J\+T\+AG n\+R\+ST pin 
+\begin{DoxyCode}
+69 \{
+70     GPIO\_InitTypeDef GPIO\_InitStruct;
+71 
+72     \textcolor{comment}{/* GPIO Ports Clock Enable */}
+73     \_\_GPIOE\_CLK\_ENABLE();
+74     \_\_GPIOB\_CLK\_ENABLE();
+75     \_\_GPIOD\_CLK\_ENABLE();
+76     \_\_GPIOA\_CLK\_ENABLE();
+77     \_\_GPIOC\_CLK\_ENABLE();
+78     \_\_GPIOF\_CLK\_ENABLE();
+79     
+80     
+82     GPIO\_InitStruct.Pin = J2\_P4\_Pin | J2\_P3\_Pin;
+83     GPIO\_InitStruct.Mode = GPIO\_MODE\_OUTPUT\_PP;
+84     GPIO\_InitStruct.Pull = GPIO\_NOPULL;
+85     GPIO\_InitStruct.Speed = GPIO\_SPEED\_LOW;
+86     HAL\_GPIO\_Init(GPIOA, &GPIO\_InitStruct);
+87     
+88 
+90     GPIO\_InitStruct.Pin = MIO5\_BOOT\_SELECT\_Pin | 
+91                   MIO4\_BOOT\_SELECT\_Pin;
+92     GPIO\_InitStruct.Mode = GPIO\_MODE\_OUTPUT\_PP;
+93     GPIO\_InitStruct.Pull = GPIO\_NOPULL;
+94     GPIO\_InitStruct.Speed = GPIO\_SPEED\_LOW;
+95     HAL\_GPIO\_Init(GPIOE, &GPIO\_InitStruct);
+96 
+99     GPIO\_InitStruct.Pin = WL\_32KHZ\_CLK\_EN\_Pin | 
+100                   ZYNQ\_POWER\_EN\_Pin |
+101                   WDI\_Pin |
+102                   SMB\_NRESET\_Pin |
+103                   ZYNQ\_CLK\_EN\_Pin;
+104                 
+105     GPIO\_InitStruct.Mode = GPIO\_MODE\_OUTPUT\_PP;
+106     GPIO\_InitStruct.Pull = GPIO\_NOPULL;
+107     GPIO\_InitStruct.Speed = GPIO\_SPEED\_LOW;
+108     HAL\_GPIO\_Init(GPIOD, &GPIO\_InitStruct);
+109 
+111     GPIO\_InitStruct.Pin = SELECT\_BUTTON\_Pin |
+112                   RESET\_BUTTON\_Pin |
+113                   ZYNQ\_POWER\_GOOD\_Pin;
+114                 
+115     GPIO\_InitStruct.Mode = GPIO\_MODE\_INPUT;
+116     GPIO\_InitStruct.Pull = GPIO\_NOPULL;
+117     HAL\_GPIO\_Init(GPIOE, &GPIO\_InitStruct);
+118     
+120     GPIO\_InitStruct.Pin = ZYNQ\_INIT\_Pin;
+121     GPIO\_InitStruct.Mode = GPIO\_MODE\_IT\_RISING\_FALLING;
+122     GPIO\_InitStruct.Pull = GPIO\_NOPULL;
+123     HAL\_GPIO\_Init(ZYNQ\_INIT\_GPIO\_Port, &GPIO\_InitStruct);
+124     
+126     GPIO\_InitStruct.Pin = ZYNQ\_DONE\_Pin;
+127     GPIO\_InitStruct.Mode = GPIO\_MODE\_IT\_RISING;
+128     GPIO\_InitStruct.Pull = GPIO\_NOPULL;
+129     HAL\_GPIO\_Init(GPIOF, &GPIO\_InitStruct);
+130 
+132     GPIO\_InitStruct.Pin = ANT\_SELECT\_2\_Pin |
+133                   ANT\_SELECT\_1\_Pin;
+134     
+135     GPIO\_InitStruct.Mode = GPIO\_MODE\_OUTPUT\_PP;
+136     GPIO\_InitStruct.Pull = GPIO\_NOPULL;
+137     GPIO\_InitStruct.Speed = GPIO\_SPEED\_LOW;
+138     HAL\_GPIO\_Init(GPIOA, &GPIO\_InitStruct);
+139 
+141     GPIO\_InitStruct.Pin = WL18xx\_BT\_EN\_Pin;
+142     GPIO\_InitStruct.Mode = GPIO\_MODE\_OUTPUT\_PP;
+143     GPIO\_InitStruct.Pull = GPIO\_NOPULL;
+144     GPIO\_InitStruct.Speed = GPIO\_SPEED\_LOW;
+145     HAL\_GPIO\_Init(WL18xx\_BT\_EN\_GPIO\_Port, &GPIO\_InitStruct);
+146 
+148     GPIO\_InitStruct.Pin = JA1\_P2\_Pin |
+149                   JA2\_P2\_Pin |
+150                   JB1\_P2\_Pin |
+151                   JB2\_P2\_Pin |
+152                   JC1\_P2\_Pin;
+153                 
+154     GPIO\_InitStruct.Mode = GPIO\_MODE\_IT\_RISING;
+155     GPIO\_InitStruct.Pull = GPIO\_NOPULL;
+156     HAL\_GPIO\_Init(GPIOD, &GPIO\_InitStruct);
+157 
+159     GPIO\_InitStruct.Pin = ZYNQ\_JTAG\_NRST\_Pin;
+160     GPIO\_InitStruct.Mode = GPIO\_MODE\_OUTPUT\_OD;
+161     GPIO\_InitStruct.Pull = GPIO\_NOPULL;
+162     GPIO\_InitStruct.Speed = GPIO\_SPEED\_LOW;
+163     HAL\_GPIO\_Init(ZYNQ\_JTAG\_NRST\_GPIO\_Port, &GPIO\_InitStruct);
+164     
+165     \textcolor{comment}{/* Configure red LED pin */}
+166     GPIO\_InitStruct.Pin = RED\_Pin;
+167     GPIO\_InitStruct.Mode = GPIO\_MODE\_OUTPUT\_OD;
+168     GPIO\_InitStruct.Pull = GPIO\_NOPULL;
+169     GPIO\_InitStruct.Speed = GPIO\_SPEED\_LOW;
+170     HAL\_GPIO\_Init(RED\_GPIO\_Port, &GPIO\_InitStruct);
+171     
+172     \textcolor{comment}{/* Configure orange, white, blue, and green LED pins */}
+173     GPIO\_InitStruct.Pin = ORANGE\_Pin |
+174                   WHITE\_Pin |
+175                   BLUE\_Pin |
+176                   GREEN\_Pin;
+177         
+178     GPIO\_InitStruct.Mode = GPIO\_MODE\_OUTPUT\_OD;
+179     GPIO\_InitStruct.Pull = GPIO\_NOPULL;
+180     GPIO\_InitStruct.Speed = GPIO\_SPEED\_LOW;
+181     HAL\_GPIO\_Init(GPIOC, &GPIO\_InitStruct);
+182 
+184     HAL\_NVIC\_SetPriority(EXTI2\_3\_IRQn, 0, 0);
+185     HAL\_NVIC\_EnableIRQ(EXTI2\_3\_IRQn);
+186     
+187     HAL\_NVIC\_SetPriority(EXTI4\_15\_IRQn, 0, 0);
+\end{DoxyCode}

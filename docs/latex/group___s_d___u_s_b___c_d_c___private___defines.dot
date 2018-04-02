@@ -1,0 +1,9 @@
+digraph "SD_USB_CDC_Private_Defines"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir=LR;
+  Node0 [label="SD_USB_CDC_Private\l_Defines",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 [label="USB Communications\l Device Class Interface",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___s_d___u_s_b___c_d_c.html",tooltip="USB CDC interface configuration and control. "];
+  Node1->Node0 [shape=plaintext, dir="back", style="solid"];
+}

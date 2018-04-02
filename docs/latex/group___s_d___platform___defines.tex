@@ -1,0 +1,95 @@
+\hypertarget{group___s_d___platform___defines}{}\section{Platform Definitions}
+\label{group___s_d___platform___defines}\index{Platform Definitions@{Platform Definitions}}
+\subsection*{Modules}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___s_d___d_f_u___defines}{Device Firmware Upgrade}}
+\item 
+\mbox{\hyperlink{group___s_d___antenna___select}{W\+L18xx Antenna Selection}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___s_d___platform___defines_gaf42bf8bfc63a6cca851012eeb8e25b52}{C\+O\+N\+S\+\_\+\+U\+A\+R\+T\+\_\+\+R\+X\+\_\+\+B\+U\+F\+F\+\_\+\+S\+I\+ZE}}~128
+\item 
+\#define \mbox{\hyperlink{group___s_d___platform___defines_ga4140f88e45c8ac3d94ec6ebd12950b27}{I\+S\+\_\+\+W\+L18xx\+\_\+\+A\+N\+T\+E\+N\+N\+A\+\_\+\+M\+O\+DE}}(\+\_\+\+\_\+\+M\+O\+D\+E\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Check that the antenna selection is valid. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___s_d___platform___defines_ga7b2c7e2a005cad6b7572974e6a8fd4f8}{T\+O\+G\+G\+L\+E\+\_\+\+B\+IT}}(\+\_\+\+\_\+\+R\+E\+G\+\_\+\+\_\+,  \+\_\+\+\_\+\+B\+I\+T\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Toggle a single bit within a register. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___s_d___platform___defines_gaf42bf8bfc63a6cca851012eeb8e25b52}\label{group___s_d___platform___defines_gaf42bf8bfc63a6cca851012eeb8e25b52}} 
+\index{Platform Definitions@{Platform Definitions}!C\+O\+N\+S\+\_\+\+U\+A\+R\+T\+\_\+\+R\+X\+\_\+\+B\+U\+F\+F\+\_\+\+S\+I\+ZE@{C\+O\+N\+S\+\_\+\+U\+A\+R\+T\+\_\+\+R\+X\+\_\+\+B\+U\+F\+F\+\_\+\+S\+I\+ZE}}
+\index{C\+O\+N\+S\+\_\+\+U\+A\+R\+T\+\_\+\+R\+X\+\_\+\+B\+U\+F\+F\+\_\+\+S\+I\+ZE@{C\+O\+N\+S\+\_\+\+U\+A\+R\+T\+\_\+\+R\+X\+\_\+\+B\+U\+F\+F\+\_\+\+S\+I\+ZE}!Platform Definitions@{Platform Definitions}}
+\subsubsection{\texorpdfstring{C\+O\+N\+S\+\_\+\+U\+A\+R\+T\+\_\+\+R\+X\+\_\+\+B\+U\+F\+F\+\_\+\+S\+I\+ZE}{CONS\_UART\_RX\_BUFF\_SIZE}}
+{\footnotesize\ttfamily \#define C\+O\+N\+S\+\_\+\+U\+A\+R\+T\+\_\+\+R\+X\+\_\+\+B\+U\+F\+F\+\_\+\+S\+I\+ZE~128}
+
+
+
+{\ttfamily \#include $<$\mbox{\hyperlink{sd__platform_8h}{Inc/sd\+\_\+platform.\+h}}$>$}
+
+Console buffer size \mbox{\Hypertarget{group___s_d___platform___defines_ga4140f88e45c8ac3d94ec6ebd12950b27}\label{group___s_d___platform___defines_ga4140f88e45c8ac3d94ec6ebd12950b27}} 
+\index{Platform Definitions@{Platform Definitions}!I\+S\+\_\+\+W\+L18xx\+\_\+\+A\+N\+T\+E\+N\+N\+A\+\_\+\+M\+O\+DE@{I\+S\+\_\+\+W\+L18xx\+\_\+\+A\+N\+T\+E\+N\+N\+A\+\_\+\+M\+O\+DE}}
+\index{I\+S\+\_\+\+W\+L18xx\+\_\+\+A\+N\+T\+E\+N\+N\+A\+\_\+\+M\+O\+DE@{I\+S\+\_\+\+W\+L18xx\+\_\+\+A\+N\+T\+E\+N\+N\+A\+\_\+\+M\+O\+DE}!Platform Definitions@{Platform Definitions}}
+\subsubsection{\texorpdfstring{I\+S\+\_\+\+W\+L18xx\+\_\+\+A\+N\+T\+E\+N\+N\+A\+\_\+\+M\+O\+DE}{IS\_WL18xx\_ANTENNA\_MODE}}
+{\footnotesize\ttfamily \#define I\+S\+\_\+\+W\+L18xx\+\_\+\+A\+N\+T\+E\+N\+N\+A\+\_\+\+M\+O\+DE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+M\+O\+D\+E\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\mbox{\hyperlink{sd__platform_8h}{Inc/sd\+\_\+platform.\+h}}$>$}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(((\_\_MODE\_\_) == \mbox{\hyperlink{group___s_d___antenna___select_gad34710c5325cf565b89f2ce2f6fde3ae}{WL18xx\_ANTENNA\_SMA}}) || \(\backslash\)
+                       ((\_\_MODE\_\_) == \mbox{\hyperlink{group___s_d___antenna___select_ga1de725e07aecec98314b752abb71e644}{WL18xx\_ANTENNA\_CHIP}}))
+\end{DoxyCode}
+
+
+Check that the antenna selection is valid. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+M\+O\+D\+E\+\_\+\+\_\+} & The antenna mode selection \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em T\+R\+UE} & if {\bfseries M\+O\+DE} is valid, F\+A\+L\+SE otherwise \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_d___platform___defines_ga7b2c7e2a005cad6b7572974e6a8fd4f8}\label{group___s_d___platform___defines_ga7b2c7e2a005cad6b7572974e6a8fd4f8}} 
+\index{Platform Definitions@{Platform Definitions}!T\+O\+G\+G\+L\+E\+\_\+\+B\+IT@{T\+O\+G\+G\+L\+E\+\_\+\+B\+IT}}
+\index{T\+O\+G\+G\+L\+E\+\_\+\+B\+IT@{T\+O\+G\+G\+L\+E\+\_\+\+B\+IT}!Platform Definitions@{Platform Definitions}}
+\subsubsection{\texorpdfstring{T\+O\+G\+G\+L\+E\+\_\+\+B\+IT}{TOGGLE\_BIT}}
+{\footnotesize\ttfamily \#define T\+O\+G\+G\+L\+E\+\_\+\+B\+IT(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+R\+E\+G\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+B\+I\+T\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\mbox{\hyperlink{sd__platform_8h}{Inc/sd\+\_\+platform.\+h}}$>$}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+((\_\_REG\_\_ & (1 << \_\_BIT\_\_)) ? \(\backslash\)
+                     (\_\_REG\_\_ & ~(1 << \_\_BIT\_\_)) : \(\backslash\)
+                     (\_\_REG\_\_ | (1 << \_\_BIT\_\_)))
+\end{DoxyCode}
+
+
+Toggle a single bit within a register. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+R\+E\+G\+\_\+\+\_\+} & Register to toggle bit \\
+\hline
+{\em \+\_\+\+\_\+\+B\+I\+T\+\_\+\+\_\+} & Bit (0 index) to toggle \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em New} & register value with the bit toggled \\
+\hline
+\end{DoxyRetVals}

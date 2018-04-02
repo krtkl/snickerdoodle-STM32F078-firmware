@@ -1,0 +1,261 @@
+\hypertarget{group___s_d___u_s_b___c_d_c___i_f___functions}{}\section{U\+SB C\+DC Interface Functions}
+\label{group___s_d___u_s_b___c_d_c___i_f___functions}\index{U\+S\+B C\+D\+C Interface Functions@{U\+S\+B C\+D\+C Interface Functions}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{group___s_d___u_s_b___c_d_c___i_f___functions_gabd3573e5083061a52edc3dcd98e6f827}{sd\+\_\+cdc\+\_\+transmit}} (uint8\+\_\+t $\ast$buf, uint16\+\_\+t len)
+\begin{DoxyCompactList}\small\item\em U\+SB Communications Class Device Transmit Data send over U\+SB IN endpoint are sent over C\+DC interface through this function. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___s_d___u_s_b___c_d_c___i_f___functions_ga583a2dd513f08c7f796c00581ec28643}\label{group___s_d___u_s_b___c_d_c___i_f___functions_ga583a2dd513f08c7f796c00581ec28643}} 
+uint8\+\_\+t {\bfseries sd\+\_\+cdc\+\_\+get\+\_\+state} (void)
+\item 
+static int8\+\_\+t \mbox{\hyperlink{group___s_d___u_s_b___c_d_c___i_f___functions_ga9acc365b136914ed8a39593ee02d0260}{sd\+\_\+cdc\+\_\+init}} (void)
+\begin{DoxyCompactList}\small\item\em C\+D\+C\+\_\+\+Init\+\_\+\+FS Initializes the C\+DC media low layer over the FS U\+SB IP. \end{DoxyCompactList}\item 
+static int8\+\_\+t \mbox{\hyperlink{group___s_d___u_s_b___c_d_c___i_f___functions_gad9f46346272b91f23250ef22b6a1e600}{sd\+\_\+cdc\+\_\+deinit}} (void)
+\begin{DoxyCompactList}\small\item\em C\+D\+C\+\_\+\+De\+Init\+\_\+\+FS De\+Initializes the C\+DC media low layer. \end{DoxyCompactList}\item 
+static int8\+\_\+t \mbox{\hyperlink{group___s_d___u_s_b___c_d_c___i_f___functions_ga7c03942883325c01bc3fd6410d4d1911}{sd\+\_\+cdc\+\_\+control}} (uint8\+\_\+t cmd, uint8\+\_\+t $\ast$pbuf, uint16\+\_\+t length)
+\begin{DoxyCompactList}\small\item\em U\+SB Communications Class Device Control Request Manage the C\+DC class requests. \end{DoxyCompactList}\item 
+static int8\+\_\+t \mbox{\hyperlink{group___s_d___u_s_b___c_d_c___i_f___functions_ga5da74bc52d86c1f85d057f7df7d7674a}{sd\+\_\+cdc\+\_\+receive}} (uint8\+\_\+t $\ast$buf, uint32\+\_\+t $\ast$len)
+\begin{DoxyCompactList}\small\item\em U\+SB Communications Class Device Receive Data received over U\+SB O\+UT endpoint are sent over C\+DC interface through this function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group___s_d___u_s_b___c_d_c___i_f___functions_ga7c03942883325c01bc3fd6410d4d1911}\label{group___s_d___u_s_b___c_d_c___i_f___functions_ga7c03942883325c01bc3fd6410d4d1911}} 
+\index{U\+S\+B C\+D\+C Interface Functions@{U\+S\+B C\+D\+C Interface Functions}!sd\+\_\+cdc\+\_\+control@{sd\+\_\+cdc\+\_\+control}}
+\index{sd\+\_\+cdc\+\_\+control@{sd\+\_\+cdc\+\_\+control}!U\+S\+B C\+D\+C Interface Functions@{U\+S\+B C\+D\+C Interface Functions}}
+\subsubsection{\texorpdfstring{sd\+\_\+cdc\+\_\+control()}{sd\_cdc\_control()}}
+{\footnotesize\ttfamily static int8\+\_\+t sd\+\_\+cdc\+\_\+control (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{cmd,  }\item[{uint8\+\_\+t $\ast$}]{pbuf,  }\item[{uint16\+\_\+t}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+{\ttfamily \#include $<$\mbox{\hyperlink{sd__usbd__cdc__if_8c}{Src/sd\+\_\+usbd\+\_\+cdc\+\_\+if.\+c}}$>$}
+
+
+
+U\+SB Communications Class Device Control Request Manage the C\+DC class requests. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cmd} & Command code ~\newline
+\\
+\hline
+{\em pbuf} & Buffer containing command data (request parameters) \\
+\hline
+{\em length} & Number of data to be sent (in bytes) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em U\+S\+B\+D\+\_\+\+OK} & if all operations are successful else U\+S\+B\+D\+\_\+\+F\+A\+IL or U\+S\+B\+D\+\_\+\+B\+U\+SY \\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyCode}
+168 \{ 
+169     \textcolor{keywordflow}{switch} (cmd) \{
+170     \textcolor{keywordflow}{case} CDC\_SEND\_ENCAPSULATED\_COMMAND:
+171  
+172         \textcolor{keywordflow}{break};
+173 
+174     \textcolor{keywordflow}{case} CDC\_GET\_ENCAPSULATED\_RESPONSE:
+175  
+176         \textcolor{keywordflow}{break};
+177 
+178     \textcolor{keywordflow}{case} CDC\_SET\_COMM\_FEATURE:
+179  
+180         \textcolor{keywordflow}{break};
+181 
+182     \textcolor{keywordflow}{case} CDC\_GET\_COMM\_FEATURE:
+183 
+184         \textcolor{keywordflow}{break};
+185 
+186     \textcolor{keywordflow}{case} CDC\_CLEAR\_COMM\_FEATURE:
+187 
+188         \textcolor{keywordflow}{break};
+189 
+190 \textcolor{comment}{/********************************************************************************/}
+191 \textcolor{comment}{/* Line Coding Structure                            */}
+192 \textcolor{comment}{/*------------------------------------------------------------------------------*/}
+193 \textcolor{comment}{/* Offset | Field       | Size | Value  | Description               */}
+194 \textcolor{comment}{/* 0      | dwDTERate   |   4  | Number |Data terminal rate, in bits per second */}
+195 \textcolor{comment}{/* 4      | bCharFormat |   1  | Number | Stop bits             */}
+196 \textcolor{comment}{/*                  0 - 1 Stop bit              */}
+197 \textcolor{comment}{/*                  1 - 1.5 Stop bits           */}
+198 \textcolor{comment}{/*                  2 - 2 Stop bits             */}
+199 \textcolor{comment}{/* 5      | bParityType |  1   | Number | Parity                */}
+200 \textcolor{comment}{/*                  0 - None                */}
+201 \textcolor{comment}{/*                  1 - Odd                 */}
+202 \textcolor{comment}{/*                  2 - Even                */}
+203 \textcolor{comment}{/*                  3 - Mark                */}
+204 \textcolor{comment}{/*                  4 - Space               */}
+205 \textcolor{comment}{/* 6      | bDataBits  |   1   | Number Data bits (5, 6, 7, 8 or 16).       */}
+206 \textcolor{comment}{/********************************************************************************/}
+207     \textcolor{keywordflow}{case} CDC\_SET\_LINE\_CODING:   
+208     
+209         \textcolor{keywordflow}{break};
+210 
+211     \textcolor{keywordflow}{case} CDC\_GET\_LINE\_CODING:     
+212 
+213         \textcolor{keywordflow}{break};
+214 
+215     \textcolor{keywordflow}{case} CDC\_SET\_CONTROL\_LINE\_STATE:
+216 
+217         \textcolor{keywordflow}{break};
+218 
+219     \textcolor{keywordflow}{case} CDC\_SEND\_BREAK:
+220  
+221         \textcolor{keywordflow}{break};    
+222     
+223     \textcolor{keywordflow}{default}:
+224         \textcolor{keywordflow}{break};
+225     \}     
+226 
+227     \textcolor{keywordflow}{return} (USBD\_OK);
+\end{DoxyCode}
+\mbox{\Hypertarget{group___s_d___u_s_b___c_d_c___i_f___functions_gad9f46346272b91f23250ef22b6a1e600}\label{group___s_d___u_s_b___c_d_c___i_f___functions_gad9f46346272b91f23250ef22b6a1e600}} 
+\index{U\+S\+B C\+D\+C Interface Functions@{U\+S\+B C\+D\+C Interface Functions}!sd\+\_\+cdc\+\_\+deinit@{sd\+\_\+cdc\+\_\+deinit}}
+\index{sd\+\_\+cdc\+\_\+deinit@{sd\+\_\+cdc\+\_\+deinit}!U\+S\+B C\+D\+C Interface Functions@{U\+S\+B C\+D\+C Interface Functions}}
+\subsubsection{\texorpdfstring{sd\+\_\+cdc\+\_\+deinit()}{sd\_cdc\_deinit()}}
+{\footnotesize\ttfamily static int8\+\_\+t sd\+\_\+cdc\+\_\+deinit (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+{\ttfamily \#include $<$\mbox{\hyperlink{sd__usbd__cdc__if_8c}{Src/sd\+\_\+usbd\+\_\+cdc\+\_\+if.\+c}}$>$}
+
+
+
+C\+D\+C\+\_\+\+De\+Init\+\_\+\+FS De\+Initializes the C\+DC media low layer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em U\+S\+B\+D\+\_\+\+OK} & if all operations are successful else U\+S\+B\+D\+\_\+\+F\+A\+IL or U\+S\+B\+D\+\_\+\+B\+U\+SY \\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyCode}
+152 \{
+153     hUsbDevice\_0 = NULL;
+154     \textcolor{keywordflow}{return} (USBD\_OK);
+\end{DoxyCode}
+\mbox{\Hypertarget{group___s_d___u_s_b___c_d_c___i_f___functions_ga9acc365b136914ed8a39593ee02d0260}\label{group___s_d___u_s_b___c_d_c___i_f___functions_ga9acc365b136914ed8a39593ee02d0260}} 
+\index{U\+S\+B C\+D\+C Interface Functions@{U\+S\+B C\+D\+C Interface Functions}!sd\+\_\+cdc\+\_\+init@{sd\+\_\+cdc\+\_\+init}}
+\index{sd\+\_\+cdc\+\_\+init@{sd\+\_\+cdc\+\_\+init}!U\+S\+B C\+D\+C Interface Functions@{U\+S\+B C\+D\+C Interface Functions}}
+\subsubsection{\texorpdfstring{sd\+\_\+cdc\+\_\+init()}{sd\_cdc\_init()}}
+{\footnotesize\ttfamily static int8\+\_\+t sd\+\_\+cdc\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+{\ttfamily \#include $<$\mbox{\hyperlink{sd__usbd__cdc__if_8c}{Src/sd\+\_\+usbd\+\_\+cdc\+\_\+if.\+c}}$>$}
+
+
+
+C\+D\+C\+\_\+\+Init\+\_\+\+FS Initializes the C\+DC media low layer over the FS U\+SB IP. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em U\+S\+B\+D\+\_\+\+OK} & if all operations are successful else U\+S\+B\+D\+\_\+\+F\+A\+IL or U\+S\+B\+D\+\_\+\+B\+U\+SY \\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyCode}
+131 \{
+132     hUsbDevice\_0 = &hUsbDeviceFS;
+133     
+134     \textcolor{comment}{/* Set Application Buffers */}
+135     USBD\_CDC\_SetTxBuffer(hUsbDevice\_0, UserTxBufferFS, 0);
+136     USBD\_CDC\_SetRxBuffer(hUsbDevice\_0, UserRxBufferFS);
+137   
+138     USBD\_CDC\_ReceivePacket(hUsbDevice\_0);
+139 
+140     \textcolor{keywordflow}{return} (USBD\_OK);
+\end{DoxyCode}
+\mbox{\Hypertarget{group___s_d___u_s_b___c_d_c___i_f___functions_ga5da74bc52d86c1f85d057f7df7d7674a}\label{group___s_d___u_s_b___c_d_c___i_f___functions_ga5da74bc52d86c1f85d057f7df7d7674a}} 
+\index{U\+S\+B C\+D\+C Interface Functions@{U\+S\+B C\+D\+C Interface Functions}!sd\+\_\+cdc\+\_\+receive@{sd\+\_\+cdc\+\_\+receive}}
+\index{sd\+\_\+cdc\+\_\+receive@{sd\+\_\+cdc\+\_\+receive}!U\+S\+B C\+D\+C Interface Functions@{U\+S\+B C\+D\+C Interface Functions}}
+\subsubsection{\texorpdfstring{sd\+\_\+cdc\+\_\+receive()}{sd\_cdc\_receive()}}
+{\footnotesize\ttfamily static int8\+\_\+t sd\+\_\+cdc\+\_\+receive (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{buf,  }\item[{uint32\+\_\+t $\ast$}]{len }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+{\ttfamily \#include $<$\mbox{\hyperlink{sd__usbd__cdc__if_8c}{Src/sd\+\_\+usbd\+\_\+cdc\+\_\+if.\+c}}$>$}
+
+
+
+U\+SB Communications Class Device Receive Data received over U\+SB O\+UT endpoint are sent over C\+DC interface through this function. 
+
+\begin{DoxyNote}{Note}
+This function will block any O\+UT packet reception on U\+SB endpoint until exiting this function. If you exit this function before transfer is complete on C\+DC interface (ie. using D\+MA controller) it will result in receiving more data while previous ones are still not sent.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em buf} & Buffer of data to be received \\
+\hline
+{\em len} & Number of data received (in bytes) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em U\+S\+B\+D\+\_\+\+OK} & if all operations are successful else U\+S\+B\+D\+\_\+\+F\+A\+IL or U\+S\+B\+D\+\_\+\+B\+U\+SY \\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyCode}
+247 \{
+248     uint8\_t result;
+249 
+250     HAL\_UART\_Transmit((&\mbox{\hyperlink{group___s_d___u_a_r_t___exported___variables_ga34b6075e649bd2f9d6bcef303a9cdce6}{uart1\_dev}})->uart, buf, *\mbox{\hyperlink{structsd__cbuf_a96bbf959016e4411c9e6b9812a8be60a}{len}}, 1000); \textcolor{comment}{/* Bridge to UART */}
+251     result = USBD\_CDC\_ReceivePacket(hUsbDevice\_0);
+252   
+253     \textcolor{keywordflow}{return} result;
+\end{DoxyCode}
+\mbox{\Hypertarget{group___s_d___u_s_b___c_d_c___i_f___functions_gabd3573e5083061a52edc3dcd98e6f827}\label{group___s_d___u_s_b___c_d_c___i_f___functions_gabd3573e5083061a52edc3dcd98e6f827}} 
+\index{U\+S\+B C\+D\+C Interface Functions@{U\+S\+B C\+D\+C Interface Functions}!sd\+\_\+cdc\+\_\+transmit@{sd\+\_\+cdc\+\_\+transmit}}
+\index{sd\+\_\+cdc\+\_\+transmit@{sd\+\_\+cdc\+\_\+transmit}!U\+S\+B C\+D\+C Interface Functions@{U\+S\+B C\+D\+C Interface Functions}}
+\subsubsection{\texorpdfstring{sd\+\_\+cdc\+\_\+transmit()}{sd\_cdc\_transmit()}}
+{\footnotesize\ttfamily uint8\+\_\+t sd\+\_\+cdc\+\_\+transmit (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{buf,  }\item[{uint16\+\_\+t}]{len }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\mbox{\hyperlink{sd__usbd__cdc__if_8c}{Src/sd\+\_\+usbd\+\_\+cdc\+\_\+if.\+c}}$>$}
+
+
+
+U\+SB Communications Class Device Transmit Data send over U\+SB IN endpoint are sent over C\+DC interface through this function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buf} & Buffer of data to be send \\
+\hline
+{\em len} & Number of data to be send (in bytes) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em U\+S\+B\+D\+\_\+\+OK} & if all operations are successful else U\+S\+B\+D\+\_\+\+F\+A\+IL or U\+S\+B\+D\+\_\+\+B\+U\+SY \\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyCode}
+267 \{
+268     uint8\_t result = USBD\_OK;
+269     
+270     \textcolor{keywordflow}{if} (hUsbDevice\_0 == NULL) 
+271         \textcolor{keywordflow}{return} USBD\_FAIL;
+272   
+273     USBD\_CDC\_SetTxBuffer(hUsbDevice\_0, buf, \mbox{\hyperlink{structsd__cbuf_a96bbf959016e4411c9e6b9812a8be60a}{len}});   
+274     result = USBD\_CDC\_TransmitPacket(hUsbDevice\_0);
+275     
+276     \textcolor{keywordflow}{return} result;
+\end{DoxyCode}

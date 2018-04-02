@@ -1,0 +1,509 @@
+\hypertarget{group___s_d___platform___function___declarations}{}\section{Platform Functions}
+\label{group___s_d___platform___function___declarations}\index{Platform Functions@{Platform Functions}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___s_d___platform___function___declarations_ga3d09a16b4b68ce526bd3eddba77b655c}{sd\+\_\+wl18xx\+\_\+ant\+\_\+config}} (uint8\+\_\+t ant)
+\begin{DoxyCompactList}\small\item\em W\+L18xx Antenna Configuration Outputs antenna select pins for the wireless module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_d___platform___function___declarations_gaf9291353913fb90687c915313dea1a0c}{sd\+\_\+zynq\+\_\+clk\+\_\+enable}} (uint8\+\_\+t en)
+\begin{DoxyCompactList}\small\item\em Zynq Clock Enable Enables the main clock source for the Zynq A\+PU. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_d___platform___function___declarations_ga028c8d70d36b43a468aafb78c7442eef}{sd\+\_\+zynq\+\_\+jtag\+\_\+enable}} (uint8\+\_\+t en)
+\begin{DoxyCompactList}\small\item\em Zynq J\+T\+AG Enable Enables the J\+T\+AG interface for programming the PS or PL. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_d___platform___function___declarations_ga3a5f60d707cd2405cf9f9a36c69de97d}{sd\+\_\+wl\+\_\+clk\+\_\+enable}} (uint8\+\_\+t en)
+\begin{DoxyCompactList}\small\item\em Wireless Clock Enable Enable the wireless module 32k\+Hz clock source. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_d___platform___function___declarations_ga5901d51fd6320b6f45c3de9e910ef765}{sd\+\_\+bt\+\_\+enable}} (uint8\+\_\+t en)
+\begin{DoxyCompactList}\small\item\em Bluetooth Enable Enable the Bluetooth interface on the wireless module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_d___platform___function___declarations_ga759f86160fc8d270309fc2a74e4139e3}{sd\+\_\+zynq\+\_\+boot\+\_\+config}} (enum \mbox{\hyperlink{group___s_d___platform_ga06667de95c86bfcdef8bcc8ab13cb2d4}{sd\+\_\+zynq\+\_\+boot}} boot)
+\begin{DoxyCompactList}\small\item\em Zynq Boot Config Outputs boot select pins to zynq for desired boot media source. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___s_d___platform___function___declarations_ga28381c9d642f66d9a6968ff7406a63d4}\label{group___s_d___platform___function___declarations_ga28381c9d642f66d9a6968ff7406a63d4}} 
+enum \mbox{\hyperlink{group___s_d___platform_ga06667de95c86bfcdef8bcc8ab13cb2d4}{sd\+\_\+zynq\+\_\+boot}} \mbox{\hyperlink{group___s_d___platform___function___declarations_ga28381c9d642f66d9a6968ff7406a63d4}{sd\+\_\+boot\+\_\+select}} (void)
+\begin{DoxyCompactList}\small\item\em Boot selection. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group___s_d___u_a_r_t___u_s_b___bridge___types_ga7e4773a8cce69fafe541cad55985f146}{sd\+\_\+uart\+\_\+usb\+\_\+err}} \mbox{\hyperlink{group___s_d___platform___function___declarations_gaa03f4625c66a0fe3be62a6aead8ac2ba}{sd\+\_\+uart\+\_\+usb\+\_\+bridge\+\_\+init}} (void)
+\begin{DoxyCompactList}\small\item\em U\+A\+RT to U\+SB Bridge Initialization Initialize U\+A\+RT device structure, U\+A\+RT to U\+SB bridge buffer and set the U\+A\+RT device to use the (previously initialized) U\+A\+RT peripheral and newly initialized buffer. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group___s_d___u_a_r_t___u_s_b___bridge___types_ga7e4773a8cce69fafe541cad55985f146}{sd\+\_\+uart\+\_\+usb\+\_\+err}} \mbox{\hyperlink{group___s_d___platform___function___declarations_ga7277fee3051720471dd68980c4928cbc}{sd\+\_\+uart\+\_\+usb\+\_\+transmit}} (struct \mbox{\hyperlink{structsd__uart__dev}{sd\+\_\+uart\+\_\+dev}} $\ast$dev)
+\begin{DoxyCompactList}\small\item\em U\+A\+RT to U\+SB Bridge Transmission Transmit the buffer that has been recieved on the bridged U\+A\+RT over U\+SB communications device. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_d___platform___function___declarations_ga405f1d2a69e1cf1f3d1ddbcbc3063651}{sd\+\_\+dfu\+\_\+start}} (void)
+\begin{DoxyCompactList}\small\item\em Enter Device Firmware Upgrade Mode Prepare device to enter system memory by disabling peripheral clocks, disable P\+LL, clear pending interrupts and disable interrupts. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_d___platform___function___declarations_gac30b9aa0032a9a8598735242c7cfa5bc}{sd\+\_\+zynq\+\_\+enable}} (void)
+\begin{DoxyCompactList}\small\item\em Enable Zynq Power Enable the Zynq power rails by setting the enable pin high. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_d___platform___function___declarations_gaaaa432cbbf3382d321107a38a56b9bef}{sd\+\_\+zynq\+\_\+disable}} (void)
+\begin{DoxyCompactList}\small\item\em Disable Zynq Power Disable the Zynq power rails by setting the enable pin low. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group___s_d___platform___function___declarations_ga5901d51fd6320b6f45c3de9e910ef765}\label{group___s_d___platform___function___declarations_ga5901d51fd6320b6f45c3de9e910ef765}} 
+\index{Platform Functions@{Platform Functions}!sd\+\_\+bt\+\_\+enable@{sd\+\_\+bt\+\_\+enable}}
+\index{sd\+\_\+bt\+\_\+enable@{sd\+\_\+bt\+\_\+enable}!Platform Functions@{Platform Functions}}
+\subsubsection{\texorpdfstring{sd\+\_\+bt\+\_\+enable()}{sd\_bt\_enable()}}
+{\footnotesize\ttfamily void sd\+\_\+bt\+\_\+enable (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{enable }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\mbox{\hyperlink{sd__platform_8h}{Inc/sd\+\_\+platform.\+h}}$>$}
+
+
+
+Bluetooth Enable Enable the Bluetooth interface on the wireless module. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enable} & State to set for Bluetooth interface \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyCode}
+160 \{
+161     GPIO\_PinState en = enable ? GPIO\_PIN\_SET : GPIO\_PIN\_RESET;
+162     
+163     HAL\_GPIO\_WritePin(WL18xx\_BT\_EN\_GPIO\_Port, 
+164               WL18xx\_BT\_EN\_Pin, en);
+165 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group___s_d___platform___function___declarations_ga405f1d2a69e1cf1f3d1ddbcbc3063651}\label{group___s_d___platform___function___declarations_ga405f1d2a69e1cf1f3d1ddbcbc3063651}} 
+\index{Platform Functions@{Platform Functions}!sd\+\_\+dfu\+\_\+start@{sd\+\_\+dfu\+\_\+start}}
+\index{sd\+\_\+dfu\+\_\+start@{sd\+\_\+dfu\+\_\+start}!Platform Functions@{Platform Functions}}
+\subsubsection{\texorpdfstring{sd\+\_\+dfu\+\_\+start()}{sd\_dfu\_start()}}
+{\footnotesize\ttfamily void sd\+\_\+dfu\+\_\+start (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\mbox{\hyperlink{sd__platform_8h}{Inc/sd\+\_\+platform.\+h}}$>$}
+
+
+
+Enter Device Firmware Upgrade Mode Prepare device to enter system memory by disabling peripheral clocks, disable P\+LL, clear pending interrupts and disable interrupts. 
+
+Disable peripheral clocks
+
+Disable P\+LL
+
+Disable systick
+
+Run to stack pointer and execute code from system memory
+\begin{DoxyCode}
+447 \{
+448     void (*boot\_jump)(void);
+449     
+453     \_\_GPIOA\_CLK\_DISABLE();
+454     \_\_GPIOB\_CLK\_DISABLE();
+455     \_\_GPIOC\_CLK\_DISABLE();
+456     \_\_GPIOD\_CLK\_DISABLE();
+457     \_\_GPIOE\_CLK\_DISABLE();
+458     \_\_GPIOF\_CLK\_DISABLE();
+459     
+463     RCC->CR    |= (uint32\_t)0x00000001; \textcolor{comment}{/* Set HSION bit */}
+464     RCC->CFGR  &= (uint32\_t)0x08FFB80C; \textcolor{comment}{/* Reset SW[1:0], HPRE[3:0], PPRE[2:0], ADCPRE, MCOSEL[2:0],
+       MCOPRE[2:0] and PLLNODIV bits */}
+465     RCC->CR    &= (uint32\_t)0xFEF6FFFF; \textcolor{comment}{/* Reset HSEON, CSSON and PLLON bits */}
+466     RCC->CR    &= (uint32\_t)0xFFFBFFFF; \textcolor{comment}{/* Reset HSEBYP bit */}
+467     RCC->CFGR  &= (uint32\_t)0xFFC0FFFF; \textcolor{comment}{/* Reset PLLSRC, PLLXTPRE and PLLMUL[3:0] bits */}
+468     RCC->CFGR2 &= (uint32\_t)0xFFFFFFF0; \textcolor{comment}{/* Reset PREDIV1[3:0] bits */}
+469     RCC->CFGR3 &= (uint32\_t)0xFFF0FEAC; \textcolor{comment}{/* Reset USARTSW[1:0], I2CSW, CECSW and ADCSW bits */}
+470     RCC->CR2   &= (uint32\_t)0xFFFFFFFE; \textcolor{comment}{/* Reset HSI14 bit */}
+471     RCC->CIR    = 0x00000000;       \textcolor{comment}{/* Disable all interrupts */}
+472     
+476     SysTick->CTRL = 0;
+477     SysTick->LOAD = 0;
+478     SysTick->VAL = 0;
+479     
+483     \_\_set\_MSP(\mbox{\hyperlink{group___s_d___d_f_u___defines_ga21b3d67021ba56888c69720267842d0b}{BOOT\_STACK\_ADDR}});
+484     boot\_jump = (void (*)(void))(*((uint32\_t *)(\mbox{\hyperlink{group___s_d___d_f_u___defines_ga15f619642ddd540adedf01b2c32eb950}{SYS\_MEM\_START\_ADDR}} + 4)));
+485     boot\_jump();
+486     \textcolor{keywordflow}{while} (1);
+487 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group___s_d___platform___function___declarations_gaa03f4625c66a0fe3be62a6aead8ac2ba}\label{group___s_d___platform___function___declarations_gaa03f4625c66a0fe3be62a6aead8ac2ba}} 
+\index{Platform Functions@{Platform Functions}!sd\+\_\+uart\+\_\+usb\+\_\+bridge\+\_\+init@{sd\+\_\+uart\+\_\+usb\+\_\+bridge\+\_\+init}}
+\index{sd\+\_\+uart\+\_\+usb\+\_\+bridge\+\_\+init@{sd\+\_\+uart\+\_\+usb\+\_\+bridge\+\_\+init}!Platform Functions@{Platform Functions}}
+\subsubsection{\texorpdfstring{sd\+\_\+uart\+\_\+usb\+\_\+bridge\+\_\+init()}{sd\_uart\_usb\_bridge\_init()}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group___s_d___u_a_r_t___u_s_b___bridge___types_ga7e4773a8cce69fafe541cad55985f146}{sd\+\_\+uart\+\_\+usb\+\_\+err}} sd\+\_\+uart\+\_\+usb\+\_\+bridge\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\mbox{\hyperlink{sd__platform_8h}{Inc/sd\+\_\+platform.\+h}}$>$}
+
+
+
+U\+A\+RT to U\+SB Bridge Initialization Initialize U\+A\+RT device structure, U\+A\+RT to U\+SB bridge buffer and set the U\+A\+RT device to use the (previously initialized) U\+A\+RT peripheral and newly initialized buffer. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em State} & of U\+A\+RT U\+SB bridge after initialization \\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyCode}
+351 \{
+352     \textcolor{comment}{/* Initialize the UART device(s) */}
+353 \textcolor{comment}{//  if (sd\_uart\_dev\_init(&uart1\_dev) != SD\_UART\_SUCCESS)}
+354 \textcolor{comment}{//      return SD\_UART\_USB\_ERROR;}
+355 \textcolor{comment}{//  }
+356 \textcolor{comment}{//  if (sd\_uart\_dev\_init(&uart2\_dev) != SD\_UART\_SUCCESS)}
+357 \textcolor{comment}{//      return SD\_UART\_USB\_ERROR;}
+358 \textcolor{comment}{//  }
+359 \textcolor{comment}{//  /* Initialize the UART <--> USB Buffer */}
+360 \textcolor{comment}{//  if (sd\_char\_buff\_init(&uart1\_rx\_cbuff, }
+361 \textcolor{comment}{//                CONS\_UART\_RX\_BUFF\_SIZE, }
+362 \textcolor{comment}{//                uart1\_rx\_buff) != SD\_BUFF\_SUCCESS)}
+363 \textcolor{comment}{//      return SD\_UART\_USB\_ERROR;}
+364 \textcolor{comment}{//  }
+365 \textcolor{comment}{//  if (sd\_char\_buff\_init(&uart2\_rx\_cbuff, }
+366 \textcolor{comment}{//                CONS\_UART\_RX\_BUFF\_SIZE,}
+367 \textcolor{comment}{//                uart2\_rx\_buff) != SD\_BUFF\_SUCCESS)}
+368 \textcolor{comment}{//      return SD\_UART\_USB\_ERROR;}
+369 \textcolor{comment}{//  }
+370 \textcolor{comment}{//  /* Set the UART device with the peripheral and buffer*/}
+371 \textcolor{comment}{//  if (sd\_uart\_rx\_init(&uart1\_dev, &huart1, &uart1\_rx\_cbuff) != SD\_BUFF\_SUCCESS)}
+372 \textcolor{comment}{//      return SD\_UART\_USB\_ERROR;}
+373 \textcolor{comment}{//  }
+374 \textcolor{comment}{//  if (sd\_uart\_rx\_init(&uart2\_dev, &huart2, &uart2\_rx\_cbuff) != SD\_BUFF\_SUCCESS)}
+375 \textcolor{comment}{//      return SD\_UART\_USB\_ERROR;}
+376 
+377     \textcolor{keywordflow}{return} \mbox{\hyperlink{group___s_d___u_a_r_t___u_s_b___bridge___types_gga7e4773a8cce69fafe541cad55985f146a5f1ee74f25f6a6f1aa6b771dc91abe11}{SD\_UART\_USB\_SUCCESS}};
+378 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group___s_d___platform___function___declarations_ga7277fee3051720471dd68980c4928cbc}\label{group___s_d___platform___function___declarations_ga7277fee3051720471dd68980c4928cbc}} 
+\index{Platform Functions@{Platform Functions}!sd\+\_\+uart\+\_\+usb\+\_\+transmit@{sd\+\_\+uart\+\_\+usb\+\_\+transmit}}
+\index{sd\+\_\+uart\+\_\+usb\+\_\+transmit@{sd\+\_\+uart\+\_\+usb\+\_\+transmit}!Platform Functions@{Platform Functions}}
+\subsubsection{\texorpdfstring{sd\+\_\+uart\+\_\+usb\+\_\+transmit()}{sd\_uart\_usb\_transmit()}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group___s_d___u_a_r_t___u_s_b___bridge___types_ga7e4773a8cce69fafe541cad55985f146}{sd\+\_\+uart\+\_\+usb\+\_\+err}} sd\+\_\+uart\+\_\+usb\+\_\+transmit (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structsd__uart__dev}{sd\+\_\+uart\+\_\+dev}} $\ast$}]{dev }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+{\ttfamily \#include $<$\mbox{\hyperlink{sd__platform_8h}{Inc/sd\+\_\+platform.\+h}}$>$}
+
+
+
+U\+A\+RT to U\+SB Bridge Transmission Transmit the buffer that has been recieved on the bridged U\+A\+RT over U\+SB communications device. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uart\+\_\+dev} & U\+A\+RT device structure that is bridged \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em S\+D\+\_\+\+U\+A\+R\+T\+\_\+\+U\+S\+B\+\_\+\+S\+U\+C\+C\+E\+SS} & on success, error state otherwise \\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyCode}
+390 \{
+391     \textcolor{keyword}{struct }\mbox{\hyperlink{structsd__cbuf}{sd\_cbuf}} *rxbuff = dev->\mbox{\hyperlink{structsd__uart__dev_a2bc17c33f4234299b83ba5d98edd5887}{rx\_buff}};
+392     \textcolor{keyword}{static} uint8\_t txbuff[\mbox{\hyperlink{group___s_d___platform___defines_gaf42bf8bfc63a6cca851012eeb8e25b52}{CONS\_UART\_RX\_BUFF\_SIZE}}];
+393     \textcolor{keyword}{static} uint32\_t idx;
+394     uint8\_t \mbox{\hyperlink{structsd__cbuf_aa88ff4ca3b7aaba9e9aaa27fd9ea94a9}{state}};
+395 
+396     \textcolor{keywordflow}{while} (rxbuff->\mbox{\hyperlink{structsd__cbuf_a96bbf959016e4411c9e6b9812a8be60a}{len}} && (idx < \mbox{\hyperlink{group___s_d___platform___defines_gaf42bf8bfc63a6cca851012eeb8e25b52}{CONS\_UART\_RX\_BUFF\_SIZE}})) \{
+397         \textcolor{comment}{/* Check for the end of the buffer and wrap */}
+398         \textcolor{keywordflow}{if} (rxbuff->\mbox{\hyperlink{structsd__cbuf_ab27775f0ed2b042b439a7431fbe311eb}{out}} >= rxbuff->\mbox{\hyperlink{structsd__cbuf_ab2c6b258f02add8fdf4cfc7c371dd772}{size}})
+399             rxbuff->\mbox{\hyperlink{structsd__cbuf_ab27775f0ed2b042b439a7431fbe311eb}{out}} = 0;
+400     
+401         \textcolor{comment}{/* Put the character in the secondary buffer */}
+402         txbuff[idx++] = rxbuff->\mbox{\hyperlink{structsd__cbuf_a8b212742c92a124f2eb4a244acc19f7c}{buff}}[rxbuff->\mbox{\hyperlink{structsd__cbuf_ab27775f0ed2b042b439a7431fbe311eb}{out}}++];
+403     
+404         \textcolor{comment}{/* Check for the end of the buffer and wrap */}
+405         \textcolor{keywordflow}{if} (rxbuff->\mbox{\hyperlink{structsd__cbuf_ab27775f0ed2b042b439a7431fbe311eb}{out}} >= rxbuff->\mbox{\hyperlink{structsd__cbuf_ab2c6b258f02add8fdf4cfc7c371dd772}{size}})
+406             rxbuff->\mbox{\hyperlink{structsd__cbuf_ab27775f0ed2b042b439a7431fbe311eb}{out}} = 0;
+407     
+408         \textcolor{keywordflow}{if} (--rxbuff->\mbox{\hyperlink{structsd__cbuf_a96bbf959016e4411c9e6b9812a8be60a}{len}} <= 0)
+409             rxbuff->\mbox{\hyperlink{structsd__cbuf_a96bbf959016e4411c9e6b9812a8be60a}{len}} = 0;
+410     
+411         \textcolor{comment}{/* Check if the UART interrupt has been triggered and end this loop */}
+412         \textcolor{keywordflow}{if} ((\_\_HAL\_UART\_GET\_IT(dev->\mbox{\hyperlink{structsd__uart__dev_a31b2a452cffe839ac4a3bf86eddc16b0}{uart}}, UART\_IT\_RXNE) != RESET) && 
+413             (\_\_HAL\_UART\_GET\_IT\_SOURCE(dev->\mbox{\hyperlink{structsd__uart__dev_a31b2a452cffe839ac4a3bf86eddc16b0}{uart}}, UART\_IT\_RXNE) != RESET))
+414             \textcolor{keywordflow}{return} \mbox{\hyperlink{group___s_d___u_a_r_t___u_s_b___bridge___types_gga7e4773a8cce69fafe541cad55985f146a5f1ee74f25f6a6f1aa6b771dc91abe11}{SD\_UART\_USB\_SUCCESS}};  \textcolor{comment}{/* End the loop here so that the UART can
+       operate */}
+415     \}
+416 
+417     \textcolor{comment}{/* Transmit if there is anything to transmit */}
+418     \textcolor{keywordflow}{if} (idx) \{
+419         \mbox{\hyperlink{structsd__cbuf_aa88ff4ca3b7aaba9e9aaa27fd9ea94a9}{state}} = sd\_cdc\_get\_state();
+420         
+421         \textcolor{keywordflow}{if} (\mbox{\hyperlink{structsd__cbuf_aa88ff4ca3b7aaba9e9aaa27fd9ea94a9}{state}} == USBD\_STATE\_CONFIGURED) \{
+422             \mbox{\hyperlink{group___s_d___u_s_b___c_d_c___i_f___functions_gabd3573e5083061a52edc3dcd98e6f827}{sd\_cdc\_transmit}}(txbuff, idx);
+423             idx = 0;    \textcolor{comment}{/* Reset the index once we've transmitted */}
+424         \}
+425     \}
+426 
+427     \textcolor{keywordflow}{return} \mbox{\hyperlink{group___s_d___u_a_r_t___u_s_b___bridge___types_gga7e4773a8cce69fafe541cad55985f146a5f1ee74f25f6a6f1aa6b771dc91abe11}{SD\_UART\_USB\_SUCCESS}};
+428 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group___s_d___platform___function___declarations_ga3d09a16b4b68ce526bd3eddba77b655c}\label{group___s_d___platform___function___declarations_ga3d09a16b4b68ce526bd3eddba77b655c}} 
+\index{Platform Functions@{Platform Functions}!sd\+\_\+wl18xx\+\_\+ant\+\_\+config@{sd\+\_\+wl18xx\+\_\+ant\+\_\+config}}
+\index{sd\+\_\+wl18xx\+\_\+ant\+\_\+config@{sd\+\_\+wl18xx\+\_\+ant\+\_\+config}!Platform Functions@{Platform Functions}}
+\subsubsection{\texorpdfstring{sd\+\_\+wl18xx\+\_\+ant\+\_\+config()}{sd\_wl18xx\_ant\_config()}}
+{\footnotesize\ttfamily void sd\+\_\+wl18xx\+\_\+ant\+\_\+config (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{ant }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\mbox{\hyperlink{sd__platform_8h}{Inc/sd\+\_\+platform.\+h}}$>$}
+
+
+
+W\+L18xx Antenna Configuration Outputs antenna select pins for the wireless module. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ant} & Value defining antenna configuration (two L\+S\+Bs used) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyCode}
+313 \{
+314     GPIO\_PinState ant\_select\_1, ant\_select\_2;
+315  
+316     \textcolor{comment}{/* Check that the antenna selection is valid */}
+317     \textcolor{keywordflow}{if} (!\mbox{\hyperlink{group___s_d___platform___defines_ga4140f88e45c8ac3d94ec6ebd12950b27}{IS\_WL18xx\_ANTENNA\_MODE}}(ant))
+318         \textcolor{keywordflow}{return};
+319 
+320     \textcolor{comment}{/* Determine antenna select pins from bits */}
+321     ant\_select\_1 = (ant & 0x01) ? GPIO\_PIN\_SET : GPIO\_PIN\_RESET;
+322     ant\_select\_2 = (ant & 0x02) ? GPIO\_PIN\_SET : GPIO\_PIN\_RESET;
+323 
+324     \textcolor{comment}{/* Output GPIO selection pins */}
+325     HAL\_GPIO\_WritePin(ANT\_SELECT\_1\_GPIO\_Port, ANT\_SELECT\_2\_Pin,
+326               ant\_select\_1);                           
+327     HAL\_GPIO\_WritePin(ANT\_SELECT\_2\_GPIO\_Port, ANT\_SELECT\_2\_Pin,
+328               ant\_select\_2);     
+329 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group___s_d___platform___function___declarations_ga3a5f60d707cd2405cf9f9a36c69de97d}\label{group___s_d___platform___function___declarations_ga3a5f60d707cd2405cf9f9a36c69de97d}} 
+\index{Platform Functions@{Platform Functions}!sd\+\_\+wl\+\_\+clk\+\_\+enable@{sd\+\_\+wl\+\_\+clk\+\_\+enable}}
+\index{sd\+\_\+wl\+\_\+clk\+\_\+enable@{sd\+\_\+wl\+\_\+clk\+\_\+enable}!Platform Functions@{Platform Functions}}
+\subsubsection{\texorpdfstring{sd\+\_\+wl\+\_\+clk\+\_\+enable()}{sd\_wl\_clk\_enable()}}
+{\footnotesize\ttfamily void sd\+\_\+wl\+\_\+clk\+\_\+enable (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{enable }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\mbox{\hyperlink{sd__platform_8h}{Inc/sd\+\_\+platform.\+h}}$>$}
+
+
+
+Wireless Clock Enable Enable the wireless module 32k\+Hz clock source. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enable} & State to set for clock \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyCode}
+144 \{
+145     GPIO\_PinState en = enable ? GPIO\_PIN\_SET : GPIO\_PIN\_RESET;
+146 
+147     HAL\_GPIO\_WritePin(WL\_32KHZ\_CLK\_EN\_GPIO\_Port, 
+148               WL\_32KHZ\_CLK\_EN\_Pin, en);
+149 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group___s_d___platform___function___declarations_ga759f86160fc8d270309fc2a74e4139e3}\label{group___s_d___platform___function___declarations_ga759f86160fc8d270309fc2a74e4139e3}} 
+\index{Platform Functions@{Platform Functions}!sd\+\_\+zynq\+\_\+boot\+\_\+config@{sd\+\_\+zynq\+\_\+boot\+\_\+config}}
+\index{sd\+\_\+zynq\+\_\+boot\+\_\+config@{sd\+\_\+zynq\+\_\+boot\+\_\+config}!Platform Functions@{Platform Functions}}
+\subsubsection{\texorpdfstring{sd\+\_\+zynq\+\_\+boot\+\_\+config()}{sd\_zynq\_boot\_config()}}
+{\footnotesize\ttfamily void sd\+\_\+zynq\+\_\+boot\+\_\+config (\begin{DoxyParamCaption}\item[{enum \mbox{\hyperlink{group___s_d___platform_ga06667de95c86bfcdef8bcc8ab13cb2d4}{sd\+\_\+zynq\+\_\+boot}}}]{boot }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\mbox{\hyperlink{sd__platform_8h}{Inc/sd\+\_\+platform.\+h}}$>$}
+
+
+
+Zynq Boot Config Outputs boot select pins to zynq for desired boot media source. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em boot} & Value defining boot pin outputs \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyCode}
+178 \{
+179     GPIO\_PinState mio4\_out, mio5\_out;
+180   
+181     \textcolor{keywordflow}{switch} (boot) \{
+182     \textcolor{keywordflow}{case} \mbox{\hyperlink{group___s_d___platform_gga06667de95c86bfcdef8bcc8ab13cb2d4aa0c510b780474f1292f04a8b7b987a76}{SD\_ZYNQ\_BOOT\_JTAG}}:
+183         mio4\_out = GPIO\_PIN\_RESET;      \textcolor{comment}{/* 0 */}
+184         mio5\_out = GPIO\_PIN\_RESET;      \textcolor{comment}{/* 0 */}
+185         \textcolor{keywordflow}{break};
+186     
+187     \textcolor{keywordflow}{case} \mbox{\hyperlink{group___s_d___platform_gga06667de95c86bfcdef8bcc8ab13cb2d4ad270040d99cf171dc127ebca46e82c54}{SD\_ZYNQ\_BOOT\_NAND}}:
+188         mio4\_out = GPIO\_PIN\_SET;    \textcolor{comment}{/* 1 */}
+189         mio5\_out = GPIO\_PIN\_RESET;      \textcolor{comment}{/* 0 */}
+190         \textcolor{keywordflow}{break};
+191     
+192     \textcolor{keywordflow}{case} \mbox{\hyperlink{group___s_d___platform_gga06667de95c86bfcdef8bcc8ab13cb2d4a85166851f8dac48bd3b4261debe97472}{SD\_ZYNQ\_BOOT\_QSPI}}:
+193         mio4\_out = GPIO\_PIN\_RESET;      \textcolor{comment}{/* 0 */}
+194         mio5\_out = GPIO\_PIN\_SET;    \textcolor{comment}{/* 1 */}
+195         \textcolor{keywordflow}{break};
+196     
+197     \textcolor{keywordflow}{case} \mbox{\hyperlink{group___s_d___platform_gga06667de95c86bfcdef8bcc8ab13cb2d4af1351df506cd9586ffcd35813fa3f5f9}{SD\_ZYNQ\_BOOT\_SD}}:
+198         mio4\_out = GPIO\_PIN\_SET;    \textcolor{comment}{/* 1 */}
+199         mio5\_out = GPIO\_PIN\_SET;    \textcolor{comment}{/* 1 */}
+200         \textcolor{keywordflow}{break};
+201     \}
+202  
+203     \textcolor{comment}{/* Write boot select pins */}
+204     HAL\_GPIO\_WritePin(MIO4\_BOOT\_SELECT\_GPIO\_Port,
+205               MIO4\_BOOT\_SELECT\_Pin,
+206               mio4\_out);
+207     
+208     HAL\_GPIO\_WritePin(MIO5\_BOOT\_SELECT\_GPIO\_Port, 
+209               MIO5\_BOOT\_SELECT\_Pin,
+210               mio5\_out);
+211 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group___s_d___platform___function___declarations_gaf9291353913fb90687c915313dea1a0c}\label{group___s_d___platform___function___declarations_gaf9291353913fb90687c915313dea1a0c}} 
+\index{Platform Functions@{Platform Functions}!sd\+\_\+zynq\+\_\+clk\+\_\+enable@{sd\+\_\+zynq\+\_\+clk\+\_\+enable}}
+\index{sd\+\_\+zynq\+\_\+clk\+\_\+enable@{sd\+\_\+zynq\+\_\+clk\+\_\+enable}!Platform Functions@{Platform Functions}}
+\subsubsection{\texorpdfstring{sd\+\_\+zynq\+\_\+clk\+\_\+enable()}{sd\_zynq\_clk\_enable()}}
+{\footnotesize\ttfamily void sd\+\_\+zynq\+\_\+clk\+\_\+enable (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{enable }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\mbox{\hyperlink{sd__platform_8h}{Inc/sd\+\_\+platform.\+h}}$>$}
+
+
+
+Zynq Clock Enable Enables the main clock source for the Zynq A\+PU. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enable} & State to set for clock \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyCode}
+111 \{
+112     GPIO\_PinState en = enable ? GPIO\_PIN\_SET : GPIO\_PIN\_RESET;
+113     
+114     HAL\_GPIO\_WritePin(ZYNQ\_CLK\_EN\_GPIO\_Port, 
+115               ZYNQ\_CLK\_EN\_Pin, en);
+116 
+117 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group___s_d___platform___function___declarations_gaaaa432cbbf3382d321107a38a56b9bef}\label{group___s_d___platform___function___declarations_gaaaa432cbbf3382d321107a38a56b9bef}} 
+\index{Platform Functions@{Platform Functions}!sd\+\_\+zynq\+\_\+disable@{sd\+\_\+zynq\+\_\+disable}}
+\index{sd\+\_\+zynq\+\_\+disable@{sd\+\_\+zynq\+\_\+disable}!Platform Functions@{Platform Functions}}
+\subsubsection{\texorpdfstring{sd\+\_\+zynq\+\_\+disable()}{sd\_zynq\_disable()}}
+{\footnotesize\ttfamily void sd\+\_\+zynq\+\_\+disable (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\mbox{\hyperlink{sd__platform_8h}{Inc/sd\+\_\+platform.\+h}}$>$}
+
+
+
+Disable Zynq Power Disable the Zynq power rails by setting the enable pin low. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em butt} & Button used to trigger this function \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyCode}
+240 \{
+241     HAL\_GPIO\_WritePin(ZYNQ\_POWER\_EN\_GPIO\_Port,
+242                 ZYNQ\_POWER\_EN\_Pin, GPIO\_PIN\_RESET);
+243     \mbox{\hyperlink{group___s_d___l_e_d___pattern___functions_gaee88ed175473585caa9ae05d5b66f993}{sd\_led\_rapid}}(&\mbox{\hyperlink{group___s_d___l_e_d___exported___variables_gae551cefd341794956c9c2a06a4782ae9}{app\_led}});
+244 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group___s_d___platform___function___declarations_gac30b9aa0032a9a8598735242c7cfa5bc}\label{group___s_d___platform___function___declarations_gac30b9aa0032a9a8598735242c7cfa5bc}} 
+\index{Platform Functions@{Platform Functions}!sd\+\_\+zynq\+\_\+enable@{sd\+\_\+zynq\+\_\+enable}}
+\index{sd\+\_\+zynq\+\_\+enable@{sd\+\_\+zynq\+\_\+enable}!Platform Functions@{Platform Functions}}
+\subsubsection{\texorpdfstring{sd\+\_\+zynq\+\_\+enable()}{sd\_zynq\_enable()}}
+{\footnotesize\ttfamily void sd\+\_\+zynq\+\_\+enable (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\mbox{\hyperlink{sd__platform_8h}{Inc/sd\+\_\+platform.\+h}}$>$}
+
+
+
+Enable Zynq Power Enable the Zynq power rails by setting the enable pin high. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em butt} & Button used to trigger this function \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyCode}
+255 \{
+256     HAL\_GPIO\_WritePin(ZYNQ\_POWER\_EN\_GPIO\_Port,
+257                 ZYNQ\_POWER\_EN\_Pin, GPIO\_PIN\_SET);
+258                 
+259     \mbox{\hyperlink{group___s_d___l_e_d___functions_ga1a7bb12d105f503fec86d069725f6591}{sd\_led\_reset}}(&\mbox{\hyperlink{group___s_d___l_e_d___exported___variables_gae551cefd341794956c9c2a06a4782ae9}{app\_led}});
+260 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group___s_d___platform___function___declarations_ga028c8d70d36b43a468aafb78c7442eef}\label{group___s_d___platform___function___declarations_ga028c8d70d36b43a468aafb78c7442eef}} 
+\index{Platform Functions@{Platform Functions}!sd\+\_\+zynq\+\_\+jtag\+\_\+enable@{sd\+\_\+zynq\+\_\+jtag\+\_\+enable}}
+\index{sd\+\_\+zynq\+\_\+jtag\+\_\+enable@{sd\+\_\+zynq\+\_\+jtag\+\_\+enable}!Platform Functions@{Platform Functions}}
+\subsubsection{\texorpdfstring{sd\+\_\+zynq\+\_\+jtag\+\_\+enable()}{sd\_zynq\_jtag\_enable()}}
+{\footnotesize\ttfamily void sd\+\_\+zynq\+\_\+jtag\+\_\+enable (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{enable }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\mbox{\hyperlink{sd__platform_8h}{Inc/sd\+\_\+platform.\+h}}$>$}
+
+
+
+Zynq J\+T\+AG Enable Enables the J\+T\+AG interface for programming the PS or PL. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enable} & State to set for J\+T\+AG interface \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyCode}
+128 \{
+129     GPIO\_PinState en = enable ? GPIO\_PIN\_SET : GPIO\_PIN\_RESET;
+130 
+131     HAL\_GPIO\_WritePin(ZYNQ\_JTAG\_NRST\_GPIO\_Port, 
+132               ZYNQ\_JTAG\_NRST\_Pin, en);
+133 \}
+\end{DoxyCode}

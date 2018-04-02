@@ -1,0 +1,9 @@
+digraph "WL18xx Antenna Configuration"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir=LR;
+  Node1 [label="Platform Configuration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___s_d___platform.html",tooltip="Platform specific board level configuration and control. "];
+  Node0 [label="WL18xx Antenna Configuration",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1->Node0 [shape=plaintext, dir="back", style="solid"];
+}

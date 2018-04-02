@@ -1,0 +1,9 @@
+digraph "sd_adc_irqhandler"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node8 [label="sd_adc_irqhandler",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node8 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="ADC1_COMP_IRQHandler",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___s_d___interrupt___functions.html#ga66180d7bef479114519b508f6d2beb10",tooltip="ADC Interrupt Handler This function handles ADC and COMP interrupts (COMP interrupts through EXTI lin..."];
+}

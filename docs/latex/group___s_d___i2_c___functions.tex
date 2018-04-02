@@ -1,0 +1,317 @@
+\hypertarget{group___s_d___i2_c___functions}{}\section{I2C Functions}
+\label{group___s_d___i2_c___functions}\index{I2\+C Functions@{I2\+C Functions}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___s_d___i2_c___functions_ga47b7e9401e2826acc6b03f258dc644a9}{sd\+\_\+i2c1\+\_\+init}} (void)
+\begin{DoxyCompactList}\small\item\em I2\+C1 Initialization Initialize low-\/level hardware peripheral and set device handle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_d___i2_c___functions_ga8ae735df0c54e25588a526d9a92d3a69}{sd\+\_\+i2c2\+\_\+init}} (void)
+\begin{DoxyCompactList}\small\item\em I2\+C2 Initialization Initialize low-\/level hardware peripheral and set device handle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_d___i2_c___functions_gabe01a202c27b23fc150aa66af3130073}{H\+A\+L\+\_\+\+I2\+C\+\_\+\+Msp\+Init}} (I2\+C\+\_\+\+Handle\+Type\+Def $\ast$hi2c)
+\item 
+\mbox{\Hypertarget{group___s_d___i2_c___functions_ga2ec8d9b09854c732e2feed549278f048}\label{group___s_d___i2_c___functions_ga2ec8d9b09854c732e2feed549278f048}} 
+void {\bfseries H\+A\+L\+\_\+\+I2\+C\+\_\+\+Msp\+De\+Init} (I2\+C\+\_\+\+Handle\+Type\+Def $\ast$hi2c)
+\item 
+enum \mbox{\hyperlink{group___s_d___i2_c___types_gae1e3131e61bdef08371262ffb4948a04}{sd\+\_\+i2c\+\_\+err}} \mbox{\hyperlink{group___s_d___i2_c___functions_ga6bd934690e906815d10e8812be1b5215}{sd\+\_\+i2\+C\+\_\+set\+\_\+chan}} (struct \mbox{\hyperlink{structsd__i2c__dev}{sd\+\_\+i2c\+\_\+dev}} $\ast$dev, uint8\+\_\+t chan)
+\begin{DoxyCompactList}\small\item\em Set I2C channel Set I2C channel (more than one channel may be specified) to broadcast messages. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group___s_d___i2_c___types_gae1e3131e61bdef08371262ffb4948a04}{sd\+\_\+i2c\+\_\+err}} \mbox{\hyperlink{group___s_d___i2_c___functions_gae53676ec67141159567ef4b5b5aadb2e}{sd\+\_\+i2c\+\_\+en\+\_\+chan}} (struct \mbox{\hyperlink{structsd__i2c__dev}{sd\+\_\+i2c\+\_\+dev}} $\ast$dev, uint8\+\_\+t chan)
+\begin{DoxyCompactList}\small\item\em Enable I2C channel Enable an I2C channel without altering previously configured channels. More than one channel may be specified. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group___s_d___i2_c___types_gae1e3131e61bdef08371262ffb4948a04}{sd\+\_\+i2c\+\_\+err}} \mbox{\hyperlink{group___s_d___i2_c___functions_ga813c9280ce6745a2e55bccc9d562cd54}{sd\+\_\+i2c\+\_\+dis\+\_\+chan}} (struct \mbox{\hyperlink{structsd__i2c__dev}{sd\+\_\+i2c\+\_\+dev}} $\ast$dev, uint8\+\_\+t chan)
+\begin{DoxyCompactList}\small\item\em Disable I2C channel Disable an I2C channel without altering previously configured channels. More than one channel may be specified. \end{DoxyCompactList}\item 
+static enum \mbox{\hyperlink{group___s_d___i2_c___types_gae1e3131e61bdef08371262ffb4948a04}{sd\+\_\+i2c\+\_\+err}} \mbox{\hyperlink{group___s_d___i2_c___functions_ga5ca9adea5de20505761f892603bf8805}{sd\+\_\+i2c\+\_\+dev\+\_\+init}} (struct \mbox{\hyperlink{structsd__i2c__dev}{sd\+\_\+i2c\+\_\+dev}} $\ast$dev, I2\+C\+\_\+\+Handle\+Type\+Def $\ast$hi2c)
+\begin{DoxyCompactList}\small\item\em Initialize I2C channel Initialize I2C channel with a peripheral handle and set the device as ready. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group___s_d___i2_c___functions_gabe01a202c27b23fc150aa66af3130073}\label{group___s_d___i2_c___functions_gabe01a202c27b23fc150aa66af3130073}} 
+\index{I2\+C Functions@{I2\+C Functions}!H\+A\+L\+\_\+\+I2\+C\+\_\+\+Msp\+Init@{H\+A\+L\+\_\+\+I2\+C\+\_\+\+Msp\+Init}}
+\index{H\+A\+L\+\_\+\+I2\+C\+\_\+\+Msp\+Init@{H\+A\+L\+\_\+\+I2\+C\+\_\+\+Msp\+Init}!I2\+C Functions@{I2\+C Functions}}
+\subsubsection{\texorpdfstring{H\+A\+L\+\_\+\+I2\+C\+\_\+\+Msp\+Init()}{HAL\_I2C\_MspInit()}}
+{\footnotesize\ttfamily void H\+A\+L\+\_\+\+I2\+C\+\_\+\+Msp\+Init (\begin{DoxyParamCaption}\item[{I2\+C\+\_\+\+Handle\+Type\+Def $\ast$}]{hi2c }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\mbox{\hyperlink{sd__i2c_8c}{Src/sd\+\_\+i2c.\+c}}$>$}
+
+\paragraph*{I2\+C1 G\+P\+IO Configuration}
+
+\tabulinesep=1mm
+\begin{longtabu} spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ Pin/\+Port  }&\textbf{ Signal -\/------   }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ Pin/\+Port  }&\textbf{ Signal -\/------   }\\\cline{1-2}
+\endhead
+P\+B8  &S\+CL   \\\cline{1-2}
+P\+B9  &S\+DA   \\\cline{1-2}
+\end{longtabu}
+
+
+\paragraph*{I2\+C2 G\+P\+IO Configuration}
+
+\tabulinesep=1mm
+\begin{longtabu} spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ Pin/\+Port  }&\textbf{ Signal -\/-\/-\/-\/---   }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ Pin/\+Port  }&\textbf{ Signal -\/-\/-\/-\/---   }\\\cline{1-2}
+\endhead
+P\+B10  &S\+CL   \\\cline{1-2}
+P\+B11  &S\+DA   \\\cline{1-2}
+\end{longtabu}
+
+\begin{DoxyCode}
+148 \{
+149     GPIO\_InitTypeDef GPIO\_InitStruct;
+150     \textcolor{keywordflow}{if} (hi2c->Instance==I2C1) \{
+159         GPIO\_InitStruct.Pin = SMB\_I2C\_SCL\_Pin|SMB\_I2C\_SDA\_Pin;
+160         GPIO\_InitStruct.Mode = GPIO\_MODE\_AF\_OD;
+161         GPIO\_InitStruct.Pull = GPIO\_PULLUP;
+162         GPIO\_InitStruct.Speed = GPIO\_SPEED\_HIGH;
+163         GPIO\_InitStruct.Alternate = GPIO\_AF1\_I2C1;
+164         HAL\_GPIO\_Init(GPIOB, &GPIO\_InitStruct);
+165 
+166         \textcolor{comment}{/* Peripheral clock enable */}
+167         \_\_I2C1\_CLK\_ENABLE();
+168     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (hi2c->Instance==I2C2) \{
+177         GPIO\_InitStruct.Pin = CRYPTO\_I2C\_SCL\_Pin|CRYPTO\_I2C\_SDA\_Pin;
+178         GPIO\_InitStruct.Mode = GPIO\_MODE\_AF\_OD;
+179         GPIO\_InitStruct.Pull = GPIO\_PULLUP;
+180         GPIO\_InitStruct.Speed = GPIO\_SPEED\_HIGH;
+181         GPIO\_InitStruct.Alternate = GPIO\_AF1\_I2C2;
+182         HAL\_GPIO\_Init(GPIOB, &GPIO\_InitStruct);
+183 
+184         \textcolor{comment}{/* Peripheral clock enable */}
+185         \_\_I2C2\_CLK\_ENABLE();
+186     \}
+187 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group___s_d___i2_c___functions_ga47b7e9401e2826acc6b03f258dc644a9}\label{group___s_d___i2_c___functions_ga47b7e9401e2826acc6b03f258dc644a9}} 
+\index{I2\+C Functions@{I2\+C Functions}!sd\+\_\+i2c1\+\_\+init@{sd\+\_\+i2c1\+\_\+init}}
+\index{sd\+\_\+i2c1\+\_\+init@{sd\+\_\+i2c1\+\_\+init}!I2\+C Functions@{I2\+C Functions}}
+\subsubsection{\texorpdfstring{sd\+\_\+i2c1\+\_\+init()}{sd\_i2c1\_init()}}
+{\footnotesize\ttfamily void sd\+\_\+i2c1\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\mbox{\hyperlink{sd__i2c_8c}{Src/sd\+\_\+i2c.\+c}}$>$}
+
+
+
+I2\+C1 Initialization Initialize low-\/level hardware peripheral and set device handle. 
+
+Configure Analog filter
+\begin{DoxyCode}
+97 \{
+98     \mbox{\hyperlink{group___s_d___i2_c___private___variables_gaf7b2c26e44dadaaa798a5c3d82914ba7}{hi2c1}}.Instance = I2C1;
+99     \mbox{\hyperlink{group___s_d___i2_c___private___variables_gaf7b2c26e44dadaaa798a5c3d82914ba7}{hi2c1}}.Init.Timing = 0x20303E5D;
+100     \mbox{\hyperlink{group___s_d___i2_c___private___variables_gaf7b2c26e44dadaaa798a5c3d82914ba7}{hi2c1}}.Init.OwnAddress1 = 0;
+101     \mbox{\hyperlink{group___s_d___i2_c___private___variables_gaf7b2c26e44dadaaa798a5c3d82914ba7}{hi2c1}}.Init.AddressingMode = I2C\_ADDRESSINGMODE\_7BIT;
+102     \mbox{\hyperlink{group___s_d___i2_c___private___variables_gaf7b2c26e44dadaaa798a5c3d82914ba7}{hi2c1}}.Init.DualAddressMode = I2C\_DUALADDRESS\_DISABLED;
+103     \mbox{\hyperlink{group___s_d___i2_c___private___variables_gaf7b2c26e44dadaaa798a5c3d82914ba7}{hi2c1}}.Init.OwnAddress2 = 0;
+104     \mbox{\hyperlink{group___s_d___i2_c___private___variables_gaf7b2c26e44dadaaa798a5c3d82914ba7}{hi2c1}}.Init.OwnAddress2Masks = I2C\_OA2\_NOMASK;
+105     \mbox{\hyperlink{group___s_d___i2_c___private___variables_gaf7b2c26e44dadaaa798a5c3d82914ba7}{hi2c1}}.Init.GeneralCallMode = I2C\_GENERALCALL\_DISABLED;
+106     \mbox{\hyperlink{group___s_d___i2_c___private___variables_gaf7b2c26e44dadaaa798a5c3d82914ba7}{hi2c1}}.Init.NoStretchMode = I2C\_NOSTRETCH\_DISABLED;
+107     HAL\_I2C\_Init(&\mbox{\hyperlink{group___s_d___i2_c___private___variables_gaf7b2c26e44dadaaa798a5c3d82914ba7}{hi2c1}});
+108 
+112     HAL\_I2CEx\_AnalogFilter\_Config(&\mbox{\hyperlink{group___s_d___i2_c___private___variables_gaf7b2c26e44dadaaa798a5c3d82914ba7}{hi2c1}}, I2C\_ANALOGFILTER\_ENABLED);
+113     
+114     \textcolor{comment}{/* Initialize I2C device */}
+115     \mbox{\hyperlink{group___s_d___i2_c___functions_ga5ca9adea5de20505761f892603bf8805}{sd\_i2c\_dev\_init}}(&\mbox{\hyperlink{group___s_d___i2_c___exported___variables_ga46fcd07cf43d192f6e66c43657a21d7b}{i2c1\_dev}}, &\mbox{\hyperlink{group___s_d___i2_c___private___variables_gaf7b2c26e44dadaaa798a5c3d82914ba7}{hi2c1}});
+116 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group___s_d___i2_c___functions_ga8ae735df0c54e25588a526d9a92d3a69}\label{group___s_d___i2_c___functions_ga8ae735df0c54e25588a526d9a92d3a69}} 
+\index{I2\+C Functions@{I2\+C Functions}!sd\+\_\+i2c2\+\_\+init@{sd\+\_\+i2c2\+\_\+init}}
+\index{sd\+\_\+i2c2\+\_\+init@{sd\+\_\+i2c2\+\_\+init}!I2\+C Functions@{I2\+C Functions}}
+\subsubsection{\texorpdfstring{sd\+\_\+i2c2\+\_\+init()}{sd\_i2c2\_init()}}
+{\footnotesize\ttfamily void sd\+\_\+i2c2\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\mbox{\hyperlink{sd__i2c_8c}{Src/sd\+\_\+i2c.\+c}}$>$}
+
+
+
+I2\+C2 Initialization Initialize low-\/level hardware peripheral and set device handle. 
+
+Configure Analog filter
+\begin{DoxyCode}
+124 \{
+125     \mbox{\hyperlink{group___s_d___i2_c___private___variables_gac379bcc152d860f08b1279fd3e232295}{hi2c2}}.Instance = I2C2;
+126     \mbox{\hyperlink{group___s_d___i2_c___private___variables_gac379bcc152d860f08b1279fd3e232295}{hi2c2}}.Init.Timing = 0x20303E5D;
+127     \mbox{\hyperlink{group___s_d___i2_c___private___variables_gac379bcc152d860f08b1279fd3e232295}{hi2c2}}.Init.OwnAddress1 = 0;
+128     \mbox{\hyperlink{group___s_d___i2_c___private___variables_gac379bcc152d860f08b1279fd3e232295}{hi2c2}}.Init.AddressingMode = I2C\_ADDRESSINGMODE\_7BIT;
+129     \mbox{\hyperlink{group___s_d___i2_c___private___variables_gac379bcc152d860f08b1279fd3e232295}{hi2c2}}.Init.DualAddressMode = I2C\_DUALADDRESS\_DISABLED;
+130     \mbox{\hyperlink{group___s_d___i2_c___private___variables_gac379bcc152d860f08b1279fd3e232295}{hi2c2}}.Init.OwnAddress2 = 0;
+131     \mbox{\hyperlink{group___s_d___i2_c___private___variables_gac379bcc152d860f08b1279fd3e232295}{hi2c2}}.Init.OwnAddress2Masks = I2C\_OA2\_NOMASK;
+132     \mbox{\hyperlink{group___s_d___i2_c___private___variables_gac379bcc152d860f08b1279fd3e232295}{hi2c2}}.Init.GeneralCallMode = I2C\_GENERALCALL\_DISABLED;
+133     \mbox{\hyperlink{group___s_d___i2_c___private___variables_gac379bcc152d860f08b1279fd3e232295}{hi2c2}}.Init.NoStretchMode = I2C\_NOSTRETCH\_DISABLED;
+134     HAL\_I2C\_Init(&\mbox{\hyperlink{group___s_d___i2_c___private___variables_gac379bcc152d860f08b1279fd3e232295}{hi2c2}});
+135 
+139     HAL\_I2CEx\_AnalogFilter\_Config(&\mbox{\hyperlink{group___s_d___i2_c___private___variables_gac379bcc152d860f08b1279fd3e232295}{hi2c2}}, I2C\_ANALOGFILTER\_ENABLED);
+140     
+141     \textcolor{comment}{/* Initialize I2C device */}
+142     \mbox{\hyperlink{group___s_d___i2_c___functions_ga5ca9adea5de20505761f892603bf8805}{sd\_i2c\_dev\_init}}(&\mbox{\hyperlink{group___s_d___i2_c___exported___variables_gaf020fc820b9c33b80b636a363fd79912}{i2c2\_dev}}, &\mbox{\hyperlink{group___s_d___i2_c___private___variables_gac379bcc152d860f08b1279fd3e232295}{hi2c2}});
+143 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group___s_d___i2_c___functions_ga5ca9adea5de20505761f892603bf8805}\label{group___s_d___i2_c___functions_ga5ca9adea5de20505761f892603bf8805}} 
+\index{I2\+C Functions@{I2\+C Functions}!sd\+\_\+i2c\+\_\+dev\+\_\+init@{sd\+\_\+i2c\+\_\+dev\+\_\+init}}
+\index{sd\+\_\+i2c\+\_\+dev\+\_\+init@{sd\+\_\+i2c\+\_\+dev\+\_\+init}!I2\+C Functions@{I2\+C Functions}}
+\subsubsection{\texorpdfstring{sd\+\_\+i2c\+\_\+dev\+\_\+init()}{sd\_i2c\_dev\_init()}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group___s_d___i2_c___types_gae1e3131e61bdef08371262ffb4948a04}{sd\+\_\+i2c\+\_\+err}} sd\+\_\+i2c\+\_\+dev\+\_\+init (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structsd__i2c__dev}{sd\+\_\+i2c\+\_\+dev}} $\ast$}]{dev,  }\item[{I2\+C\+\_\+\+Handle\+Type\+Def $\ast$}]{hi2c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+{\ttfamily \#include $<$\mbox{\hyperlink{sd__i2c_8c}{Src/sd\+\_\+i2c.\+c}}$>$}
+
+
+
+Initialize I2C channel Initialize I2C channel with a peripheral handle and set the device as ready. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dev} & I2C device to initialize \\
+\hline
+{\em hi2c} & I2C device handle to use \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em S\+D\+\_\+\+I2\+C\+\_\+\+S\+U\+C\+C\+E\+SS} & on success, error state otherwise \\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyCode}
+216 \{
+217     memset(dev, 0, \textcolor{keyword}{sizeof}(\textcolor{keyword}{struct} \mbox{\hyperlink{structsd__i2c__dev}{sd\_i2c\_dev}}));
+218     
+219     dev->\mbox{\hyperlink{structsd__i2c__dev_a23e125244a7e27ff9ccc31b3b8495cfe}{i2c}} = hi2c;
+220     dev->\mbox{\hyperlink{structsd__i2c__dev_a98f804dd76a5f720aeed34756d2142e4}{state}} = \mbox{\hyperlink{group___s_d___i2_c___types_ggaf9254fee305a19fcc68f616121146552a521415eae27441855ada6fa17d0f32fe}{SD\_I2C\_READY}};
+221     
+222     \textcolor{keywordflow}{return} \mbox{\hyperlink{group___s_d___i2_c___types_ggae1e3131e61bdef08371262ffb4948a04a8ac753d592892daa8d2f9109c59b884b}{SD\_I2C\_SUCCESS}};
+223 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group___s_d___i2_c___functions_ga813c9280ce6745a2e55bccc9d562cd54}\label{group___s_d___i2_c___functions_ga813c9280ce6745a2e55bccc9d562cd54}} 
+\index{I2\+C Functions@{I2\+C Functions}!sd\+\_\+i2c\+\_\+dis\+\_\+chan@{sd\+\_\+i2c\+\_\+dis\+\_\+chan}}
+\index{sd\+\_\+i2c\+\_\+dis\+\_\+chan@{sd\+\_\+i2c\+\_\+dis\+\_\+chan}!I2\+C Functions@{I2\+C Functions}}
+\subsubsection{\texorpdfstring{sd\+\_\+i2c\+\_\+dis\+\_\+chan()}{sd\_i2c\_dis\_chan()}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group___s_d___i2_c___types_gae1e3131e61bdef08371262ffb4948a04}{sd\+\_\+i2c\+\_\+err}} sd\+\_\+i2c\+\_\+dis\+\_\+chan (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structsd__i2c__dev}{sd\+\_\+i2c\+\_\+dev}} $\ast$}]{dev,  }\item[{uint8\+\_\+t}]{chan }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\mbox{\hyperlink{sd__i2c_8c}{Src/sd\+\_\+i2c.\+c}}$>$}
+
+
+
+Disable I2C channel Disable an I2C channel without altering previously configured channels. More than one channel may be specified. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dev} & I2C device to configure \\
+\hline
+{\em chan} & Channel to disable on the I2C switch \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em S\+D\+\_\+\+I2\+C\+\_\+\+S\+U\+C\+C\+E\+SS} & on success, error state otherwise \\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyCode}
+277 \{
+278     sd\_i2c\_chan &= ~(chan);
+279     
+280     \textcolor{keywordflow}{if} (HAL\_I2C\_Master\_Transmit(dev->\mbox{\hyperlink{structsd__i2c__dev_a23e125244a7e27ff9ccc31b3b8495cfe}{i2c}}, \mbox{\hyperlink{group___s_d___i2_c___defines_gacb76170cf42752cd56acf4d1221e57da}{SD\_I2C\_SWITCH\_ADDR}}, &sd\_i2c\_chan, 1, 1000) !
+      = HAL\_OK)
+281         \textcolor{keywordflow}{return} \mbox{\hyperlink{group___s_d___i2_c___types_ggae1e3131e61bdef08371262ffb4948a04a8c2d0ed2a4601d3eede97f9c09510bcf}{SD\_I2C\_ERROR}};
+282     
+283     \textcolor{keywordflow}{return} \mbox{\hyperlink{group___s_d___i2_c___types_ggae1e3131e61bdef08371262ffb4948a04a8ac753d592892daa8d2f9109c59b884b}{SD\_I2C\_SUCCESS}};
+284 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group___s_d___i2_c___functions_gae53676ec67141159567ef4b5b5aadb2e}\label{group___s_d___i2_c___functions_gae53676ec67141159567ef4b5b5aadb2e}} 
+\index{I2\+C Functions@{I2\+C Functions}!sd\+\_\+i2c\+\_\+en\+\_\+chan@{sd\+\_\+i2c\+\_\+en\+\_\+chan}}
+\index{sd\+\_\+i2c\+\_\+en\+\_\+chan@{sd\+\_\+i2c\+\_\+en\+\_\+chan}!I2\+C Functions@{I2\+C Functions}}
+\subsubsection{\texorpdfstring{sd\+\_\+i2c\+\_\+en\+\_\+chan()}{sd\_i2c\_en\_chan()}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group___s_d___i2_c___types_gae1e3131e61bdef08371262ffb4948a04}{sd\+\_\+i2c\+\_\+err}} sd\+\_\+i2c\+\_\+en\+\_\+chan (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structsd__i2c__dev}{sd\+\_\+i2c\+\_\+dev}} $\ast$}]{dev,  }\item[{uint8\+\_\+t}]{chan }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\mbox{\hyperlink{sd__i2c_8c}{Src/sd\+\_\+i2c.\+c}}$>$}
+
+
+
+Enable I2C channel Enable an I2C channel without altering previously configured channels. More than one channel may be specified. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dev} & I2C device to configure \\
+\hline
+{\em chan} & Channel to enable on the I2C switch \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em S\+D\+\_\+\+I2\+C\+\_\+\+S\+U\+C\+C\+E\+SS} & on success, error state otherwise \\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyCode}
+257 \{
+258     sd\_i2c\_chan |= chan;
+259     
+260     \textcolor{keywordflow}{if} (HAL\_I2C\_Master\_Transmit(dev->\mbox{\hyperlink{structsd__i2c__dev_a23e125244a7e27ff9ccc31b3b8495cfe}{i2c}}, \mbox{\hyperlink{group___s_d___i2_c___defines_gacb76170cf42752cd56acf4d1221e57da}{SD\_I2C\_SWITCH\_ADDR}}, &sd\_i2c\_chan, 1, 1000) 
+      != HAL\_OK)
+261         \textcolor{keywordflow}{return} \mbox{\hyperlink{group___s_d___i2_c___types_ggae1e3131e61bdef08371262ffb4948a04a8c2d0ed2a4601d3eede97f9c09510bcf}{SD\_I2C\_ERROR}};
+262     
+263     \textcolor{keywordflow}{return} \mbox{\hyperlink{group___s_d___i2_c___types_ggae1e3131e61bdef08371262ffb4948a04a8ac753d592892daa8d2f9109c59b884b}{SD\_I2C\_SUCCESS}};
+264 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group___s_d___i2_c___functions_ga6bd934690e906815d10e8812be1b5215}\label{group___s_d___i2_c___functions_ga6bd934690e906815d10e8812be1b5215}} 
+\index{I2\+C Functions@{I2\+C Functions}!sd\+\_\+i2\+C\+\_\+set\+\_\+chan@{sd\+\_\+i2\+C\+\_\+set\+\_\+chan}}
+\index{sd\+\_\+i2\+C\+\_\+set\+\_\+chan@{sd\+\_\+i2\+C\+\_\+set\+\_\+chan}!I2\+C Functions@{I2\+C Functions}}
+\subsubsection{\texorpdfstring{sd\+\_\+i2\+C\+\_\+set\+\_\+chan()}{sd\_i2C\_set\_chan()}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group___s_d___i2_c___types_gae1e3131e61bdef08371262ffb4948a04}{sd\+\_\+i2c\+\_\+err}} sd\+\_\+i2\+C\+\_\+set\+\_\+chan (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structsd__i2c__dev}{sd\+\_\+i2c\+\_\+dev}} $\ast$}]{dev,  }\item[{uint8\+\_\+t}]{chan }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\mbox{\hyperlink{sd__i2c_8c}{Src/sd\+\_\+i2c.\+c}}$>$}
+
+
+
+Set I2C channel Set I2C channel (more than one channel may be specified) to broadcast messages. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dev} & I2C device to configure \\
+\hline
+{\em chan} & Channel(s) to set on the I2C switch \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em S\+D\+\_\+\+I2\+C\+\_\+\+S\+U\+C\+C\+E\+SS} & on success, error state otherwise \\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyCode}
+236 \{
+237     sd\_i2c\_chan = chan;
+238     
+239     \textcolor{comment}{/* Set the output state of the switch */}
+240     \textcolor{keywordflow}{if} (HAL\_I2C\_Master\_Transmit(dev->\mbox{\hyperlink{structsd__i2c__dev_a23e125244a7e27ff9ccc31b3b8495cfe}{i2c}}, \mbox{\hyperlink{group___s_d___i2_c___defines_gacb76170cf42752cd56acf4d1221e57da}{SD\_I2C\_SWITCH\_ADDR}}, &sd\_i2c\_chan, 1, 1000) 
+      != HAL\_OK)
+241         \textcolor{keywordflow}{return} \mbox{\hyperlink{group___s_d___i2_c___types_ggae1e3131e61bdef08371262ffb4948a04a8c2d0ed2a4601d3eede97f9c09510bcf}{SD\_I2C\_ERROR}};
+242 
+243     \textcolor{keywordflow}{return} \mbox{\hyperlink{group___s_d___i2_c___types_ggae1e3131e61bdef08371262ffb4948a04a8ac753d592892daa8d2f9109c59b884b}{SD\_I2C\_SUCCESS}};
+244 \}
+\end{DoxyCode}

@@ -1,0 +1,8 @@
+digraph "Src" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  dir_ba389f24b91c1628fdcb9b698256ef61 [shape=box, label="Src", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_ba389f24b91c1628fdcb9b698256ef61.html"];
+  dir_13ea8180a17a549077efc052cc3bae2e [shape=box label="snickerdoodle-STM32-firmware" fillcolor="white" style="filled" color="red" URL="dir_13ea8180a17a549077efc052cc3bae2e.html"];
+  dir_ba389f24b91c1628fdcb9b698256ef61->dir_13ea8180a17a549077efc052cc3bae2e [headlabel="75", labeldistance=1.5 headhref="dir_000002_000000.html"];
+}

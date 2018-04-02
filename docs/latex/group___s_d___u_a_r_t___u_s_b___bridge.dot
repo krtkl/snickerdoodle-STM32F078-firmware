@@ -1,0 +1,11 @@
+digraph "UART to USB Bridge"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir=LR;
+  Node2 [label="UART USB Bridge Types",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___s_d___u_a_r_t___u_s_b___bridge___types.html"];
+  Node1 [label="Platform Configuration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___s_d___platform.html",tooltip="Platform specific board level configuration and control. "];
+  Node0 [label="UART to USB Bridge",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1->Node0 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node2 [shape=plaintext, dir="back", style="solid"];
+}

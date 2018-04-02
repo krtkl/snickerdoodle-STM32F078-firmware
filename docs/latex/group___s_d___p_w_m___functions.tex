@@ -1,0 +1,175 @@
+\hypertarget{group___s_d___p_w_m___functions}{}\section{P\+WM Functions}
+\label{group___s_d___p_w_m___functions}\index{P\+W\+M Functions@{P\+W\+M Functions}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___s_d___p_w_m___functions_ga60aa52b042f8f0dd0af4b31290239242}\label{group___s_d___p_w_m___functions_ga60aa52b042f8f0dd0af4b31290239242}} 
+void \mbox{\hyperlink{group___s_d___p_w_m___functions_ga60aa52b042f8f0dd0af4b31290239242}{sd\+\_\+tim1\+\_\+init}} (void)
+\begin{DoxyCompactList}\small\item\em Timer 1 Initialization. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___s_d___p_w_m___functions_ga0dd6df2aa5533a54908ab2b4035511e1}\label{group___s_d___p_w_m___functions_ga0dd6df2aa5533a54908ab2b4035511e1}} 
+void \mbox{\hyperlink{group___s_d___p_w_m___functions_ga0dd6df2aa5533a54908ab2b4035511e1}{sd\+\_\+tim3\+\_\+init}} (void)
+\begin{DoxyCompactList}\small\item\em Timer 3 Initialization. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_d___p_w_m___functions_ga24d5b9c609d8b753d95508419f4c1901}{H\+A\+L\+\_\+\+T\+I\+M\+\_\+\+P\+W\+M\+\_\+\+Msp\+Init}} (T\+I\+M\+\_\+\+Handle\+Type\+Def $\ast$htim\+\_\+pwm)
+\item 
+void \mbox{\hyperlink{group___s_d___p_w_m___functions_gaf5f524564b3a99a9f87f45227309e866}{H\+A\+L\+\_\+\+T\+I\+M\+\_\+\+P\+W\+M\+\_\+\+Msp\+De\+Init}} (T\+I\+M\+\_\+\+Handle\+Type\+Def $\ast$htim\+\_\+pwm)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group___s_d___p_w_m___functions_gaf5f524564b3a99a9f87f45227309e866}\label{group___s_d___p_w_m___functions_gaf5f524564b3a99a9f87f45227309e866}} 
+\index{P\+W\+M Functions@{P\+W\+M Functions}!H\+A\+L\+\_\+\+T\+I\+M\+\_\+\+P\+W\+M\+\_\+\+Msp\+De\+Init@{H\+A\+L\+\_\+\+T\+I\+M\+\_\+\+P\+W\+M\+\_\+\+Msp\+De\+Init}}
+\index{H\+A\+L\+\_\+\+T\+I\+M\+\_\+\+P\+W\+M\+\_\+\+Msp\+De\+Init@{H\+A\+L\+\_\+\+T\+I\+M\+\_\+\+P\+W\+M\+\_\+\+Msp\+De\+Init}!P\+W\+M Functions@{P\+W\+M Functions}}
+\subsubsection{\texorpdfstring{H\+A\+L\+\_\+\+T\+I\+M\+\_\+\+P\+W\+M\+\_\+\+Msp\+De\+Init()}{HAL\_TIM\_PWM\_MspDeInit()}}
+{\footnotesize\ttfamily void H\+A\+L\+\_\+\+T\+I\+M\+\_\+\+P\+W\+M\+\_\+\+Msp\+De\+Init (\begin{DoxyParamCaption}\item[{T\+I\+M\+\_\+\+Handle\+Type\+Def $\ast$}]{htim\+\_\+pwm }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\mbox{\hyperlink{sd__pwm_8c}{Src/sd\+\_\+pwm.\+c}}$>$}
+
+\paragraph*{T\+I\+M1 G\+P\+IO Configuration}
+
+\tabulinesep=1mm
+\begin{longtabu} spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ Pin/\+Port  }&\textbf{ Channel  }&\textbf{ L\+ED -\/-\/-\/-\/-\/-\/-\/------   }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ Pin/\+Port  }&\textbf{ Channel  }&\textbf{ L\+ED -\/-\/-\/-\/-\/-\/-\/------   }\\\cline{1-3}
+\endhead
+P\+A8  &Channel 1  &fault\+\_\+led   \\\cline{1-3}
+\end{longtabu}
+
+
+\paragraph*{T\+I\+M3 G\+P\+IO Configuration}
+
+\tabulinesep=1mm
+\begin{longtabu} spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ Pin/\+Port  }&\textbf{ Channel  }&\textbf{ L\+ED -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---   }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ Pin/\+Port  }&\textbf{ Channel  }&\textbf{ L\+ED -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---   }\\\cline{1-3}
+\endhead
+P\+C6  &Channel 1  &usb\+\_\+led   \\\cline{1-3}
+P\+C7  &Channel 2  &bluetooth\+\_\+led   \\\cline{1-3}
+P\+C8  &Channel 3  &app\+\_\+led   \\\cline{1-3}
+P\+C9  &Channel 4  &wireless\+\_\+led   \\\cline{1-3}
+\end{longtabu}
+
+\begin{DoxyCode}
+246 \{
+247     \textcolor{keywordflow}{if} (htim\_pwm->Instance == TIM1) \{
+248         \textcolor{comment}{/* Peripheral clock disable */}
+249         \_\_TIM1\_CLK\_DISABLE();
+250   
+258         HAL\_GPIO\_DeInit(RED\_GPIO\_Port, RED\_Pin);
+259     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (htim\_pwm->Instance == TIM3) \{
+260         \textcolor{comment}{/* Peripheral clock disable */}
+261         \_\_TIM3\_CLK\_DISABLE();
+262   
+273         HAL\_GPIO\_DeInit(GPIOC, ORANGE\_Pin | WHITE\_Pin | BLUE\_Pin | GREEN\_Pin);
+274     \}
+275 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group___s_d___p_w_m___functions_ga24d5b9c609d8b753d95508419f4c1901}\label{group___s_d___p_w_m___functions_ga24d5b9c609d8b753d95508419f4c1901}} 
+\index{P\+W\+M Functions@{P\+W\+M Functions}!H\+A\+L\+\_\+\+T\+I\+M\+\_\+\+P\+W\+M\+\_\+\+Msp\+Init@{H\+A\+L\+\_\+\+T\+I\+M\+\_\+\+P\+W\+M\+\_\+\+Msp\+Init}}
+\index{H\+A\+L\+\_\+\+T\+I\+M\+\_\+\+P\+W\+M\+\_\+\+Msp\+Init@{H\+A\+L\+\_\+\+T\+I\+M\+\_\+\+P\+W\+M\+\_\+\+Msp\+Init}!P\+W\+M Functions@{P\+W\+M Functions}}
+\subsubsection{\texorpdfstring{H\+A\+L\+\_\+\+T\+I\+M\+\_\+\+P\+W\+M\+\_\+\+Msp\+Init()}{HAL\_TIM\_PWM\_MspInit()}}
+{\footnotesize\ttfamily void H\+A\+L\+\_\+\+T\+I\+M\+\_\+\+P\+W\+M\+\_\+\+Msp\+Init (\begin{DoxyParamCaption}\item[{T\+I\+M\+\_\+\+Handle\+Type\+Def $\ast$}]{htim\+\_\+pwm }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\mbox{\hyperlink{sd__pwm_8c}{Src/sd\+\_\+pwm.\+c}}$>$}
+
+\paragraph*{T\+I\+M1 G\+P\+IO Configuration}
+
+\tabulinesep=1mm
+\begin{longtabu} spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ Pin/\+Port  }&\textbf{ Channel  }&\textbf{ L\+ED -\/-\/-\/-\/-\/-\/-\/------   }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ Pin/\+Port  }&\textbf{ Channel  }&\textbf{ L\+ED -\/-\/-\/-\/-\/-\/-\/------   }\\\cline{1-3}
+\endhead
+P\+A8  &Channel 1  &fault\+\_\+led   \\\cline{1-3}
+\end{longtabu}
+
+
+\paragraph*{T\+I\+M3 G\+P\+IO Configuration}
+
+\tabulinesep=1mm
+\begin{longtabu} spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ Pin/\+Port  }&\textbf{ Channel  }&\textbf{ L\+ED -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---   }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ Pin/\+Port  }&\textbf{ Channel  }&\textbf{ L\+ED -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---   }\\\cline{1-3}
+\endhead
+P\+C6  &Channel 1  &usb\+\_\+led   \\\cline{1-3}
+P\+C7  &Channel 2  &bluetooth\+\_\+led   \\\cline{1-3}
+P\+C8  &Channel 3  &app\+\_\+led   \\\cline{1-3}
+P\+C9  &Channel 4  &wireless\+\_\+led   \\\cline{1-3}
+\end{longtabu}
+
+\begin{DoxyCode}
+177 \{
+178     GPIO\_InitTypeDef GPIO\_InitStruct;
+179     \textcolor{keywordflow}{if} (htim\_pwm->Instance==TIM1) \{
+180         \textcolor{comment}{/* Peripheral clock enable */}
+181         \_\_TIM1\_CLK\_ENABLE();
+182   
+190         GPIO\_InitStruct.Pin = RED\_Pin;
+191         GPIO\_InitStruct.Mode = GPIO\_MODE\_AF\_OD;
+192         GPIO\_InitStruct.Pull = GPIO\_NOPULL;
+193         GPIO\_InitStruct.Speed = GPIO\_SPEED\_LOW;
+194         GPIO\_InitStruct.Alternate = GPIO\_AF2\_TIM1;
+195         HAL\_GPIO\_Init(RED\_GPIO\_Port, &GPIO\_InitStruct);
+196 
+197         \mbox{\hyperlink{group___s_d___l_e_d___exported___variables_ga282f37361758642f972e789019cf2692}{fault\_led}}.\mbox{\hyperlink{structsd__led_a6e46bfc6fae939f8fc5ee53ea4551f18}{tim}} = htim\_pwm;
+198         \mbox{\hyperlink{group___s_d___l_e_d___exported___variables_ga282f37361758642f972e789019cf2692}{fault\_led}}.\mbox{\hyperlink{structsd__led_afb67f3e4e204785118073a96b76614d6}{chan}} = TIM\_CHANNEL\_1;
+199         \mbox{\hyperlink{group___s_d___l_e_d___exported___variables_ga282f37361758642f972e789019cf2692}{fault\_led}}.\mbox{\hyperlink{structsd__led_acaf3272a1f93d49be9ec4c31804252e6}{cfg}} = &fault\_cfg;
+200 
+201     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (htim\_pwm->Instance==TIM3) \{
+202         \textcolor{comment}{/* Peripheral clock enable */}
+203         \_\_TIM3\_CLK\_ENABLE();
+204   
+215         GPIO\_InitStruct.Pin = ORANGE\_Pin |
+216                       WHITE\_Pin |
+217                       BLUE\_Pin |
+218                       GREEN\_Pin;
+219         
+220         GPIO\_InitStruct.Mode = GPIO\_MODE\_AF\_OD;
+221         GPIO\_InitStruct.Pull = GPIO\_NOPULL;
+222         GPIO\_InitStruct.Speed = GPIO\_SPEED\_LOW;
+223         GPIO\_InitStruct.Alternate = GPIO\_AF0\_TIM3;
+224         HAL\_GPIO\_Init(GPIOC, &GPIO\_InitStruct);
+225 
+226         \mbox{\hyperlink{group___s_d___l_e_d___exported___variables_ga19ed39428c591574b7c023c924f70a47}{usb\_led}}.\mbox{\hyperlink{structsd__led_a6e46bfc6fae939f8fc5ee53ea4551f18}{tim}} = htim\_pwm;
+227         \mbox{\hyperlink{group___s_d___l_e_d___exported___variables_ga19ed39428c591574b7c023c924f70a47}{usb\_led}}.\mbox{\hyperlink{structsd__led_afb67f3e4e204785118073a96b76614d6}{chan}} = TIM\_CHANNEL\_1;
+228         \mbox{\hyperlink{group___s_d___l_e_d___exported___variables_ga19ed39428c591574b7c023c924f70a47}{usb\_led}}.\mbox{\hyperlink{structsd__led_acaf3272a1f93d49be9ec4c31804252e6}{cfg}} = &usb\_cfg;
+229 
+230         \mbox{\hyperlink{group___s_d___l_e_d___exported___variables_ga1135853c32bde3f26e5f4e59a1fc688d}{bluetooth\_led}}.\mbox{\hyperlink{structsd__led_a6e46bfc6fae939f8fc5ee53ea4551f18}{tim}} = htim\_pwm;
+231         \mbox{\hyperlink{group___s_d___l_e_d___exported___variables_ga1135853c32bde3f26e5f4e59a1fc688d}{bluetooth\_led}}.\mbox{\hyperlink{structsd__led_afb67f3e4e204785118073a96b76614d6}{chan}} = TIM\_CHANNEL\_2;
+232         \mbox{\hyperlink{group___s_d___l_e_d___exported___variables_ga1135853c32bde3f26e5f4e59a1fc688d}{bluetooth\_led}}.\mbox{\hyperlink{structsd__led_acaf3272a1f93d49be9ec4c31804252e6}{cfg}} = &bluetooth\_cfg;
+233 
+234         \mbox{\hyperlink{group___s_d___l_e_d___exported___variables_gae551cefd341794956c9c2a06a4782ae9}{app\_led}}.\mbox{\hyperlink{structsd__led_a6e46bfc6fae939f8fc5ee53ea4551f18}{tim}} = htim\_pwm;
+235         \mbox{\hyperlink{group___s_d___l_e_d___exported___variables_gae551cefd341794956c9c2a06a4782ae9}{app\_led}}.\mbox{\hyperlink{structsd__led_afb67f3e4e204785118073a96b76614d6}{chan}} = TIM\_CHANNEL\_3;
+236         \mbox{\hyperlink{group___s_d___l_e_d___exported___variables_gae551cefd341794956c9c2a06a4782ae9}{app\_led}}.\mbox{\hyperlink{structsd__led_acaf3272a1f93d49be9ec4c31804252e6}{cfg}} = &app\_cfg;
+237 
+238         \mbox{\hyperlink{group___s_d___l_e_d___exported___variables_ga3717192f0076892f0ddfd3a38348deed}{wireless\_led}}.\mbox{\hyperlink{structsd__led_a6e46bfc6fae939f8fc5ee53ea4551f18}{tim}} = htim\_pwm;
+239         \mbox{\hyperlink{group___s_d___l_e_d___exported___variables_ga3717192f0076892f0ddfd3a38348deed}{wireless\_led}}.\mbox{\hyperlink{structsd__led_afb67f3e4e204785118073a96b76614d6}{chan}} = TIM\_CHANNEL\_4;
+240         \mbox{\hyperlink{group___s_d___l_e_d___exported___variables_ga3717192f0076892f0ddfd3a38348deed}{wireless\_led}}.\mbox{\hyperlink{structsd__led_acaf3272a1f93d49be9ec4c31804252e6}{cfg}} = &wireless\_cfg;
+241     \}
+242 \}
+\end{DoxyCode}

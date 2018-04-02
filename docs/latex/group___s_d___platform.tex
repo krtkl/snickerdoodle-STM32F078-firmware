@@ -1,0 +1,200 @@
+\hypertarget{group___s_d___platform}{}\section{Platform Configuration}
+\label{group___s_d___platform}\index{Platform Configuration@{Platform Configuration}}
+
+
+Platform specific board level configuration and control.  
+
+
+\subsection*{Modules}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___s_d___d_f_u}{Device Firmware Upgrade}}
+\item 
+\mbox{\hyperlink{group___s_d___platform___defines}{Platform Definitions}}
+\item 
+\mbox{\hyperlink{group___s_d___platform___exported___variables}{Platform Exported Variables}}
+\item 
+\mbox{\hyperlink{group___s_d___platform___function___declarations}{Platform Functions}}
+\item 
+\mbox{\hyperlink{group___s_d___platform___variables}{Platform Variables}}
+\begin{DoxyCompactList}\small\item\em snickerdoodle platform variables \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___s_d___u_a_r_t___u_s_b___bridge}{U\+A\+R\+T to U\+S\+B Bridge}}
+\begin{DoxyCompactList}\small\item\em snickerdoodle U\+A\+RT to U\+SB bridge functions \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___s_d___platform___w_l18xx___ant}{W\+L18xx Antenna Configuration}}
+\item 
+\mbox{\hyperlink{group___s_d___platform___boot___config}{Zynq Boot Configuration}}
+\begin{DoxyCompactList}\small\item\em Zynq processing subsystem boot configuration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___s_d___platform_ga086665d90c28883d36a12fa61ad26eaf}{S\+D\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+B\+O\+OT}}~0x00
+\item 
+\#define \mbox{\hyperlink{group___s_d___platform_gaed22fc6c832ec83bcc4aa35bace12970}{S\+D\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+D\+F\+U\+\_\+\+B\+O\+OT}}~0x03
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group___s_d___platform_ga06667de95c86bfcdef8bcc8ab13cb2d4}{sd\+\_\+zynq\+\_\+boot}} \{ \mbox{\hyperlink{group___s_d___platform_gga06667de95c86bfcdef8bcc8ab13cb2d4aa0c510b780474f1292f04a8b7b987a76}{S\+D\+\_\+\+Z\+Y\+N\+Q\+\_\+\+B\+O\+O\+T\+\_\+\+J\+T\+AG}} = 0x00, 
+\mbox{\hyperlink{group___s_d___platform_gga06667de95c86bfcdef8bcc8ab13cb2d4ad270040d99cf171dc127ebca46e82c54}{S\+D\+\_\+\+Z\+Y\+N\+Q\+\_\+\+B\+O\+O\+T\+\_\+\+N\+A\+ND}} = 0x01, 
+\mbox{\hyperlink{group___s_d___platform_gga06667de95c86bfcdef8bcc8ab13cb2d4a85166851f8dac48bd3b4261debe97472}{S\+D\+\_\+\+Z\+Y\+N\+Q\+\_\+\+B\+O\+O\+T\+\_\+\+Q\+S\+PI}} = 0x02, 
+\mbox{\hyperlink{group___s_d___platform_gga06667de95c86bfcdef8bcc8ab13cb2d4af1351df506cd9586ffcd35813fa3f5f9}{S\+D\+\_\+\+Z\+Y\+N\+Q\+\_\+\+B\+O\+O\+T\+\_\+\+SD}} = 0x03
+ \}
+\begin{DoxyCompactList}\small\item\em Zynq boot pin enumeration. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group___s_d___platform_ga0cfdf02c4e2dcebe57216fb62c79d464}{sd\+\_\+boot\+\_\+button}} \{ \mbox{\hyperlink{group___s_d___platform_gga0cfdf02c4e2dcebe57216fb62c79d464acf258a74260a98b634ec614263a43f12}{S\+D\+\_\+\+B\+O\+O\+T\+\_\+\+D\+FU}} = 0x00, 
+\mbox{\hyperlink{group___s_d___platform_gga0cfdf02c4e2dcebe57216fb62c79d464ad894ca3fbbd2ec66227b60650567bddb}{S\+D\+\_\+\+B\+O\+O\+T\+\_\+\+Q\+S\+PI}} = 0x01, 
+\mbox{\hyperlink{group___s_d___platform_gga0cfdf02c4e2dcebe57216fb62c79d464af990e7ab412748b5978df97d0d1b0518}{S\+D\+\_\+\+B\+O\+O\+T\+\_\+\+J\+T\+AG}} = 0x02, 
+\mbox{\hyperlink{group___s_d___platform_gga0cfdf02c4e2dcebe57216fb62c79d464a8302e6d19404f342f1a92dd12d32dc85}{S\+D\+\_\+\+B\+O\+O\+T\+\_\+\+D\+E\+F\+A\+U\+LT}} = 0x03
+ \}
+\begin{DoxyCompactList}\small\item\em Boot button press state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___s_d___platform_gaf02d5f52d29caba0ba168f5c53539c8f}\label{group___s_d___platform_gaf02d5f52d29caba0ba168f5c53539c8f}} 
+void {\bfseries H\+A\+L\+\_\+\+G\+P\+I\+O\+\_\+\+E\+X\+T\+I\+\_\+\+Callback} (uint16\+\_\+t pin)
+\item 
+\mbox{\Hypertarget{group___s_d___platform_ga0d7f90ea76b8ffd5d714122177f84b3b}\label{group___s_d___platform_ga0d7f90ea76b8ffd5d714122177f84b3b}} 
+enum \mbox{\hyperlink{group___s_d___platform_ga0cfdf02c4e2dcebe57216fb62c79d464}{sd\+\_\+boot\+\_\+button}} \mbox{\hyperlink{group___s_d___platform_ga0d7f90ea76b8ffd5d714122177f84b3b}{sd\+\_\+boot\+\_\+get\+\_\+button\+\_\+state}} (void)
+\begin{DoxyCompactList}\small\item\em Get button press state. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___s_d___platform_ga12d2befc51ccaa811a666d7eca5761ff}{sd\+\_\+boot\+\_\+timer\+\_\+expired}} (uint32\+\_\+t start, uint32\+\_\+t end)
+\begin{DoxyCompactList}\small\item\em Check if boot timer has expired. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___s_d___platform_ga28381c9d642f66d9a6968ff7406a63d4}\label{group___s_d___platform_ga28381c9d642f66d9a6968ff7406a63d4}} 
+enum \mbox{\hyperlink{group___s_d___platform_ga06667de95c86bfcdef8bcc8ab13cb2d4}{sd\+\_\+zynq\+\_\+boot}} \mbox{\hyperlink{group___s_d___platform_ga28381c9d642f66d9a6968ff7406a63d4}{sd\+\_\+boot\+\_\+select}} (void)
+\begin{DoxyCompactList}\small\item\em Boot selection. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Platform specific board level configuration and control. 
+
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___s_d___platform_gaed22fc6c832ec83bcc4aa35bace12970}\label{group___s_d___platform_gaed22fc6c832ec83bcc4aa35bace12970}} 
+\index{Platform Configuration@{Platform Configuration}!S\+D\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+D\+F\+U\+\_\+\+B\+O\+OT@{S\+D\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+D\+F\+U\+\_\+\+B\+O\+OT}}
+\index{S\+D\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+D\+F\+U\+\_\+\+B\+O\+OT@{S\+D\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+D\+F\+U\+\_\+\+B\+O\+OT}!Platform Configuration@{Platform Configuration}}
+\subsubsection{\texorpdfstring{S\+D\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+D\+F\+U\+\_\+\+B\+O\+OT}{SD\_PLATFORM\_DFU\_BOOT}}
+{\footnotesize\ttfamily \#define S\+D\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+D\+F\+U\+\_\+\+B\+O\+OT~0x03}
+
+
+
+{\ttfamily \#include $<$\mbox{\hyperlink{sd__platform_8c}{Src/sd\+\_\+platform.\+c}}$>$}
+
+Both buttons pressed \mbox{\Hypertarget{group___s_d___platform_ga086665d90c28883d36a12fa61ad26eaf}\label{group___s_d___platform_ga086665d90c28883d36a12fa61ad26eaf}} 
+\index{Platform Configuration@{Platform Configuration}!S\+D\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+B\+O\+OT@{S\+D\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+B\+O\+OT}}
+\index{S\+D\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+B\+O\+OT@{S\+D\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+B\+O\+OT}!Platform Configuration@{Platform Configuration}}
+\subsubsection{\texorpdfstring{S\+D\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+B\+O\+OT}{SD\_PLATFORM\_NORMAL\_BOOT}}
+{\footnotesize\ttfamily \#define S\+D\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+B\+O\+OT~0x00}
+
+
+
+{\ttfamily \#include $<$\mbox{\hyperlink{sd__platform_8c}{Src/sd\+\_\+platform.\+c}}$>$}
+
+Not boot select, boot normally 
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{group___s_d___platform_ga0cfdf02c4e2dcebe57216fb62c79d464}\label{group___s_d___platform_ga0cfdf02c4e2dcebe57216fb62c79d464}} 
+\index{Platform Configuration@{Platform Configuration}!sd\+\_\+boot\+\_\+button@{sd\+\_\+boot\+\_\+button}}
+\index{sd\+\_\+boot\+\_\+button@{sd\+\_\+boot\+\_\+button}!Platform Configuration@{Platform Configuration}}
+\subsubsection{\texorpdfstring{sd\+\_\+boot\+\_\+button}{sd\_boot\_button}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group___s_d___platform_ga0cfdf02c4e2dcebe57216fb62c79d464}{sd\+\_\+boot\+\_\+button}}}
+
+
+
+{\ttfamily \#include $<$\mbox{\hyperlink{sd__platform_8h}{Inc/sd\+\_\+platform.\+h}}$>$}
+
+
+
+Boot button press state. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+\_\+\+B\+O\+O\+T\+\_\+\+D\+FU@{S\+D\+\_\+\+B\+O\+O\+T\+\_\+\+D\+FU}!Platform Configuration@{Platform Configuration}}\index{Platform Configuration@{Platform Configuration}!S\+D\+\_\+\+B\+O\+O\+T\+\_\+\+D\+FU@{S\+D\+\_\+\+B\+O\+O\+T\+\_\+\+D\+FU}}}\mbox{\Hypertarget{group___s_d___platform_gga0cfdf02c4e2dcebe57216fb62c79d464acf258a74260a98b634ec614263a43f12}\label{group___s_d___platform_gga0cfdf02c4e2dcebe57216fb62c79d464acf258a74260a98b634ec614263a43f12}} 
+S\+D\+\_\+\+B\+O\+O\+T\+\_\+\+D\+FU&Default boot \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+\_\+\+B\+O\+O\+T\+\_\+\+Q\+S\+PI@{S\+D\+\_\+\+B\+O\+O\+T\+\_\+\+Q\+S\+PI}!Platform Configuration@{Platform Configuration}}\index{Platform Configuration@{Platform Configuration}!S\+D\+\_\+\+B\+O\+O\+T\+\_\+\+Q\+S\+PI@{S\+D\+\_\+\+B\+O\+O\+T\+\_\+\+Q\+S\+PI}}}\mbox{\Hypertarget{group___s_d___platform_gga0cfdf02c4e2dcebe57216fb62c79d464ad894ca3fbbd2ec66227b60650567bddb}\label{group___s_d___platform_gga0cfdf02c4e2dcebe57216fb62c79d464ad894ca3fbbd2ec66227b60650567bddb}} 
+S\+D\+\_\+\+B\+O\+O\+T\+\_\+\+Q\+S\+PI&Boot from Q\+P\+SI \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+\_\+\+B\+O\+O\+T\+\_\+\+J\+T\+AG@{S\+D\+\_\+\+B\+O\+O\+T\+\_\+\+J\+T\+AG}!Platform Configuration@{Platform Configuration}}\index{Platform Configuration@{Platform Configuration}!S\+D\+\_\+\+B\+O\+O\+T\+\_\+\+J\+T\+AG@{S\+D\+\_\+\+B\+O\+O\+T\+\_\+\+J\+T\+AG}}}\mbox{\Hypertarget{group___s_d___platform_gga0cfdf02c4e2dcebe57216fb62c79d464af990e7ab412748b5978df97d0d1b0518}\label{group___s_d___platform_gga0cfdf02c4e2dcebe57216fb62c79d464af990e7ab412748b5978df97d0d1b0518}} 
+S\+D\+\_\+\+B\+O\+O\+T\+\_\+\+J\+T\+AG&Boot using J\+T\+AG \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+\_\+\+B\+O\+O\+T\+\_\+\+D\+E\+F\+A\+U\+LT@{S\+D\+\_\+\+B\+O\+O\+T\+\_\+\+D\+E\+F\+A\+U\+LT}!Platform Configuration@{Platform Configuration}}\index{Platform Configuration@{Platform Configuration}!S\+D\+\_\+\+B\+O\+O\+T\+\_\+\+D\+E\+F\+A\+U\+LT@{S\+D\+\_\+\+B\+O\+O\+T\+\_\+\+D\+E\+F\+A\+U\+LT}}}\mbox{\Hypertarget{group___s_d___platform_gga0cfdf02c4e2dcebe57216fb62c79d464a8302e6d19404f342f1a92dd12d32dc85}\label{group___s_d___platform_gga0cfdf02c4e2dcebe57216fb62c79d464a8302e6d19404f342f1a92dd12d32dc85}} 
+S\+D\+\_\+\+B\+O\+O\+T\+\_\+\+D\+E\+F\+A\+U\+LT&Device firmware boot \\
+\hline
+
+\end{DoxyEnumFields}
+
+\begin{DoxyCode}
+175                     \{
+\end{DoxyCode}
+\mbox{\Hypertarget{group___s_d___platform_ga06667de95c86bfcdef8bcc8ab13cb2d4}\label{group___s_d___platform_ga06667de95c86bfcdef8bcc8ab13cb2d4}} 
+\index{Platform Configuration@{Platform Configuration}!sd\+\_\+zynq\+\_\+boot@{sd\+\_\+zynq\+\_\+boot}}
+\index{sd\+\_\+zynq\+\_\+boot@{sd\+\_\+zynq\+\_\+boot}!Platform Configuration@{Platform Configuration}}
+\subsubsection{\texorpdfstring{sd\+\_\+zynq\+\_\+boot}{sd\_zynq\_boot}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group___s_d___platform_ga06667de95c86bfcdef8bcc8ab13cb2d4}{sd\+\_\+zynq\+\_\+boot}}}
+
+
+
+{\ttfamily \#include $<$\mbox{\hyperlink{sd__platform_8h}{Inc/sd\+\_\+platform.\+h}}$>$}
+
+
+
+Zynq boot pin enumeration. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+\_\+\+Z\+Y\+N\+Q\+\_\+\+B\+O\+O\+T\+\_\+\+J\+T\+AG@{S\+D\+\_\+\+Z\+Y\+N\+Q\+\_\+\+B\+O\+O\+T\+\_\+\+J\+T\+AG}!Platform Configuration@{Platform Configuration}}\index{Platform Configuration@{Platform Configuration}!S\+D\+\_\+\+Z\+Y\+N\+Q\+\_\+\+B\+O\+O\+T\+\_\+\+J\+T\+AG@{S\+D\+\_\+\+Z\+Y\+N\+Q\+\_\+\+B\+O\+O\+T\+\_\+\+J\+T\+AG}}}\mbox{\Hypertarget{group___s_d___platform_gga06667de95c86bfcdef8bcc8ab13cb2d4aa0c510b780474f1292f04a8b7b987a76}\label{group___s_d___platform_gga06667de95c86bfcdef8bcc8ab13cb2d4aa0c510b780474f1292f04a8b7b987a76}} 
+S\+D\+\_\+\+Z\+Y\+N\+Q\+\_\+\+B\+O\+O\+T\+\_\+\+J\+T\+AG&J\+T\+AG boot \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+\_\+\+Z\+Y\+N\+Q\+\_\+\+B\+O\+O\+T\+\_\+\+N\+A\+ND@{S\+D\+\_\+\+Z\+Y\+N\+Q\+\_\+\+B\+O\+O\+T\+\_\+\+N\+A\+ND}!Platform Configuration@{Platform Configuration}}\index{Platform Configuration@{Platform Configuration}!S\+D\+\_\+\+Z\+Y\+N\+Q\+\_\+\+B\+O\+O\+T\+\_\+\+N\+A\+ND@{S\+D\+\_\+\+Z\+Y\+N\+Q\+\_\+\+B\+O\+O\+T\+\_\+\+N\+A\+ND}}}\mbox{\Hypertarget{group___s_d___platform_gga06667de95c86bfcdef8bcc8ab13cb2d4ad270040d99cf171dc127ebca46e82c54}\label{group___s_d___platform_gga06667de95c86bfcdef8bcc8ab13cb2d4ad270040d99cf171dc127ebca46e82c54}} 
+S\+D\+\_\+\+Z\+Y\+N\+Q\+\_\+\+B\+O\+O\+T\+\_\+\+N\+A\+ND&N\+A\+ND flash boot \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+\_\+\+Z\+Y\+N\+Q\+\_\+\+B\+O\+O\+T\+\_\+\+Q\+S\+PI@{S\+D\+\_\+\+Z\+Y\+N\+Q\+\_\+\+B\+O\+O\+T\+\_\+\+Q\+S\+PI}!Platform Configuration@{Platform Configuration}}\index{Platform Configuration@{Platform Configuration}!S\+D\+\_\+\+Z\+Y\+N\+Q\+\_\+\+B\+O\+O\+T\+\_\+\+Q\+S\+PI@{S\+D\+\_\+\+Z\+Y\+N\+Q\+\_\+\+B\+O\+O\+T\+\_\+\+Q\+S\+PI}}}\mbox{\Hypertarget{group___s_d___platform_gga06667de95c86bfcdef8bcc8ab13cb2d4a85166851f8dac48bd3b4261debe97472}\label{group___s_d___platform_gga06667de95c86bfcdef8bcc8ab13cb2d4a85166851f8dac48bd3b4261debe97472}} 
+S\+D\+\_\+\+Z\+Y\+N\+Q\+\_\+\+B\+O\+O\+T\+\_\+\+Q\+S\+PI&Quad S\+PI flash boot \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+\_\+\+Z\+Y\+N\+Q\+\_\+\+B\+O\+O\+T\+\_\+\+SD@{S\+D\+\_\+\+Z\+Y\+N\+Q\+\_\+\+B\+O\+O\+T\+\_\+\+SD}!Platform Configuration@{Platform Configuration}}\index{Platform Configuration@{Platform Configuration}!S\+D\+\_\+\+Z\+Y\+N\+Q\+\_\+\+B\+O\+O\+T\+\_\+\+SD@{S\+D\+\_\+\+Z\+Y\+N\+Q\+\_\+\+B\+O\+O\+T\+\_\+\+SD}}}\mbox{\Hypertarget{group___s_d___platform_gga06667de95c86bfcdef8bcc8ab13cb2d4af1351df506cd9586ffcd35813fa3f5f9}\label{group___s_d___platform_gga06667de95c86bfcdef8bcc8ab13cb2d4af1351df506cd9586ffcd35813fa3f5f9}} 
+S\+D\+\_\+\+Z\+Y\+N\+Q\+\_\+\+B\+O\+O\+T\+\_\+\+SD&SD card boot \\
+\hline
+
+\end{DoxyEnumFields}
+
+\begin{DoxyCode}
+162                   \{
+\end{DoxyCode}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group___s_d___platform_ga12d2befc51ccaa811a666d7eca5761ff}\label{group___s_d___platform_ga12d2befc51ccaa811a666d7eca5761ff}} 
+\index{Platform Configuration@{Platform Configuration}!sd\+\_\+boot\+\_\+timer\+\_\+expired@{sd\+\_\+boot\+\_\+timer\+\_\+expired}}
+\index{sd\+\_\+boot\+\_\+timer\+\_\+expired@{sd\+\_\+boot\+\_\+timer\+\_\+expired}!Platform Configuration@{Platform Configuration}}
+\subsubsection{\texorpdfstring{sd\+\_\+boot\+\_\+timer\+\_\+expired()}{sd\_boot\_timer\_expired()}}
+{\footnotesize\ttfamily uint8\+\_\+t sd\+\_\+boot\+\_\+timer\+\_\+expired (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{start,  }\item[{uint32\+\_\+t}]{end }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\mbox{\hyperlink{sd__platform_8c}{Src/sd\+\_\+platform.\+c}}$>$}
+
+
+
+Check if boot timer has expired. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start} & Timer start tick count (ms) \\
+\hline
+{\em end} & Timer end count (ms) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em T\+R\+UE} & if the timer has expired, F\+A\+L\+SE otherwise \\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyCode}
+515 \{
+516     \textcolor{keywordflow}{return} (HAL\_GetTick() > (start + end));
+517 \}
+\end{DoxyCode}

@@ -1,0 +1,72 @@
+\hypertarget{sd__spi_8h}{}\section{Inc/sd\+\_\+spi.h File Reference}
+\label{sd__spi_8h}\index{Inc/sd\+\_\+spi.\+h@{Inc/sd\+\_\+spi.\+h}}
+
+
+S\+PI Slave Control.  
+
+
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structsd__spi__packet}{sd\+\_\+spi\+\_\+packet}}
+\begin{DoxyCompactList}\small\item\em S\+PI packet structure. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structsd__spi__dev}{sd\+\_\+spi\+\_\+dev}}
+\begin{DoxyCompactList}\small\item\em S\+PI device structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group___s_d___s_p_i___types_ga9ae67f7089a8196e9c6b74b8a6708c2e}{sd\+\_\+spi\+\_\+error}} \{ \newline
+\mbox{\hyperlink{group___s_d___s_p_i___types_gga9ae67f7089a8196e9c6b74b8a6708c2ea109567296b93a03b1949407009750681}{S\+D\+\_\+\+S\+P\+I\+\_\+\+S\+U\+C\+C\+E\+SS}} = 0x4\+A0D, 
+\mbox{\hyperlink{group___s_d___s_p_i___types_gga9ae67f7089a8196e9c6b74b8a6708c2eaad5c42032f18bd5aafbbf60754614fc1}{S\+D\+\_\+\+S\+P\+I\+\_\+\+N\+U\+L\+L\+\_\+\+E\+R\+R\+OR}}, 
+\mbox{\hyperlink{group___s_d___s_p_i___types_gga9ae67f7089a8196e9c6b74b8a6708c2eaa7e23f729a2493076dfb261678471c24}{S\+D\+\_\+\+S\+P\+I\+\_\+\+L\+O\+C\+K\+ED}}, 
+\mbox{\hyperlink{group___s_d___s_p_i___types_gga9ae67f7089a8196e9c6b74b8a6708c2ea6281bf8a7232d9947bdc676856008ede}{S\+D\+\_\+\+S\+P\+I\+\_\+\+T\+I\+M\+E\+O\+UT}}, 
+\newline
+\mbox{\hyperlink{group___s_d___s_p_i___types_gga9ae67f7089a8196e9c6b74b8a6708c2eae8bfc341906b1dcb2431a61007acd4f0}{S\+D\+\_\+\+S\+P\+I\+\_\+\+E\+R\+R\+OR}}
+ \}
+\begin{DoxyCompactList}\small\item\em S\+PI error enumeration. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group___s_d___s_p_i___types_gaf0ec45d302a4c5a4af552acb7a001fa1}{sd\+\_\+spi\+\_\+state}} \{ \mbox{\hyperlink{group___s_d___s_p_i___types_ggaf0ec45d302a4c5a4af552acb7a001fa1ad057fdd1f53eb35b0a42e4d539ae0702}{S\+D\+\_\+\+S\+P\+I\+\_\+\+I\+N\+I\+T\+I\+A\+L\+I\+Z\+ED}} = 0x0\+E60, 
+\mbox{\hyperlink{group___s_d___s_p_i___types_ggaf0ec45d302a4c5a4af552acb7a001fa1a9f9c603a855647ea19336bcfe7637fa4}{S\+D\+\_\+\+S\+P\+I\+\_\+\+R\+E\+A\+DY}}, 
+\mbox{\hyperlink{group___s_d___s_p_i___types_ggaf0ec45d302a4c5a4af552acb7a001fa1aae8d52aee0a4d321db6702f906522b98}{S\+D\+\_\+\+S\+P\+I\+\_\+\+B\+U\+SY}}, 
+\mbox{\hyperlink{group___s_d___s_p_i___types_ggaf0ec45d302a4c5a4af552acb7a001fa1acedf52aae178e30eb1dd620d8db30456}{S\+D\+\_\+\+S\+P\+I\+\_\+\+O\+V\+E\+R\+F\+L\+OW}}
+ \}
+\begin{DoxyCompactList}\small\item\em S\+PI state enumeration. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group___s_d___s_p_i___types_ga0cf86b44c1bee9173f49395d05e076d5}{sd\+\_\+spi\+\_\+rx\+\_\+state}} \{ \mbox{\hyperlink{group___s_d___s_p_i___types_gga0cf86b44c1bee9173f49395d05e076d5a18932b80de20adc5422578c1512c5f6d}{S\+D\+\_\+\+S\+P\+I\+\_\+\+R\+X\+\_\+\+W\+A\+I\+T\+I\+NG}}, 
+\mbox{\hyperlink{group___s_d___s_p_i___types_gga0cf86b44c1bee9173f49395d05e076d5a3d56ab099b151c3b01757f4a1c8bfc0f}{S\+D\+\_\+\+S\+P\+I\+\_\+\+R\+X\+\_\+\+L\+E\+N\+G\+TH}}, 
+\mbox{\hyperlink{group___s_d___s_p_i___types_gga0cf86b44c1bee9173f49395d05e076d5aad68b7ce311a7ca2b9a5546e8c6767fd}{S\+D\+\_\+\+S\+P\+I\+\_\+\+R\+X\+\_\+\+P\+A\+C\+K\+ET}}
+ \}
+\begin{DoxyCompactList}\small\item\em S\+PI receive state enumeration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries sd\+\_\+spi2\+\_\+init} (void)
+\item 
+enum \mbox{\hyperlink{group___s_d___s_p_i___types_ga9ae67f7089a8196e9c6b74b8a6708c2e}{sd\+\_\+spi\+\_\+error}} \mbox{\hyperlink{group___s_d___s_p_i___functions_gaf4898042003aea6ba58eb519eb115284}{sd\+\_\+spi\+\_\+dev\+\_\+init}} (struct \mbox{\hyperlink{structsd__spi__dev}{sd\+\_\+spi\+\_\+dev}} $\ast$dev, S\+P\+I\+\_\+\+Handle\+Type\+Def $\ast$spi)
+\begin{DoxyCompactList}\small\item\em S\+PI Device Initialization Initialize S\+PI device structure. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group___s_d___s_p_i___types_ga9ae67f7089a8196e9c6b74b8a6708c2e}{sd\+\_\+spi\+\_\+error}} \mbox{\hyperlink{group___s_d___s_p_i___functions_gad3e4aa819e8e76a92816be83ca2702c9}{sd\+\_\+spi\+\_\+rx\+\_\+init}} (struct \mbox{\hyperlink{structsd__spi__dev}{sd\+\_\+spi\+\_\+dev}} $\ast$dev, struct \mbox{\hyperlink{structsd__cbuf}{sd\+\_\+cbuf}} $\ast$rx\+\_\+buff)
+\begin{DoxyCompactList}\small\item\em S\+PI Receive Interrupt Initialization Enable and prepare the S\+PI to receive on interrupt. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_d___s_p_i___functions_ga091c2e241f814bec60a92c7f97eb89ae}{sd\+\_\+spi\+\_\+irqhandler}} (struct \mbox{\hyperlink{structsd__spi__dev}{sd\+\_\+spi\+\_\+dev}} $\ast$dev)
+\begin{DoxyCompactList}\small\item\em S\+PI Interrupt Handler Handle interrupt events on the spi peripheral. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+S\+PI Slave Control. 
+
+\begin{DoxyAuthor}{Author}
+R. Bush  \href{mailto:bush@krtkl.com}{\tt bush@krtkl.\+com} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+v1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2016 March 28 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Free\+B\+SD
+\end{DoxyCopyright}
+Copyright (c) krtkl inc., 2016
+
+This program is free software\+: you can redistribute it and/or modify it under the terms of the G\+NU General Public License as published by the Free Software Foundation, either version 3 of the License, or any later version.
+
+This program is distributed in the hope that it will be useful, but W\+I\+T\+H\+O\+UT A\+NY W\+A\+R\+R\+A\+N\+TY; without even the implied warranty of M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+TY or F\+I\+T\+N\+E\+SS F\+OR A P\+A\+R\+T\+I\+C\+U\+L\+AR P\+U\+R\+P\+O\+SE. See the G\+NU General Public License for more details.
+
+You should have received a copy of the G\+NU General Public License along with this program. If not, see \href{http://www.gnu.org/licenses/}{\tt http\+://www.\+gnu.\+org/licenses/}. 

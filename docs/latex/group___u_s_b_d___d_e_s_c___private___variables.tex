@@ -1,0 +1,73 @@
+\hypertarget{group___u_s_b_d___d_e_s_c___private___variables}{}\section{U\+S\+B\+D\+\_\+\+D\+E\+S\+C\+\_\+\+Private\+\_\+\+Variables}
+\label{group___u_s_b_d___d_e_s_c___private___variables}\index{U\+S\+B\+D\+\_\+\+D\+E\+S\+C\+\_\+\+Private\+\_\+\+Variables@{U\+S\+B\+D\+\_\+\+D\+E\+S\+C\+\_\+\+Private\+\_\+\+Variables}}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+U\+S\+B\+D\+\_\+\+Descriptors\+Type\+Def \mbox{\hyperlink{group___u_s_b_d___d_e_s_c___private___variables_gae36d67393118d9d8531a8d633e23a797}{F\+S\+\_\+\+Desc}}
+\item 
+\+\_\+\+\_\+\+A\+L\+I\+G\+N\+\_\+\+B\+E\+G\+IN uint8\+\_\+t U\+S\+B\+D\+\_\+\+F\+S\+\_\+\+Device\+Desc \mbox{[}U\+S\+B\+\_\+\+L\+E\+N\+\_\+\+D\+E\+V\+\_\+\+D\+E\+SC\mbox{]} \mbox{\hyperlink{group___u_s_b_d___d_e_s_c___private___variables_ga89686ff64ce14e5466980830aea57e07}{\+\_\+\+\_\+\+A\+L\+I\+G\+N\+\_\+\+E\+ND}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{group___u_s_b_d___d_e_s_c___private___variables_ga89686ff64ce14e5466980830aea57e07}\label{group___u_s_b_d___d_e_s_c___private___variables_ga89686ff64ce14e5466980830aea57e07}} 
+\index{U\+S\+B\+D\+\_\+\+D\+E\+S\+C\+\_\+\+Private\+\_\+\+Variables@{U\+S\+B\+D\+\_\+\+D\+E\+S\+C\+\_\+\+Private\+\_\+\+Variables}!\+\_\+\+\_\+\+A\+L\+I\+G\+N\+\_\+\+E\+ND@{\+\_\+\+\_\+\+A\+L\+I\+G\+N\+\_\+\+E\+ND}}
+\index{\+\_\+\+\_\+\+A\+L\+I\+G\+N\+\_\+\+E\+ND@{\+\_\+\+\_\+\+A\+L\+I\+G\+N\+\_\+\+E\+ND}!U\+S\+B\+D\+\_\+\+D\+E\+S\+C\+\_\+\+Private\+\_\+\+Variables@{U\+S\+B\+D\+\_\+\+D\+E\+S\+C\+\_\+\+Private\+\_\+\+Variables}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+\+A\+L\+I\+G\+N\+\_\+\+E\+ND}{\_\_ALIGN\_END}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+A\+L\+I\+G\+N\+\_\+\+B\+E\+G\+IN uint8\+\_\+t U\+S\+B\+D\+\_\+\+Str\+Desc \mbox{[}U\+S\+B\+D\+\_\+\+M\+A\+X\+\_\+\+S\+T\+R\+\_\+\+D\+E\+S\+C\+\_\+\+S\+IZ\mbox{]} \+\_\+\+\_\+\+A\+L\+I\+G\+N\+\_\+\+E\+ND}
+
+
+
+{\ttfamily \#include $<$\mbox{\hyperlink{usbd__desc_8c}{Src/usbd\+\_\+desc.\+c}}$>$}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+=
+  \{
+    0x12,                       
+    USB\_DESC\_TYPE\_DEVICE,       
+    0x00,                         
+    0x02,
+    0x00,                       
+    0x00,                       
+    0x00,                       
+    USB\_MAX\_EP0\_SIZE,          
+    LOBYTE(USBD\_VID),           
+    HIBYTE(USBD\_VID),           
+    LOBYTE(USBD\_PID\_FS),           
+    HIBYTE(USBD\_PID\_FS),           
+    0x00,                       
+    0x02,
+    USBD\_IDX\_MFC\_STR,           
+    USBD\_IDX\_PRODUCT\_STR,       
+    USBD\_IDX\_SERIAL\_STR,        
+    USBD\_MAX\_NUM\_CONFIGURATION  
+  \}
+\end{DoxyCode}
+$<$ I\+AR Compiler I\+AR Compiler \mbox{\Hypertarget{group___u_s_b_d___d_e_s_c___private___variables_gae36d67393118d9d8531a8d633e23a797}\label{group___u_s_b_d___d_e_s_c___private___variables_gae36d67393118d9d8531a8d633e23a797}} 
+\index{U\+S\+B\+D\+\_\+\+D\+E\+S\+C\+\_\+\+Private\+\_\+\+Variables@{U\+S\+B\+D\+\_\+\+D\+E\+S\+C\+\_\+\+Private\+\_\+\+Variables}!F\+S\+\_\+\+Desc@{F\+S\+\_\+\+Desc}}
+\index{F\+S\+\_\+\+Desc@{F\+S\+\_\+\+Desc}!U\+S\+B\+D\+\_\+\+D\+E\+S\+C\+\_\+\+Private\+\_\+\+Variables@{U\+S\+B\+D\+\_\+\+D\+E\+S\+C\+\_\+\+Private\+\_\+\+Variables}}
+\subsubsection{\texorpdfstring{F\+S\+\_\+\+Desc}{FS\_Desc}}
+{\footnotesize\ttfamily U\+S\+B\+D\+\_\+\+Descriptors\+Type\+Def F\+S\+\_\+\+Desc}
+
+
+
+{\ttfamily \#include $<$\mbox{\hyperlink{usbd__desc_8c}{Src/usbd\+\_\+desc.\+c}}$>$}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+=
+\{
+  \mbox{\hyperlink{group___u_s_b_d___d_e_s_c___private___functions_ga14798be38c08a37163e53167032485ff}{USBD\_FS\_DeviceDescriptor}},
+  \mbox{\hyperlink{group___u_s_b_d___d_e_s_c___private___functions_gac02628ceb6a6a071e192dcb85063c0cc}{USBD\_FS\_LangIDStrDescriptor}}, 
+  \mbox{\hyperlink{group___u_s_b_d___d_e_s_c___private___functions_ga6427a671827813efe1a46c3dfcb05683}{USBD\_FS\_ManufacturerStrDescriptor}},
+  \mbox{\hyperlink{group___u_s_b_d___d_e_s_c___private___functions_ga0ec558c0303daabb851d584109a56514}{USBD\_FS\_ProductStrDescriptor}},
+  \mbox{\hyperlink{group___u_s_b_d___d_e_s_c___private___functions_gaad2a1d1451821845eda602a82b1cd213}{USBD\_FS\_SerialStrDescriptor}},
+  \mbox{\hyperlink{group___u_s_b_d___d_e_s_c___private___functions_ga40ed2a0fb60c50a285983a09ba6921d6}{USBD\_FS\_ConfigStrDescriptor}},
+  \mbox{\hyperlink{group___u_s_b_d___d_e_s_c___private___functions_gab248f43276f92d982ab5853111e4fb10}{USBD\_FS\_InterfaceStrDescriptor}},
+\}
+\end{DoxyCode}
+I\+AR Compiler 

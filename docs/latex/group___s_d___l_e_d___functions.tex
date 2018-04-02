@@ -1,0 +1,262 @@
+\hypertarget{group___s_d___l_e_d___functions}{}\section{L\+ED functions}
+\label{group___s_d___l_e_d___functions}\index{L\+E\+D functions@{L\+E\+D functions}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group___s_d___l_e_d___types_ga4f347a1003b4089de88a7f0fc62c1071}{sd\+\_\+led\+\_\+err}} \mbox{\hyperlink{group___s_d___l_e_d___functions_ga06e51b91e36bfe8becb0e977ae6d9035}{sd\+\_\+led\+\_\+init}} (struct \mbox{\hyperlink{structsd__led}{sd\+\_\+led}} $\ast$led, T\+I\+M\+\_\+\+Handle\+Type\+Def $\ast$tim, uint32\+\_\+t chan, uint32\+\_\+t $\ast$pattern, uint32\+\_\+t len, T\+I\+M\+\_\+\+Handle\+Type\+Def $\ast$up\+\_\+tim)
+\begin{DoxyCompactList}\small\item\em L\+ED initialization Initialize an L\+ED configuration on a timer peripheral with a pattern. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___s_d___l_e_d___functions_ga4e236adfeac9570724de7a61dc89324d}\label{group___s_d___l_e_d___functions_ga4e236adfeac9570724de7a61dc89324d}} 
+enum \mbox{\hyperlink{group___s_d___l_e_d___types_ga4f347a1003b4089de88a7f0fc62c1071}{sd\+\_\+led\+\_\+err}} \mbox{\hyperlink{group___s_d___l_e_d___functions_ga4e236adfeac9570724de7a61dc89324d}{sd\+\_\+led\+\_\+enable}} (struct \mbox{\hyperlink{structsd__led}{sd\+\_\+led}} $\ast$led, uint8\+\_\+t en)
+\begin{DoxyCompactList}\small\item\em L\+ED Enable. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group___s_d___l_e_d___types_ga4f347a1003b4089de88a7f0fc62c1071}{sd\+\_\+led\+\_\+err}} \mbox{\hyperlink{group___s_d___l_e_d___functions_ga1a7bb12d105f503fec86d069725f6591}{sd\+\_\+led\+\_\+reset}} (struct \mbox{\hyperlink{structsd__led}{sd\+\_\+led}} $\ast$led)
+\begin{DoxyCompactList}\small\item\em L\+ED reset Reset the L\+ED configuration and clear the pattern. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group___s_d___l_e_d___types_ga4f347a1003b4089de88a7f0fc62c1071}{sd\+\_\+led\+\_\+err}} \mbox{\hyperlink{group___s_d___l_e_d___functions_gaecada14301da813355742b77525b6ebc}{sd\+\_\+led\+\_\+queuehandler}} (struct \mbox{\hyperlink{structsd__led}{sd\+\_\+led}} $\ast$led)
+\begin{DoxyCompactList}\small\item\em L\+ED queue handler Execute the L\+ED pattern state machine. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group___s_d___l_e_d___types_ga4f347a1003b4089de88a7f0fc62c1071}{sd\+\_\+led\+\_\+err}} \mbox{\hyperlink{group___s_d___l_e_d___functions_ga5641c6ed41cf81ecbd2d61731a412667}{sd\+\_\+led\+\_\+set\+\_\+pattern}} (struct \mbox{\hyperlink{structsd__led}{sd\+\_\+led}} $\ast$led, uint32\+\_\+t $\ast$pattern, uint32\+\_\+t len, uint8\+\_\+t repeat)
+\begin{DoxyCompactList}\small\item\em L\+ED set pattern Set pattern for L\+ED output. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group___s_d___l_e_d___functions_ga06e51b91e36bfe8becb0e977ae6d9035}\label{group___s_d___l_e_d___functions_ga06e51b91e36bfe8becb0e977ae6d9035}} 
+\index{L\+E\+D functions@{L\+E\+D functions}!sd\+\_\+led\+\_\+init@{sd\+\_\+led\+\_\+init}}
+\index{sd\+\_\+led\+\_\+init@{sd\+\_\+led\+\_\+init}!L\+E\+D functions@{L\+E\+D functions}}
+\subsubsection{\texorpdfstring{sd\+\_\+led\+\_\+init()}{sd\_led\_init()}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group___s_d___l_e_d___types_ga4f347a1003b4089de88a7f0fc62c1071}{sd\+\_\+led\+\_\+err}} sd\+\_\+led\+\_\+init (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structsd__led}{sd\+\_\+led}} $\ast$}]{led,  }\item[{T\+I\+M\+\_\+\+Handle\+Type\+Def $\ast$}]{tim,  }\item[{uint32\+\_\+t}]{chan,  }\item[{uint32\+\_\+t $\ast$}]{pattern,  }\item[{uint32\+\_\+t}]{len,  }\item[{T\+I\+M\+\_\+\+Handle\+Type\+Def $\ast$}]{up\+\_\+tim }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\mbox{\hyperlink{sd__led_8c}{Src/sd\+\_\+led.\+c}}$>$}
+
+
+
+L\+ED initialization Initialize an L\+ED configuration on a timer peripheral with a pattern. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em led} & L\+ED configuration \\
+\hline
+{\em tim} & Timer handle associated with the L\+ED \\
+\hline
+{\em chan} & Timer channel for the L\+ED \\
+\hline
+{\em pattern} & The pattern to initialize the L\+ED with \\
+\hline
+{\em len} & Length of the pattern \\
+\hline
+{\em up\+\_\+tim} & Update timer for patter queue \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em S\+D\+\_\+\+L\+E\+D\+\_\+\+S\+U\+C\+C\+E\+SS} & on success, error status otherwise \\
+\hline
+\end{DoxyRetVals}
+Only reenable the update timer if it was running prior to this function being called
+\begin{DoxyCode}
+98 \{
+99     uint8\_t reenable\_timer;
+100                   
+101     \textcolor{comment}{/* Check for NULL pointers for the config and timer handle */}
+102     \textcolor{keywordflow}{if} (led == NULL)
+103         \textcolor{keywordflow}{return} \mbox{\hyperlink{group___s_d___l_e_d___types_gga4f347a1003b4089de88a7f0fc62c1071ac90640745bacb0ff9863a4d917ae02a1}{SD\_LED\_NULL\_HANDLE\_ERROR}};
+104 
+105     \textcolor{keywordflow}{if} (led->\mbox{\hyperlink{structsd__led_a6e46bfc6fae939f8fc5ee53ea4551f18}{tim}} == NULL)
+106         \textcolor{keywordflow}{return} \mbox{\hyperlink{group___s_d___l_e_d___types_gga4f347a1003b4089de88a7f0fc62c1071afc7e0672820a686720c50ff0aa9d807a}{SD\_LED\_NULL\_TIMER\_ERROR}}; 
+107 
+108     \textcolor{comment}{/* Check if the update timer has been initialized */}
+109     \textcolor{keywordflow}{if} ((up\_tim->Instance->CR1 & (TIM\_CR1\_CEN)) && 
+110         (up\_tim->Instance->DIER & (TIM\_IT\_UPDATE))) \{
+111         reenable\_timer = 1;
+112         HAL\_TIM\_Base\_Stop\_IT(up\_tim);
+113     \}
+114        
+115     \textcolor{comment}{/* Set the configuration of the LED */}
+116     led->\mbox{\hyperlink{structsd__led_a6e46bfc6fae939f8fc5ee53ea4551f18}{tim}} = tim;
+117     led->\mbox{\hyperlink{structsd__led_afb67f3e4e204785118073a96b76614d6}{chan}} = chan;
+118     led->\mbox{\hyperlink{structsd__led_a70c2ff7a80dc607b1f146e4aa1494c43}{pattern}} = pattern;
+119     led->\mbox{\hyperlink{structsd__led_ad68a2de2731d9bf342369de2cdc270c5}{pattern\_len}} = \mbox{\hyperlink{structsd__cbuf_a96bbf959016e4411c9e6b9812a8be60a}{len}};
+120     led->\mbox{\hyperlink{structsd__led_a60a9dc074fe55a93fc9752d68bef8673}{pattern\_idx}} = 0;
+121     led->\mbox{\hyperlink{structsd__led_a61d4acd84796eefb3b7dead0fae9dabb}{up\_tim}} = up\_tim;
+122          
+127     \textcolor{keywordflow}{if} (reenable\_timer)
+128         HAL\_TIM\_Base\_Start\_IT(up\_tim);
+129   
+130     \textcolor{keywordflow}{return} \mbox{\hyperlink{group___s_d___l_e_d___types_gga4f347a1003b4089de88a7f0fc62c1071ad3d9e41d4cdb2e47e8754d0a1a3824e2}{SD\_LED\_SUCCESS}};
+131 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group___s_d___l_e_d___functions_gaecada14301da813355742b77525b6ebc}\label{group___s_d___l_e_d___functions_gaecada14301da813355742b77525b6ebc}} 
+\index{L\+E\+D functions@{L\+E\+D functions}!sd\+\_\+led\+\_\+queuehandler@{sd\+\_\+led\+\_\+queuehandler}}
+\index{sd\+\_\+led\+\_\+queuehandler@{sd\+\_\+led\+\_\+queuehandler}!L\+E\+D functions@{L\+E\+D functions}}
+\subsubsection{\texorpdfstring{sd\+\_\+led\+\_\+queuehandler()}{sd\_led\_queuehandler()}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group___s_d___l_e_d___types_ga4f347a1003b4089de88a7f0fc62c1071}{sd\+\_\+led\+\_\+err}} sd\+\_\+led\+\_\+queuehandler (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structsd__led}{sd\+\_\+led}} $\ast$}]{led }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\mbox{\hyperlink{sd__led_8c}{Src/sd\+\_\+led.\+c}}$>$}
+
+
+
+L\+ED queue handler Execute the L\+ED pattern state machine. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em led} & The L\+ED pattern handle \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em S\+D\+\_\+\+L\+E\+D\+\_\+\+S\+U\+C\+C\+E\+SS} & on success, error status otherwise \\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyCode}
+214 \{
+215   
+216     \textcolor{comment}{/* Check for NULL pointers for the config and timer handle */}
+217     \textcolor{keywordflow}{if} (led == NULL) 
+218         \textcolor{keywordflow}{return} \mbox{\hyperlink{group___s_d___l_e_d___types_gga4f347a1003b4089de88a7f0fc62c1071ac90640745bacb0ff9863a4d917ae02a1}{SD\_LED\_NULL\_HANDLE\_ERROR}};
+219     \textcolor{keywordflow}{if} (led->\mbox{\hyperlink{structsd__led_a6e46bfc6fae939f8fc5ee53ea4551f18}{tim}} == NULL) 
+220         \textcolor{keywordflow}{return} \mbox{\hyperlink{group___s_d___l_e_d___types_gga4f347a1003b4089de88a7f0fc62c1071afc7e0672820a686720c50ff0aa9d807a}{SD\_LED\_NULL\_TIMER\_ERROR}};
+221   
+222     \textcolor{comment}{/* For uninitialized patterns, do nothing */}
+223     \textcolor{keywordflow}{if} (led->\mbox{\hyperlink{structsd__led_a70c2ff7a80dc607b1f146e4aa1494c43}{pattern}} == NULL)
+224         \textcolor{keywordflow}{return} \mbox{\hyperlink{group___s_d___l_e_d___types_gga4f347a1003b4089de88a7f0fc62c1071a6c91349c49b8ebeb399bfb6709d82e7d}{SD\_LED\_IDLE}};
+225   
+226     \textcolor{comment}{/* Restart the pattern index if necessary */}
+227     \textcolor{keywordflow}{if} (led->\mbox{\hyperlink{structsd__led_a60a9dc074fe55a93fc9752d68bef8673}{pattern\_idx}} >= led->\mbox{\hyperlink{structsd__led_ad68a2de2731d9bf342369de2cdc270c5}{pattern\_len}} ) \{
+228         led->\mbox{\hyperlink{structsd__led_a60a9dc074fe55a93fc9752d68bef8673}{pattern\_idx}} = 0;
+229     
+230         \textcolor{comment}{/* Is the pattern repeating? */}
+231         \textcolor{keywordflow}{if} (!(led->\mbox{\hyperlink{structsd__led_a29642221aad4146341708fe32dfb8064}{repeat}})) \{
+232                 led->\mbox{\hyperlink{structsd__led_a70c2ff7a80dc607b1f146e4aa1494c43}{pattern}} = NULL;
+233                 led->\mbox{\hyperlink{structsd__led_ad68a2de2731d9bf342369de2cdc270c5}{pattern\_len}} = 0;
+234                 \textcolor{keywordflow}{return} \mbox{\hyperlink{group___s_d___l_e_d___types_gga4f347a1003b4089de88a7f0fc62c1071ad3d9e41d4cdb2e47e8754d0a1a3824e2}{SD\_LED\_SUCCESS}};  \textcolor{comment}{/* Return without configuring the PWM */}
+235         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (led->\mbox{\hyperlink{structsd__led_aa3c569d89c64771860f259ee403b8f6a}{pattern\_next}} != NULL)  \{
+236             \textcolor{comment}{/* Is there a new pattern to start? */}
+237             led->\mbox{\hyperlink{structsd__led_a70c2ff7a80dc607b1f146e4aa1494c43}{pattern}} = led->\mbox{\hyperlink{structsd__led_aa3c569d89c64771860f259ee403b8f6a}{pattern\_next}};
+238             led->\mbox{\hyperlink{structsd__led_aa3c569d89c64771860f259ee403b8f6a}{pattern\_next}} = NULL;
+239         \}
+240     \}
+241   
+242     \textcolor{comment}{/* Set the pattern value in the configuration */}
+243     led->\mbox{\hyperlink{structsd__led_acaf3272a1f93d49be9ec4c31804252e6}{cfg}}->Pulse = led->\mbox{\hyperlink{structsd__led_a70c2ff7a80dc607b1f146e4aa1494c43}{pattern}}[led->\mbox{\hyperlink{structsd__led_a60a9dc074fe55a93fc9752d68bef8673}{pattern\_idx}}++];
+244   
+245     \textcolor{comment}{/* Set the configuration */}
+246     HAL\_TIM\_PWM\_ConfigChannel(led->\mbox{\hyperlink{structsd__led_a6e46bfc6fae939f8fc5ee53ea4551f18}{tim}}, led->\mbox{\hyperlink{structsd__led_acaf3272a1f93d49be9ec4c31804252e6}{cfg}}, led->\mbox{\hyperlink{structsd__led_afb67f3e4e204785118073a96b76614d6}{chan}});
+247   
+248     \textcolor{comment}{/* Set the PWM Output */}
+249     HAL\_TIM\_PWM\_Start(led->\mbox{\hyperlink{structsd__led_a6e46bfc6fae939f8fc5ee53ea4551f18}{tim}}, led->\mbox{\hyperlink{structsd__led_afb67f3e4e204785118073a96b76614d6}{chan}});
+250   
+251     \textcolor{keywordflow}{return} \mbox{\hyperlink{group___s_d___l_e_d___types_gga4f347a1003b4089de88a7f0fc62c1071ad3d9e41d4cdb2e47e8754d0a1a3824e2}{SD\_LED\_SUCCESS}};
+252 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group___s_d___l_e_d___functions_ga1a7bb12d105f503fec86d069725f6591}\label{group___s_d___l_e_d___functions_ga1a7bb12d105f503fec86d069725f6591}} 
+\index{L\+E\+D functions@{L\+E\+D functions}!sd\+\_\+led\+\_\+reset@{sd\+\_\+led\+\_\+reset}}
+\index{sd\+\_\+led\+\_\+reset@{sd\+\_\+led\+\_\+reset}!L\+E\+D functions@{L\+E\+D functions}}
+\subsubsection{\texorpdfstring{sd\+\_\+led\+\_\+reset()}{sd\_led\_reset()}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group___s_d___l_e_d___types_ga4f347a1003b4089de88a7f0fc62c1071}{sd\+\_\+led\+\_\+err}} sd\+\_\+led\+\_\+reset (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structsd__led}{sd\+\_\+led}} $\ast$}]{led }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\mbox{\hyperlink{sd__led_8c}{Src/sd\+\_\+led.\+c}}$>$}
+
+
+
+L\+ED reset Reset the L\+ED configuration and clear the pattern. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em led} & L\+ED configuration \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em S\+D\+\_\+\+L\+E\+D\+\_\+\+S\+U\+C\+C\+E\+SS} & on success, error status otherwise \\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyCode}
+175 \{
+176   
+177     \textcolor{comment}{/* Check for NULL pointers for the config and timer handle */}
+178     \textcolor{keywordflow}{if} (led == NULL)
+179         \textcolor{keywordflow}{return} \mbox{\hyperlink{group___s_d___l_e_d___types_gga4f347a1003b4089de88a7f0fc62c1071ac90640745bacb0ff9863a4d917ae02a1}{SD\_LED\_NULL\_HANDLE\_ERROR}};
+180     \textcolor{keywordflow}{if} (led->\mbox{\hyperlink{structsd__led_a6e46bfc6fae939f8fc5ee53ea4551f18}{tim}} == NULL)
+181         \textcolor{keywordflow}{return} \mbox{\hyperlink{group___s_d___l_e_d___types_gga4f347a1003b4089de88a7f0fc62c1071afc7e0672820a686720c50ff0aa9d807a}{SD\_LED\_NULL\_TIMER\_ERROR}};
+182   
+183     \textcolor{comment}{/* Disable update timer interrupt */}
+184     HAL\_TIM\_Base\_Stop\_IT(led->\mbox{\hyperlink{structsd__led_a61d4acd84796eefb3b7dead0fae9dabb}{up\_tim}});
+185   
+186     \textcolor{comment}{/* Set the pattern value in the configuration */}
+187     led->\mbox{\hyperlink{structsd__led_acaf3272a1f93d49be9ec4c31804252e6}{cfg}}->Pulse = 0;
+188   
+189     \textcolor{comment}{/* Set the configuration */}
+190     HAL\_TIM\_PWM\_ConfigChannel(led->\mbox{\hyperlink{structsd__led_a6e46bfc6fae939f8fc5ee53ea4551f18}{tim}}, led->\mbox{\hyperlink{structsd__led_acaf3272a1f93d49be9ec4c31804252e6}{cfg}}, led->\mbox{\hyperlink{structsd__led_afb67f3e4e204785118073a96b76614d6}{chan}});
+191     
+192     \textcolor{comment}{/* Remove the pattern from the LED */}
+193     led->\mbox{\hyperlink{structsd__led_a70c2ff7a80dc607b1f146e4aa1494c43}{pattern}} = NULL;
+194     led->\mbox{\hyperlink{structsd__led_aa3c569d89c64771860f259ee403b8f6a}{pattern\_next}} = NULL;
+195     led->\mbox{\hyperlink{structsd__led_a60a9dc074fe55a93fc9752d68bef8673}{pattern\_idx}} = 0;
+196     led->\mbox{\hyperlink{structsd__led_ad68a2de2731d9bf342369de2cdc270c5}{pattern\_len}} = 0;
+197     led->\mbox{\hyperlink{structsd__led_a29642221aad4146341708fe32dfb8064}{repeat}} = 0;
+198     
+199     \textcolor{comment}{/* Enable update timer interrupt */}
+200     HAL\_TIM\_Base\_Start\_IT(led->\mbox{\hyperlink{structsd__led_a61d4acd84796eefb3b7dead0fae9dabb}{up\_tim}});
+201   
+202     \textcolor{keywordflow}{return} \mbox{\hyperlink{group___s_d___l_e_d___types_gga4f347a1003b4089de88a7f0fc62c1071ad3d9e41d4cdb2e47e8754d0a1a3824e2}{SD\_LED\_SUCCESS}};
+203 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group___s_d___l_e_d___functions_ga5641c6ed41cf81ecbd2d61731a412667}\label{group___s_d___l_e_d___functions_ga5641c6ed41cf81ecbd2d61731a412667}} 
+\index{L\+E\+D functions@{L\+E\+D functions}!sd\+\_\+led\+\_\+set\+\_\+pattern@{sd\+\_\+led\+\_\+set\+\_\+pattern}}
+\index{sd\+\_\+led\+\_\+set\+\_\+pattern@{sd\+\_\+led\+\_\+set\+\_\+pattern}!L\+E\+D functions@{L\+E\+D functions}}
+\subsubsection{\texorpdfstring{sd\+\_\+led\+\_\+set\+\_\+pattern()}{sd\_led\_set\_pattern()}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group___s_d___l_e_d___types_ga4f347a1003b4089de88a7f0fc62c1071}{sd\+\_\+led\+\_\+err}} sd\+\_\+led\+\_\+set\+\_\+pattern (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structsd__led}{sd\+\_\+led}} $\ast$}]{led,  }\item[{uint32\+\_\+t $\ast$}]{pattern,  }\item[{uint32\+\_\+t}]{len,  }\item[{uint8\+\_\+t}]{repeat }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\mbox{\hyperlink{sd__led_8c}{Src/sd\+\_\+led.\+c}}$>$}
+
+
+
+L\+ED set pattern Set pattern for L\+ED output. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em led} & The L\+ED pattern handle \\
+\hline
+{\em pattern} & The pattern to use for the L\+ED \\
+\hline
+{\em len} & The length of the pattern \\
+\hline
+{\em repeat} & Set the pattern to repeat after ending \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em S\+D\+\_\+\+L\+E\+D\+\_\+\+S\+U\+C\+C\+E\+SS} & on success, error status otherwise \\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyCode}
+269 \{
+270     \textcolor{comment}{/* Check for NULL pointers for the config and timer handle */}
+271     \textcolor{keywordflow}{if} ((led == NULL) || (led->\mbox{\hyperlink{structsd__led_a6e46bfc6fae939f8fc5ee53ea4551f18}{tim}} == NULL)) 
+272         \textcolor{keywordflow}{return} \mbox{\hyperlink{group___s_d___l_e_d___types_gga4f347a1003b4089de88a7f0fc62c1071ac90640745bacb0ff9863a4d917ae02a1}{SD\_LED\_NULL\_HANDLE\_ERROR}};
+273   
+274     \textcolor{comment}{/* Disable the timer interrupt */}
+275     \textcolor{comment}{//HAL\_TIM\_Base\_Stop\_IT( LED->Update\_HTIMx );}
+276   
+277     led->\mbox{\hyperlink{structsd__led_a70c2ff7a80dc607b1f146e4aa1494c43}{pattern}} = pattern;
+278     led->\mbox{\hyperlink{structsd__led_ad68a2de2731d9bf342369de2cdc270c5}{pattern\_len}} = \mbox{\hyperlink{structsd__cbuf_a96bbf959016e4411c9e6b9812a8be60a}{len}};
+279     led->\mbox{\hyperlink{structsd__led_a60a9dc074fe55a93fc9752d68bef8673}{pattern\_idx}} = 0;
+280     led->\mbox{\hyperlink{structsd__led_a29642221aad4146341708fe32dfb8064}{repeat}} = repeat;
+281   
+282     \textcolor{comment}{/* Reenable the timer */}
+283     \textcolor{comment}{//HAL\_TIM\_Base\_Start\_IT( LED->Update\_HTIMx );}
+284  
+285     \textcolor{keywordflow}{return} \mbox{\hyperlink{group___s_d___l_e_d___types_gga4f347a1003b4089de88a7f0fc62c1071ad3d9e41d4cdb2e47e8754d0a1a3824e2}{SD\_LED\_SUCCESS}};
+286 \}
+\end{DoxyCode}

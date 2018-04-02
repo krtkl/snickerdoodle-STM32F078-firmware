@@ -1,0 +1,14 @@
+digraph "sd_i2c_dev_init"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node11 [label="sd_i2c_dev_init",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node11 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="sd_i2c1_init",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___s_d___i2_c___functions.html#ga47b7e9401e2826acc6b03f258dc644a9",tooltip="I2C1 Initialization Initialize low-level hardware peripheral and set device handle. "];
+  Node12 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node13 [label="main",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___s_d___main.html#ga840291bc02cba5474a4cb46a9b9566fe",tooltip="Main Program Entry Point Initializes each peripheral along with any interrupts and begins execution o..."];
+  Node11 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node14 [label="sd_i2c2_init",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___s_d___i2_c___functions.html#ga8ae735df0c54e25588a526d9a92d3a69",tooltip="I2C2 Initialization Initialize low-level hardware peripheral and set device handle. "];
+  Node14 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+}

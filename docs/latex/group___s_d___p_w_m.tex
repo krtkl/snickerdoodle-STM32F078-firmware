@@ -1,0 +1,149 @@
+\hypertarget{group___s_d___p_w_m}{}\section{P\+WM}
+\label{group___s_d___p_w_m}\index{P\+WM@{P\+WM}}
+
+
+P\+WM configuration and output control.  
+
+
+\subsection*{Modules}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___s_d___p_w_m___functions}{P\+W\+M Functions}}
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___s_d___p_w_m_ga25fc663547539bc49fecc0011bd76ab5}\label{group___s_d___p_w_m_ga25fc663547539bc49fecc0011bd76ab5}} 
+T\+I\+M\+\_\+\+Handle\+Type\+Def {\bfseries htim1}
+\item 
+\mbox{\Hypertarget{group___s_d___p_w_m_gaac3d2c59ee0e3bbae1b99529a154eb62}\label{group___s_d___p_w_m_gaac3d2c59ee0e3bbae1b99529a154eb62}} 
+T\+I\+M\+\_\+\+Handle\+Type\+Def {\bfseries htim3}
+\item 
+static T\+I\+M\+\_\+\+O\+C\+\_\+\+Init\+Type\+Def {\bfseries fault\+\_\+cfg}
+\item 
+static T\+I\+M\+\_\+\+O\+C\+\_\+\+Init\+Type\+Def {\bfseries usb\+\_\+cfg}
+\item 
+static T\+I\+M\+\_\+\+O\+C\+\_\+\+Init\+Type\+Def {\bfseries bluetooth\+\_\+cfg}
+\item 
+static T\+I\+M\+\_\+\+O\+C\+\_\+\+Init\+Type\+Def {\bfseries app\+\_\+cfg}
+\item 
+static T\+I\+M\+\_\+\+O\+C\+\_\+\+Init\+Type\+Def {\bfseries wireless\+\_\+cfg}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+P\+WM configuration and output control. 
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{group___s_d___p_w_m_gaafad42a9d0bd4a3186e1c78c6bf1796e}\label{group___s_d___p_w_m_gaafad42a9d0bd4a3186e1c78c6bf1796e}} 
+\index{P\+WM@{P\+WM}!app\+\_\+cfg@{app\+\_\+cfg}}
+\index{app\+\_\+cfg@{app\+\_\+cfg}!P\+WM@{P\+WM}}
+\subsubsection{\texorpdfstring{app\+\_\+cfg}{app\_cfg}}
+{\footnotesize\ttfamily T\+I\+M\+\_\+\+O\+C\+\_\+\+Init\+Type\+Def app\+\_\+cfg\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+{\ttfamily \#include $<$\mbox{\hyperlink{sd__pwm_8c}{Src/sd\+\_\+pwm.\+c}}$>$}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{
+    TIM\_OCMODE\_PWM1,
+    0,
+    TIM\_OCPOLARITY\_LOW,
+    TIM\_OCNPOLARITY\_LOW,
+    TIM\_OCFAST\_DISABLE,
+    TIM\_OCIDLESTATE\_RESET,
+    TIM\_OCNIDLESTATE\_RESET
+\}
+\end{DoxyCode}
+\mbox{\Hypertarget{group___s_d___p_w_m_gae3fa77e9e0878a275a8cd304bc4926c3}\label{group___s_d___p_w_m_gae3fa77e9e0878a275a8cd304bc4926c3}} 
+\index{P\+WM@{P\+WM}!bluetooth\+\_\+cfg@{bluetooth\+\_\+cfg}}
+\index{bluetooth\+\_\+cfg@{bluetooth\+\_\+cfg}!P\+WM@{P\+WM}}
+\subsubsection{\texorpdfstring{bluetooth\+\_\+cfg}{bluetooth\_cfg}}
+{\footnotesize\ttfamily T\+I\+M\+\_\+\+O\+C\+\_\+\+Init\+Type\+Def bluetooth\+\_\+cfg\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+{\ttfamily \#include $<$\mbox{\hyperlink{sd__pwm_8c}{Src/sd\+\_\+pwm.\+c}}$>$}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{
+    TIM\_OCMODE\_PWM1,
+    0,
+    TIM\_OCPOLARITY\_LOW,
+    TIM\_OCNPOLARITY\_LOW,
+    TIM\_OCFAST\_DISABLE,
+    TIM\_OCIDLESTATE\_RESET,
+    TIM\_OCNIDLESTATE\_RESET
+\}
+\end{DoxyCode}
+\mbox{\Hypertarget{group___s_d___p_w_m_ga5bc9c8a172b4c75930387af65adf2e26}\label{group___s_d___p_w_m_ga5bc9c8a172b4c75930387af65adf2e26}} 
+\index{P\+WM@{P\+WM}!fault\+\_\+cfg@{fault\+\_\+cfg}}
+\index{fault\+\_\+cfg@{fault\+\_\+cfg}!P\+WM@{P\+WM}}
+\subsubsection{\texorpdfstring{fault\+\_\+cfg}{fault\_cfg}}
+{\footnotesize\ttfamily T\+I\+M\+\_\+\+O\+C\+\_\+\+Init\+Type\+Def fault\+\_\+cfg\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+{\ttfamily \#include $<$\mbox{\hyperlink{sd__pwm_8c}{Src/sd\+\_\+pwm.\+c}}$>$}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{
+    TIM\_OCMODE\_PWM1,
+    0,
+    TIM\_OCPOLARITY\_LOW,
+    TIM\_OCNPOLARITY\_LOW,
+    TIM\_OCFAST\_DISABLE,
+    TIM\_OCIDLESTATE\_RESET,
+    TIM\_OCNIDLESTATE\_RESET
+\}
+\end{DoxyCode}
+\mbox{\Hypertarget{group___s_d___p_w_m_ga3d73e8517034e997f36ad0ac5ca08c43}\label{group___s_d___p_w_m_ga3d73e8517034e997f36ad0ac5ca08c43}} 
+\index{P\+WM@{P\+WM}!usb\+\_\+cfg@{usb\+\_\+cfg}}
+\index{usb\+\_\+cfg@{usb\+\_\+cfg}!P\+WM@{P\+WM}}
+\subsubsection{\texorpdfstring{usb\+\_\+cfg}{usb\_cfg}}
+{\footnotesize\ttfamily T\+I\+M\+\_\+\+O\+C\+\_\+\+Init\+Type\+Def usb\+\_\+cfg\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+{\ttfamily \#include $<$\mbox{\hyperlink{sd__pwm_8c}{Src/sd\+\_\+pwm.\+c}}$>$}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{
+    TIM\_OCMODE\_PWM1,
+    0,
+    TIM\_OCPOLARITY\_HIGH,
+    TIM\_OCNPOLARITY\_LOW,
+    TIM\_OCFAST\_DISABLE,
+    TIM\_OCIDLESTATE\_RESET,
+    TIM\_OCNIDLESTATE\_RESET
+\}
+\end{DoxyCode}
+\mbox{\Hypertarget{group___s_d___p_w_m_ga16e3d3aeb6a3dfc37eb50e66129a9014}\label{group___s_d___p_w_m_ga16e3d3aeb6a3dfc37eb50e66129a9014}} 
+\index{P\+WM@{P\+WM}!wireless\+\_\+cfg@{wireless\+\_\+cfg}}
+\index{wireless\+\_\+cfg@{wireless\+\_\+cfg}!P\+WM@{P\+WM}}
+\subsubsection{\texorpdfstring{wireless\+\_\+cfg}{wireless\_cfg}}
+{\footnotesize\ttfamily T\+I\+M\+\_\+\+O\+C\+\_\+\+Init\+Type\+Def wireless\+\_\+cfg\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+{\ttfamily \#include $<$\mbox{\hyperlink{sd__pwm_8c}{Src/sd\+\_\+pwm.\+c}}$>$}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{
+    TIM\_OCMODE\_PWM1,
+    0,
+    TIM\_OCPOLARITY\_LOW,
+    TIM\_OCNPOLARITY\_LOW,
+    TIM\_OCFAST\_DISABLE,
+    TIM\_OCIDLESTATE\_RESET,
+    TIM\_OCNIDLESTATE\_RESET
+\}
+\end{DoxyCode}

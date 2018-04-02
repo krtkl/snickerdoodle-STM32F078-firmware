@@ -1,0 +1,154 @@
+\hypertarget{group___s_d___u_a_r_t}{}\section{U\+A\+RT}
+\label{group___s_d___u_a_r_t}\index{U\+A\+RT@{U\+A\+RT}}
+
+
+U\+A\+RT configuration and control.  
+
+
+\subsection*{Modules}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___s_d___u_a_r_t___defines}{U\+A\+R\+T Definitions}}
+\item 
+\mbox{\hyperlink{group___s_d___u_a_r_t___exported___variables}{U\+A\+R\+T Exported Variables}}
+\item 
+\mbox{\hyperlink{group___s_d___u_a_r_t___functions}{U\+A\+R\+T Functions}}
+\item 
+\mbox{\hyperlink{group___s_d___u_a_r_t___private___variables}{U\+A\+R\+T Private Variables}}
+\item 
+\mbox{\hyperlink{group___s_d___u_a_r_t___types}{U\+A\+R\+T Types}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static enum \mbox{\hyperlink{group___s_d___u_a_r_t___types_gaff649a266fb34035c10733370c4fd104}{sd\+\_\+uart\+\_\+err}} \mbox{\hyperlink{group___s_d___u_a_r_t_ga67a7e880d3ca7aa4f2a2987e3cbd9a15}{sd\+\_\+uart\+\_\+dev\+\_\+init}} (struct \mbox{\hyperlink{structsd__uart__dev}{sd\+\_\+uart\+\_\+dev}} $\ast$dev, U\+A\+R\+T\+\_\+\+Handle\+Type\+Def $\ast$huart)
+\begin{DoxyCompactList}\small\item\em U\+A\+RT Device Initialization Initialize U\+A\+RT device structure. \end{DoxyCompactList}\item 
+static enum \mbox{\hyperlink{group___s_d___u_a_r_t___types_gaff649a266fb34035c10733370c4fd104}{sd\+\_\+uart\+\_\+err}} \mbox{\hyperlink{group___s_d___u_a_r_t_ga54b5b3ca4f31885d84714a36f6fcc5e3}{sd\+\_\+uart\+\_\+rx\+\_\+isr}} (struct \mbox{\hyperlink{structsd__uart__dev}{sd\+\_\+uart\+\_\+dev}} $\ast$dev)
+\begin{DoxyCompactList}\small\item\em Receive Interrupt Routine. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{group___s_d___u_a_r_t_gafc595787c83c748d767ac49596be144e}{sd\+\_\+uart\+\_\+err\+\_\+cb}} (struct \mbox{\hyperlink{structsd__uart__dev}{sd\+\_\+uart\+\_\+dev}} $\ast$dev)
+\begin{DoxyCompactList}\small\item\em Handle U\+A\+RT errors. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+U\+A\+RT configuration and control. 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group___s_d___u_a_r_t_ga67a7e880d3ca7aa4f2a2987e3cbd9a15}\label{group___s_d___u_a_r_t_ga67a7e880d3ca7aa4f2a2987e3cbd9a15}} 
+\index{U\+A\+RT@{U\+A\+RT}!sd\+\_\+uart\+\_\+dev\+\_\+init@{sd\+\_\+uart\+\_\+dev\+\_\+init}}
+\index{sd\+\_\+uart\+\_\+dev\+\_\+init@{sd\+\_\+uart\+\_\+dev\+\_\+init}!U\+A\+RT@{U\+A\+RT}}
+\subsubsection{\texorpdfstring{sd\+\_\+uart\+\_\+dev\+\_\+init()}{sd\_uart\_dev\_init()}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group___s_d___u_a_r_t___types_gaff649a266fb34035c10733370c4fd104}{sd\+\_\+uart\+\_\+err}} sd\+\_\+uart\+\_\+dev\+\_\+init (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structsd__uart__dev}{sd\+\_\+uart\+\_\+dev}} $\ast$}]{dev,  }\item[{U\+A\+R\+T\+\_\+\+Handle\+Type\+Def $\ast$}]{huart }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+{\ttfamily \#include $<$\mbox{\hyperlink{sd__uart_8c}{Src/sd\+\_\+uart.\+c}}$>$}
+
+
+
+U\+A\+RT Device Initialization Initialize U\+A\+RT device structure. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uart\+\_\+dev} & Device structure to initialize \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em S\+D\+\_\+\+U\+A\+R\+T\+\_\+\+S\+U\+C\+C\+E\+SS} & on success, error state otherwise \\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyCode}
+291 \{
+292     \textcolor{keywordflow}{if} (huart == NULL)
+293         \textcolor{keywordflow}{return} \mbox{\hyperlink{group___s_d___u_a_r_t___types_ggaff649a266fb34035c10733370c4fd104ad77d98472c0c3bb192d745b3389de08d}{SD\_UART\_ERROR}};
+294     
+295     \textcolor{comment}{/* Reset the UART device structure */}
+296     memset(dev, 0, \textcolor{keyword}{sizeof}(\textcolor{keyword}{struct} \mbox{\hyperlink{structsd__uart__dev}{sd\_uart\_dev}}));
+297   
+298     dev->\mbox{\hyperlink{structsd__uart__dev_a31b2a452cffe839ac4a3bf86eddc16b0}{uart}} = huart;      \textcolor{comment}{/* Set the UART handle pointer */}
+299     
+300     
+301     \textcolor{keywordflow}{return} \mbox{\hyperlink{group___s_d___u_a_r_t___types_ggaff649a266fb34035c10733370c4fd104a3b6fe085405a5d58c55226fd59f01994}{SD\_UART\_SUCCESS}};
+302 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group___s_d___u_a_r_t_gafc595787c83c748d767ac49596be144e}\label{group___s_d___u_a_r_t_gafc595787c83c748d767ac49596be144e}} 
+\index{U\+A\+RT@{U\+A\+RT}!sd\+\_\+uart\+\_\+err\+\_\+cb@{sd\+\_\+uart\+\_\+err\+\_\+cb}}
+\index{sd\+\_\+uart\+\_\+err\+\_\+cb@{sd\+\_\+uart\+\_\+err\+\_\+cb}!U\+A\+RT@{U\+A\+RT}}
+\subsubsection{\texorpdfstring{sd\+\_\+uart\+\_\+err\+\_\+cb()}{sd\_uart\_err\_cb()}}
+{\footnotesize\ttfamily static void sd\+\_\+uart\+\_\+err\+\_\+cb (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structsd__uart__dev}{sd\+\_\+uart\+\_\+dev}} $\ast$}]{dev }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+{\ttfamily \#include $<$\mbox{\hyperlink{sd__uart_8c}{Src/sd\+\_\+uart.\+c}}$>$}
+
+
+
+Handle U\+A\+RT errors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em huart} & U\+A\+RT handle with error triggered error interrupt \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em none} & \\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyCode}
+455 \{
+456   \textcolor{comment}{/* Handle errors */}
+457 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group___s_d___u_a_r_t_ga54b5b3ca4f31885d84714a36f6fcc5e3}\label{group___s_d___u_a_r_t_ga54b5b3ca4f31885d84714a36f6fcc5e3}} 
+\index{U\+A\+RT@{U\+A\+RT}!sd\+\_\+uart\+\_\+rx\+\_\+isr@{sd\+\_\+uart\+\_\+rx\+\_\+isr}}
+\index{sd\+\_\+uart\+\_\+rx\+\_\+isr@{sd\+\_\+uart\+\_\+rx\+\_\+isr}!U\+A\+RT@{U\+A\+RT}}
+\subsubsection{\texorpdfstring{sd\+\_\+uart\+\_\+rx\+\_\+isr()}{sd\_uart\_rx\_isr()}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group___s_d___u_a_r_t___types_gaff649a266fb34035c10733370c4fd104}{sd\+\_\+uart\+\_\+err}} sd\+\_\+uart\+\_\+rx\+\_\+isr (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structsd__uart__dev}{sd\+\_\+uart\+\_\+dev}} $\ast$}]{dev }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+{\ttfamily \#include $<$\mbox{\hyperlink{sd__uart_8c}{Src/sd\+\_\+uart.\+c}}$>$}
+
+
+
+Receive Interrupt Routine. 
+
+\begin{DoxyNote}{Note}
+This function is called from within the interrupt handler when the the R\+X\+NE interrupt is enabled and set.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em dev} & The U\+A\+RT peripheral that triggered interrupt \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em S\+D\+\_\+\+U\+A\+R\+T\+\_\+\+S\+U\+C\+C\+E\+SS} & on success, error status otherwise \\
+\hline
+\end{DoxyRetVals}
+Put the character in the current buffer 
+\begin{DoxyCode}
+405 \{
+406     \textcolor{keyword}{struct }\mbox{\hyperlink{structsd__cbuf}{sd\_cbuf}} *rx\_buff = dev->\mbox{\hyperlink{structsd__uart__dev_a2bc17c33f4234299b83ba5d98edd5887}{rx\_buff}};
+407     UART\_HandleTypeDef *huart = dev->\mbox{\hyperlink{structsd__uart__dev_a31b2a452cffe839ac4a3bf86eddc16b0}{uart}};
+408     uint16\_t mask = huart->Mask;
+409 
+411     rx\_buff->\mbox{\hyperlink{structsd__cbuf_a8b212742c92a124f2eb4a244acc19f7c}{buff}}[rx\_buff->\mbox{\hyperlink{structsd__cbuf_a86fd6c417fa43c58339f7cde29495419}{in}}++] = (uint8\_t)(huart->Instance->RDR & (uint8\_t)mask);
+412     
+413     \textcolor{comment}{/* Wrap buffer if at the end */}
+414     \textcolor{keywordflow}{if} (rx\_buff->\mbox{\hyperlink{structsd__cbuf_a86fd6c417fa43c58339f7cde29495419}{in}} >= rx\_buff->\mbox{\hyperlink{structsd__cbuf_ab2c6b258f02add8fdf4cfc7c371dd772}{size}})
+415         rx\_buff->\mbox{\hyperlink{structsd__cbuf_a86fd6c417fa43c58339f7cde29495419}{in}} = 0;
+416 
+417     \textcolor{keywordflow}{if} (++rx\_buff->\mbox{\hyperlink{structsd__cbuf_a96bbf959016e4411c9e6b9812a8be60a}{len}} >= rx\_buff->\mbox{\hyperlink{structsd__cbuf_ab2c6b258f02add8fdf4cfc7c371dd772}{size}}) \{
+418         rx\_buff->\mbox{\hyperlink{structsd__cbuf_aa88ff4ca3b7aaba9e9aaa27fd9ea94a9}{state}} = \mbox{\hyperlink{group___s_d___buffer___types_gga52f14e9c7b7d9ba092e1cd615559012ba0b2df962b7d70e883bd5faceda09f428}{SD\_BUFF\_OVERFLOW}};
+419         \textcolor{keywordflow}{return} \mbox{\hyperlink{group___s_d___u_a_r_t___types_ggaff649a266fb34035c10733370c4fd104ad77d98472c0c3bb192d745b3389de08d}{SD\_UART\_ERROR}};
+420     \}
+421 
+422     \textcolor{keywordflow}{return} \mbox{\hyperlink{group___s_d___u_a_r_t___types_ggaff649a266fb34035c10733370c4fd104a3b6fe085405a5d58c55226fd59f01994}{SD\_UART\_SUCCESS}};
+423 \}
+\end{DoxyCode}

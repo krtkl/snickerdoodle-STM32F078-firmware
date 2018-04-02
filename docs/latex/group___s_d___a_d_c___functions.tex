@@ -1,0 +1,315 @@
+\hypertarget{group___s_d___a_d_c___functions}{}\section{A\+DC Functions}
+\label{group___s_d___a_d_c___functions}\index{A\+D\+C Functions@{A\+D\+C Functions}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+enum sd\+\_\+adc\+\_\+err \mbox{\hyperlink{group___s_d___a_d_c___functions_ga1189f478e64b9aeb4d4ebd4c73e0394e}{sd\+\_\+adc\+\_\+dev\+\_\+init}} (struct \mbox{\hyperlink{structsd__adc__dev}{sd\+\_\+adc\+\_\+dev}} $\ast$dev, A\+D\+C\+\_\+\+Handle\+Type\+Def $\ast$adc)
+\begin{DoxyCompactList}\small\item\em A\+DC Device Initialization. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_d___a_d_c___functions_ga1a0d46dabe915346e428a46b9f943879}{sd\+\_\+adc\+\_\+init}} (void)
+\item 
+void \mbox{\hyperlink{group___s_d___a_d_c___functions_gaa30863492d5c3103e3e8ce8a63dadd07}{H\+A\+L\+\_\+\+A\+D\+C\+\_\+\+Msp\+Init}} (A\+D\+C\+\_\+\+Handle\+Type\+Def $\ast$hadc)
+\item 
+\mbox{\Hypertarget{group___s_d___a_d_c___functions_ga39b0f8e80268ab3e660ead921ad4b22f}\label{group___s_d___a_d_c___functions_ga39b0f8e80268ab3e660ead921ad4b22f}} 
+void {\bfseries H\+A\+L\+\_\+\+A\+D\+C\+\_\+\+Msp\+De\+Init} (A\+D\+C\+\_\+\+Handle\+Type\+Def $\ast$hadc)
+\item 
+void \mbox{\hyperlink{group___s_d___a_d_c___functions_ga78d41bf72512fd19ce879a78f158cb42}{sd\+\_\+adc\+\_\+watchdog\+\_\+enable}} (void)
+\begin{DoxyCompactList}\small\item\em A\+DC Watchdog Enable. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_d___a_d_c___functions_ga54804db19c825e0ec5e991ffa4f34123}{sd\+\_\+adc\+\_\+irqhandler}} (struct \mbox{\hyperlink{structsd__adc__dev}{sd\+\_\+adc\+\_\+dev}} $\ast$dev)
+\begin{DoxyCompactList}\small\item\em A\+DC Interrupt Handler Handle interrupt events on the A\+DC peripheral. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___s_d___a_d_c___functions_ga152fa7d6af28e9a27f32b00ac179f478}\label{group___s_d___a_d_c___functions_ga152fa7d6af28e9a27f32b00ac179f478}} 
+void \mbox{\hyperlink{group___s_d___a_d_c___functions_ga152fa7d6af28e9a27f32b00ac179f478}{sd\+\_\+adc\+\_\+print}} (void)
+\begin{DoxyCompactList}\small\item\em Print the A\+DC Values. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___s_d___a_d_c___functions_gac3a9e92d1ff530dcaae393eb513bdb57}\label{group___s_d___a_d_c___functions_gac3a9e92d1ff530dcaae393eb513bdb57}} 
+void \mbox{\hyperlink{group___s_d___a_d_c___functions_gac3a9e92d1ff530dcaae393eb513bdb57}{sd\+\_\+adc\+\_\+monitor}} (struct \mbox{\hyperlink{structsd__adc__dev}{sd\+\_\+adc\+\_\+dev}} $\ast$dev)
+\begin{DoxyCompactList}\small\item\em Check A\+DC Limits. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___s_d___a_d_c___functions_ga3ec0aea321c0130f3507160e1fb5682a}\label{group___s_d___a_d_c___functions_ga3ec0aea321c0130f3507160e1fb5682a}} 
+void {\bfseries sd\+\_\+adc\+\_\+monitor\+\_\+enable} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group___s_d___a_d_c___functions_gaa30863492d5c3103e3e8ce8a63dadd07}\label{group___s_d___a_d_c___functions_gaa30863492d5c3103e3e8ce8a63dadd07}} 
+\index{A\+D\+C Functions@{A\+D\+C Functions}!H\+A\+L\+\_\+\+A\+D\+C\+\_\+\+Msp\+Init@{H\+A\+L\+\_\+\+A\+D\+C\+\_\+\+Msp\+Init}}
+\index{H\+A\+L\+\_\+\+A\+D\+C\+\_\+\+Msp\+Init@{H\+A\+L\+\_\+\+A\+D\+C\+\_\+\+Msp\+Init}!A\+D\+C Functions@{A\+D\+C Functions}}
+\subsubsection{\texorpdfstring{H\+A\+L\+\_\+\+A\+D\+C\+\_\+\+Msp\+Init()}{HAL\_ADC\_MspInit()}}
+{\footnotesize\ttfamily void H\+A\+L\+\_\+\+A\+D\+C\+\_\+\+Msp\+Init (\begin{DoxyParamCaption}\item[{A\+D\+C\+\_\+\+Handle\+Type\+Def $\ast$}]{hadc }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\mbox{\hyperlink{sd__adc_8c}{Src/sd\+\_\+adc.\+c}}$>$}
+
+\paragraph*{A\+DC G\+P\+IO Configuration}
+
+\tabulinesep=1mm
+\begin{longtabu} spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ Pin/\+Port  }&\textbf{ Channel -\/-\/-\/-\/---   }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ Pin/\+Port  }&\textbf{ Channel -\/-\/-\/-\/---   }\\\cline{1-2}
+\endhead
+P\+A0  &Channel 0   \\\cline{1-2}
+P\+A1  &Channel 1   \\\cline{1-2}
+P\+A2  &Channel 2   \\\cline{1-2}
+P\+A3  &Channel 3   \\\cline{1-2}
+P\+A6  &Channel 6   \\\cline{1-2}
+P\+B0  &Channel 8   \\\cline{1-2}
+P\+B1  &Channel 9   \\\cline{1-2}
+P\+C2  &Channel 12   \\\cline{1-2}
+P\+C3  &Channel 13   \\\cline{1-2}
+\end{longtabu}
+
+\begin{DoxyCode}
+154 \{
+155     GPIO\_InitTypeDef GPIO\_InitStruct;
+156     \textcolor{keywordflow}{if} (hadc->Instance==ADC1) \{
+157         \textcolor{comment}{/* Peripheral clock enable */}
+158         \_\_ADC1\_CLK\_ENABLE();
+159   
+175         GPIO\_InitStruct.Pin = ZYNQ\_1V2\_SENSE\_Pin |
+176                       ZYNQ\_3V3\_SENSE\_Pin;
+177                       
+178         GPIO\_InitStruct.Mode = GPIO\_MODE\_ANALOG;
+179         GPIO\_InitStruct.Pull = GPIO\_NOPULL;
+180         HAL\_GPIO\_Init(GPIOC, &GPIO\_InitStruct);
+181 
+182         GPIO\_InitStruct.Pin = MAIN\_3V3\_SENSE\_Pin |
+183                       VIN\_SENSE\_Pin |
+184                       MAIN\_1V8\_SENSE\_Pin |
+185                       VDDIO2\_3V3\_SENSE\_Pin |
+186                       VUSB\_SENSE\_Pin;
+187     
+188         GPIO\_InitStruct.Mode = GPIO\_MODE\_ANALOG;
+189         GPIO\_InitStruct.Pull = GPIO\_NOPULL;
+190         HAL\_GPIO\_Init(GPIOA, &GPIO\_InitStruct);
+191 
+192         GPIO\_InitStruct.Pin = ZYNQ\_1V0\_SENSE\_Pin|ZYNQ\_1V8\_SENSE\_Pin;
+193         GPIO\_InitStruct.Mode = GPIO\_MODE\_ANALOG;
+194         GPIO\_InitStruct.Pull = GPIO\_NOPULL;
+195         HAL\_GPIO\_Init(GPIOB, &GPIO\_InitStruct);
+196 
+197         HAL\_NVIC\_SetPriority(ADC1\_COMP\_IRQn, 0, 0);
+198         HAL\_NVIC\_EnableIRQ(ADC1\_COMP\_IRQn);
+199         
+200         HAL\_ADCEx\_Calibration\_Start(hadc);
+201     \}
+202 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group___s_d___a_d_c___functions_ga1189f478e64b9aeb4d4ebd4c73e0394e}\label{group___s_d___a_d_c___functions_ga1189f478e64b9aeb4d4ebd4c73e0394e}} 
+\index{A\+D\+C Functions@{A\+D\+C Functions}!sd\+\_\+adc\+\_\+dev\+\_\+init@{sd\+\_\+adc\+\_\+dev\+\_\+init}}
+\index{sd\+\_\+adc\+\_\+dev\+\_\+init@{sd\+\_\+adc\+\_\+dev\+\_\+init}!A\+D\+C Functions@{A\+D\+C Functions}}
+\subsubsection{\texorpdfstring{sd\+\_\+adc\+\_\+dev\+\_\+init()}{sd\_adc\_dev\_init()}}
+{\footnotesize\ttfamily enum sd\+\_\+adc\+\_\+err sd\+\_\+adc\+\_\+dev\+\_\+init (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structsd__adc__dev}{sd\+\_\+adc\+\_\+dev}} $\ast$}]{dev,  }\item[{A\+D\+C\+\_\+\+Handle\+Type\+Def $\ast$}]{adc }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\mbox{\hyperlink{sd__adc_8c}{Src/sd\+\_\+adc.\+c}}$>$}
+
+
+
+A\+DC Device Initialization. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dev} & A\+DC device to initialize \\
+\hline
+{\em adc} & A\+DC handle to attach to device \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em S\+D\+\_\+\+A\+D\+C\+\_\+\+S\+U\+C\+C\+E\+SS} & on success, error status otherwise \\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyCode}
+241 \{
+242     dev->\mbox{\hyperlink{structsd__adc__dev_a2701c9711189aaeb5f330e1d4db94c42}{adc}} = adc;
+243     
+244     \textcolor{comment}{/* Set the sampling time and channel selection registers */}
+245     adc->Instance->SMPR = ADC\_SAMPLETIME\_71CYCLES\_5;
+246     adc\_dev.\mbox{\hyperlink{structsd__adc__dev_a2701c9711189aaeb5f330e1d4db94c42}{adc}}->Instance->CHSELR = (1U << ADC\_CHANNEL\_0) |
+247                 (1U << ADC\_CHANNEL\_1) |
+248                 (1U << ADC\_CHANNEL\_2) |
+249                 (1U << ADC\_CHANNEL\_3) |
+250                 (1U << ADC\_CHANNEL\_6) |
+251                 (1U << ADC\_CHANNEL\_8) |
+252                 (1U << ADC\_CHANNEL\_9) |
+253                 (1U << ADC\_CHANNEL\_12) |
+254                 (1U << ADC\_CHANNEL\_13);
+255     
+256     \textcolor{comment}{/* Start the ADC in interrupt mode */}
+257     HAL\_ADC\_Start\_IT(adc);
+258     
+259     \textcolor{keywordflow}{return} SD\_ADC\_SUCCESS;
+260 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group___s_d___a_d_c___functions_ga1a0d46dabe915346e428a46b9f943879}\label{group___s_d___a_d_c___functions_ga1a0d46dabe915346e428a46b9f943879}} 
+\index{A\+D\+C Functions@{A\+D\+C Functions}!sd\+\_\+adc\+\_\+init@{sd\+\_\+adc\+\_\+init}}
+\index{sd\+\_\+adc\+\_\+init@{sd\+\_\+adc\+\_\+init}!A\+D\+C Functions@{A\+D\+C Functions}}
+\subsubsection{\texorpdfstring{sd\+\_\+adc\+\_\+init()}{sd\_adc\_init()}}
+{\footnotesize\ttfamily void sd\+\_\+adc\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\mbox{\hyperlink{sd__adc_8c}{Src/sd\+\_\+adc.\+c}}$>$}
+
+Configure the global features of the A\+DC (Clock, Resolution, Data Alignment and number of conversion)
+\begin{DoxyCode}
+130 \{
+135     hadc.Instance = ADC1;
+136     hadc.Init.ClockPrescaler = ADC\_CLOCK\_ASYNC;
+137     hadc.Init.Resolution = ADC\_RESOLUTION12b;
+138     hadc.Init.DataAlign = ADC\_DATAALIGN\_RIGHT;
+139     hadc.Init.ScanConvMode = ADC\_SCAN\_DIRECTION\_FORWARD;
+140     hadc.Init.EOCSelection = EOC\_SINGLE\_CONV;
+141     hadc.Init.LowPowerAutoWait = DISABLE;
+142     hadc.Init.LowPowerAutoPowerOff = DISABLE;
+143     hadc.Init.ContinuousConvMode = ENABLE;
+144     hadc.Init.DiscontinuousConvMode = DISABLE;
+145     hadc.Init.ExternalTrigConvEdge = ADC\_EXTERNALTRIGCONVEDGE\_NONE;
+146     hadc.Init.DMAContinuousRequests = DISABLE;
+147     hadc.Init.Overrun = OVR\_DATA\_PRESERVED;
+148     HAL\_ADC\_Init(&hadc);
+149     
+150     \mbox{\hyperlink{group___s_d___a_d_c___functions_ga1189f478e64b9aeb4d4ebd4c73e0394e}{sd\_adc\_dev\_init}}(&adc\_dev, &hadc);
+151 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group___s_d___a_d_c___functions_ga54804db19c825e0ec5e991ffa4f34123}\label{group___s_d___a_d_c___functions_ga54804db19c825e0ec5e991ffa4f34123}} 
+\index{A\+D\+C Functions@{A\+D\+C Functions}!sd\+\_\+adc\+\_\+irqhandler@{sd\+\_\+adc\+\_\+irqhandler}}
+\index{sd\+\_\+adc\+\_\+irqhandler@{sd\+\_\+adc\+\_\+irqhandler}!A\+D\+C Functions@{A\+D\+C Functions}}
+\subsubsection{\texorpdfstring{sd\+\_\+adc\+\_\+irqhandler()}{sd\_adc\_irqhandler()}}
+{\footnotesize\ttfamily void sd\+\_\+adc\+\_\+irqhandler (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structsd__adc__dev}{sd\+\_\+adc\+\_\+dev}} $\ast$}]{dev }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\mbox{\hyperlink{sd__adc_8c}{Src/sd\+\_\+adc.\+c}}$>$}
+
+
+
+A\+DC Interrupt Handler Handle interrupt events on the A\+DC peripheral. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dev} & A\+DC device \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyCode}
+290 \{
+291     ADC\_HandleTypeDef *hadc = dev->\mbox{\hyperlink{structsd__adc__dev_a2701c9711189aaeb5f330e1d4db94c42}{adc}};
+292   
+293     \textcolor{comment}{/* Check the parameters */}
+294     \mbox{\hyperlink{stm32f0xx__hal__conf_8h_a631dea7b230e600555f979c62af1de21}{assert\_param}}(IS\_ADC\_ALL\_INSTANCE(hadc->Instance));
+295     \mbox{\hyperlink{stm32f0xx__hal__conf_8h_a631dea7b230e600555f979c62af1de21}{assert\_param}}(IS\_FUNCTIONAL\_STATE(hadc->Init.ContinuousConvMode));
+296     \mbox{\hyperlink{stm32f0xx__hal__conf_8h_a631dea7b230e600555f979c62af1de21}{assert\_param}}(IS\_ADC\_EOC\_SELECTION(hadc->Init.EOCSelection));
+297   
+298     \textcolor{comment}{/* Check if the analog watchdog triggered interrupt */}
+299     \textcolor{keywordflow}{if} (\_\_HAL\_ADC\_GET\_FLAG(hadc, ADC\_FLAG\_AWD) &&
+300         \_\_HAL\_ADC\_GET\_IT\_SOURCE(hadc, ADC\_IT\_AWD)) \{
+301         
+302         \textcolor{comment}{/* Disable the Zynq clock */}
+303 \textcolor{comment}{//      sd\_zynq\_clk\_enable(FALSE);}
+304         
+305         \textcolor{comment}{/* Disable the Zynq power rails */}
+306 \textcolor{comment}{//      sd\_zynq\_disable();}
+307     \}
+308   
+309     \textcolor{comment}{/* Check if an end of conversion triggered interrupt */}
+310     \textcolor{keywordflow}{if} (\_\_HAL\_ADC\_GET\_FLAG(hadc, ADC\_FLAG\_EOC) && 
+311          \_\_HAL\_ADC\_GET\_IT\_SOURCE(hadc, ADC\_IT\_EOC)) \{
+312     
+313         \textcolor{comment}{/* Update state machine on conversion status if not in error state */}
+314         \textcolor{keywordflow}{if} (HAL\_IS\_BIT\_CLR(hadc->State, HAL\_ADC\_STATE\_ERROR\_INTERNAL)) \{
+315       
+316             \textcolor{comment}{/* Set ADC state */}
+317             SET\_BIT(hadc->State, HAL\_ADC\_STATE\_REG\_EOC); 
+318         \}
+319     
+320         \textcolor{comment}{/* Record channel measurement */}
+321         (adc\_chan++)->meas = hadc->Instance->DR;
+322     
+323         \textcolor{comment}{/* Clear regular group conversion flag */}
+324         \_\_HAL\_ADC\_CLEAR\_FLAG(hadc, ADC\_FLAG\_EOC);
+325     \}
+326     
+327     \textcolor{comment}{/* Check if end of sequence triggered interrupt */}
+328     \textcolor{keywordflow}{if} (\_\_HAL\_ADC\_GET\_FLAG(hadc, ADC\_FLAG\_EOS) && 
+329         \_\_HAL\_ADC\_GET\_IT\_SOURCE(hadc, ADC\_IT\_EOS)) \{
+330         
+331         \textcolor{comment}{/* Reset to beginning of table */}
+332         adc\_chan = &adc\_tab[0];
+333 
+334         \textcolor{comment}{/* Clear interrupt flag */}
+335         \_\_HAL\_ADC\_CLEAR\_FLAG(hadc, ADC\_FLAG\_EOS);
+336     \}
+337   
+338     \textcolor{comment}{/*------------------- Check overrun interrupt flag -------------------*/}
+339     \textcolor{keywordflow}{if} (\_\_HAL\_ADC\_GET\_FLAG(hadc, ADC\_FLAG\_OVR) &&
+340         \_\_HAL\_ADC\_GET\_IT\_SOURCE(hadc, ADC\_IT\_OVR)) \{
+341         \textcolor{comment}{/* If overrun is set to overwrite previous data (default setting),        */}
+342         \textcolor{comment}{/* overrun event is not considered as an error.                           */}
+343         \textcolor{comment}{/* (cf ref manual "Managing conversions without using the DMA and without */}
+344         \textcolor{comment}{/* overrun ")                                                             */}
+345         \textcolor{comment}{/* Exception for usage with DMA overrun event always considered as an     */}
+346         \textcolor{comment}{/* error.                                                                 */}
+347         \textcolor{keywordflow}{if} ((hadc->Init.Overrun == ADC\_OVR\_DATA\_PRESERVED) ||
+348             HAL\_IS\_BIT\_SET(hadc->Instance->CFGR1, ADC\_CFGR1\_DMAEN)) \{
+349             \textcolor{comment}{/* Set ADC error code overrun bit */}
+350             hadc->ErrorCode |= HAL\_ADC\_ERROR\_OVR;
+351       
+352             \textcolor{comment}{/* Clear ADC overrun flag */}
+353             \_\_HAL\_ADC\_CLEAR\_FLAG(hadc, ADC\_FLAG\_OVR);
+354       
+355             \textcolor{comment}{/* Error callback */} 
+356             HAL\_ADC\_ErrorCallback(hadc);
+357         \}
+358     
+359         \textcolor{comment}{/* Clear the Overrun flag */}
+360         \_\_HAL\_ADC\_CLEAR\_FLAG(hadc, ADC\_FLAG\_OVR);
+361     \}
+362 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group___s_d___a_d_c___functions_ga78d41bf72512fd19ce879a78f158cb42}\label{group___s_d___a_d_c___functions_ga78d41bf72512fd19ce879a78f158cb42}} 
+\index{A\+D\+C Functions@{A\+D\+C Functions}!sd\+\_\+adc\+\_\+watchdog\+\_\+enable@{sd\+\_\+adc\+\_\+watchdog\+\_\+enable}}
+\index{sd\+\_\+adc\+\_\+watchdog\+\_\+enable@{sd\+\_\+adc\+\_\+watchdog\+\_\+enable}!A\+D\+C Functions@{A\+D\+C Functions}}
+\subsubsection{\texorpdfstring{sd\+\_\+adc\+\_\+watchdog\+\_\+enable()}{sd\_adc\_watchdog\_enable()}}
+{\footnotesize\ttfamily void sd\+\_\+adc\+\_\+watchdog\+\_\+enable (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\mbox{\hyperlink{sd__adc_8c}{Src/sd\+\_\+adc.\+c}}$>$}
+
+
+
+A\+DC Watchdog Enable. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyCode}
+269 \{
+270     ADC\_AnalogWDGConfTypeDef adc\_wd\_config;
+271 
+272     adc\_wd\_config.WatchdogMode = ADC\_ANALOGWATCHDOG\_SINGLE\_REG;
+273     adc\_wd\_config.Channel = ADC\_CHANNEL\_2;
+274     adc\_wd\_config.ITMode = ENABLE;
+275     adc\_wd\_config.HighThreshold = 3583;
+276     adc\_wd\_config.LowThreshold = 3242;
+277 
+278     HAL\_ADC\_AnalogWDGConfig(&hadc, &adc\_wd\_config);
+279 \}
+\end{DoxyCode}

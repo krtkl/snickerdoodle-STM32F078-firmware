@@ -1,0 +1,11 @@
+digraph "sd_led_rapid"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node10 [label="sd_led_rapid",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node10 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="sd_zynq_disable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___s_d___platform___function___declarations.html#gaaaa432cbbf3382d321107a38a56b9bef",tooltip="Disable Zynq Power Disable the Zynq power rails by setting the enable pin low. "];
+  Node11 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="sd_zynq_reset",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___s_d___platform___boot___config.html#ga65b13e7293170788758e4f8cd8512326",tooltip="Zynq Reset Reset the Zynq APU. "];
+}

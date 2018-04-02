@@ -1,0 +1,260 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
+
+body, table, div, p, dl {
+	font: 400 14px/22px 'Open Sans',sans-serif;
+}
+
+#projectlogo img {
+	height: 78px;
+	margin: 10px;
+}
+
+#projectname {
+	font: 225% 'Open Sans',sans-serif;
+	font-weight: 300;
+	margin: 0px;
+	padding: 2px 0px;
+}
+
+.title {
+	font: 400 14px/28px 'Open Sans',sans-serif;
+	font-weight: 600;
+	font-size: 150%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 300;
+}
+
+/**
+ * Top Bar Navigation
+ */
+.tabs, .tabs2, .tabs3 {
+	background-image: none;
+	background: rgb(0, 41, 57);
+	width: 100%;
+	z-index: 101;
+	font-size: 13px;
+	font-family: 'Open Sans',sans-serif;
+}
+
+.tablist li {
+	float: left;
+	display: table-cell;
+	background-image: none;
+	background: rgb(0, 41, 57);
+	line-height: 36px;
+	list-style: none;
+}
+
+.tablist a {
+	display: block;
+	padding: 0 20px;
+	font-weight: bold;
+	background-image: none;
+	background: rgba(0, 41, 57, 0.66);
+	color: #FFF;
+	text-shadow: none;
+	text-decoration: none;
+	outline: none;
+}
+
+.tablist a:hover {
+	background-image: none;
+	background: rgba(0, 118, 187, 1.0);
+	color: #fff;
+	text-shadow: 0px 1px 1px rgba(0, 0, 0, 1.0);
+	text-decoration: none;
+}
+
+.tablist li.current a {
+	background-image: none;
+	background: rgba(0, 118, 187, 1.0);
+	color: #fff;
+	text-shadow: 0px 1px 1px rgba(0, 0, 0, 1.0);
+}
+
+/**
+ * Navigation Tree
+ */
+#nav-tree .label {
+	font: 12px 'Open Sans',sans-serif;
+	font-weight: 300;
+}
+
+#nav-tree .selected {
+	background: rgb(255, 187, 0);
+	color: rgb(0, 41, 57);
+	text-shadow: none;
+}
+
+#nav-tree .item .label a:hover {
+	background: rgb(255, 252, 240);
+	box-shadow: 0px 0px 5px rgb(255, 252, 240);
+}
+
+#nav-tree .item.selected .label a:hover {
+	background: rgb(255, 187, 0);
+	box-shadow: none;
+}
+
+#nav-tree .selected a {
+	text-decoration: none;
+	color: rgb(0, 41, 57);
+	font-weight: 400;
+}
+
+
+
+/**
+ * Main Content Style
+ */
+div.contents {
+	margin-right: 12px;
+}
+
+.memitem {
+	margin-right: 15px;
+	box-shadow: none;
+}
+
+.memname {
+  font-weight: 300;
+  margin-left: 6px;
+	color: #000;
+}
+
+.memname .paramname {
+	color: #000;
+}
+
+.memname a, .memname a.el, .memname .paramname a, .memname .paramtype a {
+	color: rgb(0, 118, 187);
+}
+
+.memproto {
+	border-top: 3px solid rgb(0, 118, 187);
+	border-left: 3px solid rgb(0, 118, 187);
+	border-right: 3px solid rgb(0, 118, 187);
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	background-image: none;
+	background: rgba(149, 191, 230, 0.33);
+	box-shadow: none;
+	text-shadow: none;
+}
+
+.memproto, dl.reflist dt {
+	color: #000;
+	font-weight: 300;
+}
+
+span.mlabel {
+	background-color: rgb(0, 118, 187);
+	border: 1px solid rgb(0, 118, 187);
+	border-radius: 5px;
+	font-size: 11pt;
+}
+
+.memdoc{
+	background-image: none;
+	background-color: #FFFFFF;
+	border-bottom: 3px solid rgb(0, 118, 187);
+	border-left: 3px solid rgb(0, 118, 187);
+	border-right: 3px solid rgb(0, 118, 187);
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	box-shadow: none;
+}
+
+table.doxtable {
+	border: 1px solid rgb(0, 118, 187);
+}
+
+table.doxtable td, table.doxtable th {
+	border: none; /* 1px solid #2D4068; */
+	padding: 3px 7px 2px;
+}
+
+table.doxtable th {
+	background-color: rgb(0, 118, 187);
+	color: #FFFFFF;
+	font-weight: 600;
+	font-size: 110%;
+	padding-bottom: 4px;
+	padding-top: 5px;
+}
+
+table.doxtable tr:nth-child(odd) {
+	background-color: rgba(149, 191, 230, 0.33);
+}
+
+table.fieldtable {
+	/* width: 100%; */
+	margin-bottom: 10px;
+	border: 1px solid #A8B8D9;
+	border-spacing: 0px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+.fieldtable th {
+	background-image: none;
+	background-repeat: repeat-x;
+	background-color: rgba(149, 191, 230, 0.33);
+	font-size: 90%;
+	color: rgb(0, 41, 57);
+	padding-bottom: 4px;
+	padding-top: 5px;
+	text-align: left;
+	-moz-border-radius-topleft: 4px;
+	-moz-border-radius-topright: 4px;
+	-webkit-border-top-left-radius: 4px;
+	-webkit-border-top-right-radius: 4px;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	border-bottom: 1px solid #A8B8D9;
+}
+
+dl.note {
+	margin-left: -7px;
+	padding-left: 3px;
+	border-left: 4px solid;
+	border-color: rgb(255, 187, 0);
+}
+
+/**
+ * Bottom Navigation
+ */
+.navpath ul {
+	font-size: 11px;
+	background: rgb(0, 41, 57);
+}
+
+.navpath li.footer {
+	list-style-type: none;
+	float: right;
+	padding-left: 10px;
+	padding-right: 15px;
+	background-image: none;
+	background-repeat: no-repeat;
+	background-position: right;
+	color: #fff;
+	font-size: 8pt;
+}
+
+/**
+ * UI Elements
+ */
+.ui-resizable-e {
+	background: rgb(0, 41, 57);
+	cursor: e-resize;
+	height: 100%;
+	right: 0;
+	top: 0;
+	width: 6px;
+}

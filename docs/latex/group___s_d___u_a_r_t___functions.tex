@@ -1,0 +1,319 @@
+\hypertarget{group___s_d___u_a_r_t___functions}{}\section{U\+A\+RT Functions}
+\label{group___s_d___u_a_r_t___functions}\index{U\+A\+R\+T Functions@{U\+A\+R\+T Functions}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___s_d___u_a_r_t___functions_ga3c068b8d65ff8482fa0661fc5ef58da0}\label{group___s_d___u_a_r_t___functions_ga3c068b8d65ff8482fa0661fc5ef58da0}} 
+void \mbox{\hyperlink{group___s_d___u_a_r_t___functions_ga3c068b8d65ff8482fa0661fc5ef58da0}{sd\+\_\+usart1\+\_\+init}} (void)
+\begin{DoxyCompactList}\small\item\em U\+S\+A\+RT 1 Initialization. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___s_d___u_a_r_t___functions_gaa39e30aeb0d6ed7754ed9ce3b76d522c}\label{group___s_d___u_a_r_t___functions_gaa39e30aeb0d6ed7754ed9ce3b76d522c}} 
+void \mbox{\hyperlink{group___s_d___u_a_r_t___functions_gaa39e30aeb0d6ed7754ed9ce3b76d522c}{sd\+\_\+usart2\+\_\+init}} (void)
+\begin{DoxyCompactList}\small\item\em U\+S\+A\+RT 2 Initialization. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___s_d___u_a_r_t___functions_ga33ad79f8c02f0f479691fac6dd696051}\label{group___s_d___u_a_r_t___functions_ga33ad79f8c02f0f479691fac6dd696051}} 
+void \mbox{\hyperlink{group___s_d___u_a_r_t___functions_ga33ad79f8c02f0f479691fac6dd696051}{sd\+\_\+usart3\+\_\+init}} (void)
+\begin{DoxyCompactList}\small\item\em U\+S\+A\+RT 3 Initialization. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_d___u_a_r_t___functions_ga0e553b32211877322f949b14801bbfa7}{H\+A\+L\+\_\+\+U\+A\+R\+T\+\_\+\+Msp\+Init}} (U\+A\+R\+T\+\_\+\+Handle\+Type\+Def $\ast$huart)
+\item 
+\mbox{\Hypertarget{group___s_d___u_a_r_t___functions_ga718f39804e3b910d738a0e1e46151188}\label{group___s_d___u_a_r_t___functions_ga718f39804e3b910d738a0e1e46151188}} 
+void {\bfseries H\+A\+L\+\_\+\+U\+A\+R\+T\+\_\+\+Msp\+De\+Init} (U\+A\+R\+T\+\_\+\+Handle\+Type\+Def $\ast$huart)
+\item 
+enum \mbox{\hyperlink{group___s_d___u_a_r_t___types_gaff649a266fb34035c10733370c4fd104}{sd\+\_\+uart\+\_\+err}} \mbox{\hyperlink{group___s_d___u_a_r_t___functions_ga92a2dfada8629938854ad2fddff0d01d}{sd\+\_\+uart\+\_\+rx\+\_\+init}} (struct \mbox{\hyperlink{structsd__uart__dev}{sd\+\_\+uart\+\_\+dev}} $\ast$dev, struct \mbox{\hyperlink{structsd__cbuf}{sd\+\_\+cbuf}} $\ast$rx\+\_\+buff)
+\begin{DoxyCompactList}\small\item\em U\+A\+RT Receive Interrupt Initialization Enable and prepare the U\+A\+RT to receive on interrupt. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_d___u_a_r_t___functions_ga1464d7463564d0d7341a1cff71eb439d}{sd\+\_\+uart\+\_\+irqhandler}} (struct \mbox{\hyperlink{structsd__uart__dev}{sd\+\_\+uart\+\_\+dev}} $\ast$dev)
+\begin{DoxyCompactList}\small\item\em U\+A\+RT Interrupt Handler Handle interrupt events on the U\+A\+RT peripheral. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group___s_d___u_a_r_t___types_gaff649a266fb34035c10733370c4fd104}{sd\+\_\+uart\+\_\+err}} \mbox{\hyperlink{group___s_d___u_a_r_t___functions_ga8170b7c747d603b269242afa8de67164}{sd\+\_\+uart\+\_\+transmit}} (struct \mbox{\hyperlink{structsd__uart__dev}{sd\+\_\+uart\+\_\+dev}} $\ast$dev, uint8\+\_\+t $\ast$buf, uint32\+\_\+t len, uint32\+\_\+t timeout)
+\begin{DoxyCompactList}\small\item\em Transmit Data In Blocking Mode. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group___s_d___u_a_r_t___functions_ga0e553b32211877322f949b14801bbfa7}\label{group___s_d___u_a_r_t___functions_ga0e553b32211877322f949b14801bbfa7}} 
+\index{U\+A\+R\+T Functions@{U\+A\+R\+T Functions}!H\+A\+L\+\_\+\+U\+A\+R\+T\+\_\+\+Msp\+Init@{H\+A\+L\+\_\+\+U\+A\+R\+T\+\_\+\+Msp\+Init}}
+\index{H\+A\+L\+\_\+\+U\+A\+R\+T\+\_\+\+Msp\+Init@{H\+A\+L\+\_\+\+U\+A\+R\+T\+\_\+\+Msp\+Init}!U\+A\+R\+T Functions@{U\+A\+R\+T Functions}}
+\subsubsection{\texorpdfstring{H\+A\+L\+\_\+\+U\+A\+R\+T\+\_\+\+Msp\+Init()}{HAL\_UART\_MspInit()}}
+{\footnotesize\ttfamily void H\+A\+L\+\_\+\+U\+A\+R\+T\+\_\+\+Msp\+Init (\begin{DoxyParamCaption}\item[{U\+A\+R\+T\+\_\+\+Handle\+Type\+Def $\ast$}]{huart }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\mbox{\hyperlink{sd__uart_8c}{Src/sd\+\_\+uart.\+c}}$>$}
+
+\paragraph*{U\+S\+A\+RT 1 G\+P\+IO Configuration}
+
+\tabulinesep=1mm
+\begin{longtabu} spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ Pin/\+Port  }&\textbf{ Signal --------   }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ Pin/\+Port  }&\textbf{ Signal --------   }\\\cline{1-2}
+\endhead
+P\+B7  &U\+S\+A\+R\+T1\+\_\+\+RX   \\\cline{1-2}
+P\+B6  &U\+S\+A\+R\+T1\+\_\+\+TX   \\\cline{1-2}
+\end{longtabu}
+
+
+~\newline
+~\newline
+\paragraph*{U\+S\+A\+RT 2 G\+P\+IO Configuration}
+
+\tabulinesep=1mm
+\begin{longtabu} spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ Pin/\+Port  }&\textbf{ Signal -\/-\/------   }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ Pin/\+Port  }&\textbf{ Signal -\/-\/------   }\\\cline{1-2}
+\endhead
+P\+D5  &U\+S\+A\+R\+T2\+\_\+\+TX   \\\cline{1-2}
+P\+D6  &U\+S\+A\+R\+T2\+\_\+\+RX   \\\cline{1-2}
+P\+D4  &U\+S\+A\+R\+T2\+\_\+\+R\+TS   \\\cline{1-2}
+P\+D3  &U\+S\+A\+R\+T2\+\_\+\+C\+TS   \\\cline{1-2}
+\end{longtabu}
+
+
+~\newline
+\paragraph*{U\+S\+A\+RT 2 G\+P\+IO Configuration}
+
+\tabulinesep=1mm
+\begin{longtabu} spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ Pin/\+Port  }&\textbf{ Signal -\/-\/-\/-\/-\/---   }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ Pin/\+Port  }&\textbf{ Signal -\/-\/-\/-\/-\/---   }\\\cline{1-2}
+\endhead
+P\+C4  &U\+S\+A\+R\+T3\+\_\+\+TX   \\\cline{1-2}
+P\+C5  &U\+S\+A\+R\+T3\+\_\+\+RX   \\\cline{1-2}
+\end{longtabu}
+
+\begin{DoxyCode}
+168 \{
+169     GPIO\_InitTypeDef GPIO\_InitStruct;
+170     
+171     \textcolor{keywordflow}{if} (huart->Instance == USART1) \{
+172         \textcolor{comment}{/* Peripheral clock enable */}
+173         \_\_USART1\_CLK\_ENABLE();
+174   
+175   
+184         GPIO\_InitStruct.Pin = ZYNQ\_CONSOLE\_TX\_Pin|ZYNQ\_CONSOLE\_RX\_Pin;
+185         GPIO\_InitStruct.Mode = GPIO\_MODE\_AF\_PP;
+186         GPIO\_InitStruct.Pull = GPIO\_PULLUP;
+187         GPIO\_InitStruct.Speed = GPIO\_SPEED\_HIGH;
+188         GPIO\_InitStruct.Alternate = GPIO\_AF0\_USART1;
+189         HAL\_GPIO\_Init(GPIOB, &GPIO\_InitStruct);
+190 
+191         \textcolor{comment}{/* Peripheral interrupt init*/}
+192         HAL\_NVIC\_SetPriority(USART1\_IRQn, 1, 0);
+193         HAL\_NVIC\_EnableIRQ(USART1\_IRQn);
+194         
+195     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (huart->Instance == USART2) \{
+196         \textcolor{comment}{/* Peripheral clock enable */}
+197         \_\_USART2\_CLK\_ENABLE();
+198   
+209         GPIO\_InitStruct.Pin = BT\_HCI\_RX\_Pin|BT\_HCI\_TX\_Pin;
+210         GPIO\_InitStruct.Mode = GPIO\_MODE\_AF\_PP;
+211         GPIO\_InitStruct.Pull = GPIO\_PULLUP;
+212         GPIO\_InitStruct.Speed = GPIO\_SPEED\_HIGH;
+213         GPIO\_InitStruct.Alternate = GPIO\_AF0\_USART2;
+214         HAL\_GPIO\_Init(GPIOD, &GPIO\_InitStruct);
+215 
+216         GPIO\_InitStruct.Pin = BT\_HCI\_CTS\_Pin|BT\_HCI\_RTS\_Pin;
+217         GPIO\_InitStruct.Mode = GPIO\_MODE\_AF\_PP;
+218         GPIO\_InitStruct.Pull = GPIO\_NOPULL;
+219         GPIO\_InitStruct.Speed = GPIO\_SPEED\_HIGH;
+220         GPIO\_InitStruct.Alternate = GPIO\_AF0\_USART2;
+221         HAL\_GPIO\_Init(GPIOD, &GPIO\_InitStruct);
+222 
+223         \textcolor{comment}{/* Peripheral interrupt init*/}
+224         HAL\_NVIC\_SetPriority(USART2\_IRQn, 0, 0);
+225         HAL\_NVIC\_EnableIRQ(USART2\_IRQn);
+226 
+227     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (huart->Instance == USART3) \{
+228         \textcolor{comment}{/* Peripheral clock enable */}
+229         \_\_USART3\_CLK\_ENABLE();
+230   
+239         GPIO\_InitStruct.Pin =  WL\_RS232\_TX\_Pin |  WL\_RS232\_RX\_Pin;
+240         GPIO\_InitStruct.Mode = GPIO\_MODE\_AF\_PP;
+241         GPIO\_InitStruct.Pull = GPIO\_PULLUP;
+242         GPIO\_InitStruct.Speed = GPIO\_SPEED\_HIGH;
+243         GPIO\_InitStruct.Alternate = GPIO\_AF0\_USART3;
+244         HAL\_GPIO\_Init(GPIOC, &GPIO\_InitStruct);
+245 
+246         \textcolor{comment}{/* Peripheral interrupt init*/}
+247         HAL\_NVIC\_SetPriority(USART3\_4\_IRQn, 0, 0);
+248         HAL\_NVIC\_EnableIRQ(USART3\_4\_IRQn);
+249     \}
+250 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group___s_d___u_a_r_t___functions_ga1464d7463564d0d7341a1cff71eb439d}\label{group___s_d___u_a_r_t___functions_ga1464d7463564d0d7341a1cff71eb439d}} 
+\index{U\+A\+R\+T Functions@{U\+A\+R\+T Functions}!sd\+\_\+uart\+\_\+irqhandler@{sd\+\_\+uart\+\_\+irqhandler}}
+\index{sd\+\_\+uart\+\_\+irqhandler@{sd\+\_\+uart\+\_\+irqhandler}!U\+A\+R\+T Functions@{U\+A\+R\+T Functions}}
+\subsubsection{\texorpdfstring{sd\+\_\+uart\+\_\+irqhandler()}{sd\_uart\_irqhandler()}}
+{\footnotesize\ttfamily void sd\+\_\+uart\+\_\+irqhandler (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structsd__uart__dev}{sd\+\_\+uart\+\_\+dev}} $\ast$}]{dev }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\mbox{\hyperlink{sd__uart_8c}{Src/sd\+\_\+uart.\+c}}$>$}
+
+
+
+U\+A\+RT Interrupt Handler Handle interrupt events on the U\+A\+RT peripheral. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dev} & U\+A\+RT device that triggered the interrupt \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyCode}
+362 \{
+363     UART\_HandleTypeDef *huart = dev->\mbox{\hyperlink{structsd__uart__dev_a31b2a452cffe839ac4a3bf86eddc16b0}{uart}};
+364   
+365     \textcolor{comment}{/* Check for errors and store them in the device error state */}
+366     \textcolor{keywordflow}{if} ((dev->\mbox{\hyperlink{structsd__uart__dev_adc64ccb7538429fe78e3fe0139267370}{error}} |= \mbox{\hyperlink{group___s_d___u_a_r_t___defines_gaecb6d035303fa5bf3942fdfa3f78867f}{\_\_SD\_UART\_ERROR\_IT}}(huart))) \{
+367         \mbox{\hyperlink{group___s_d___u_a_r_t___defines_ga2f7c7d01afb8822a032abc57a3bf78cf}{\_\_SD\_UART\_CLEAR\_ERROR\_IT}}(huart);    \textcolor{comment}{/* Clear the error flags */}
+368         \mbox{\hyperlink{group___s_d___u_a_r_t_gafc595787c83c748d767ac49596be144e}{sd\_uart\_err\_cb}}(dev);          \textcolor{comment}{/* Execute error callback */}
+369         dev->\mbox{\hyperlink{structsd__uart__dev_adc64ccb7538429fe78e3fe0139267370}{error}} = SD\_UART\_ERROR\_NONE;   \textcolor{comment}{/* Clear the error */}
+370         \textcolor{keywordflow}{return};                     \textcolor{comment}{/* Return without reading or writing */}
+371     \}
+372 
+373     \textcolor{comment}{/* Receive Interrupt */}
+374     \textcolor{keywordflow}{if} ((\_\_HAL\_UART\_GET\_IT(huart, UART\_IT\_RXNE) != RESET) && 
+375         (\_\_HAL\_UART\_GET\_IT\_SOURCE(huart, UART\_IT\_RXNE) != RESET)) \{
+376         \mbox{\hyperlink{group___s_d___u_a_r_t_ga54b5b3ca4f31885d84714a36f6fcc5e3}{sd\_uart\_rx\_isr}}(dev);
+377         \textcolor{comment}{/* Clear RXNE interrupt flag */}
+378         \_\_HAL\_UART\_SEND\_REQ(huart, UART\_RXDATA\_FLUSH\_REQUEST);
+379     \}
+380        
+381     \textcolor{comment}{/* Transmit Interrupt */}
+382     \textcolor{keywordflow}{if} ((\_\_HAL\_UART\_GET\_IT(huart, UART\_IT\_TXE) != RESET) &&
+383         (\_\_HAL\_UART\_GET\_IT\_SOURCE(huart, UART\_IT\_TXE) != RESET)) \{
+384         UART\_Transmit\_IT(huart);
+385     \}
+386 
+387     \textcolor{comment}{/* Transmit End Interrupt */}
+388     \textcolor{keywordflow}{if} ((\_\_HAL\_UART\_GET\_IT(huart, UART\_IT\_TC) != RESET) &&
+389         (\_\_HAL\_UART\_GET\_IT\_SOURCE(huart, UART\_IT\_TC) != RESET)) \{
+390         UART\_EndTransmit\_IT(huart);
+391     \}  
+392 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group___s_d___u_a_r_t___functions_ga92a2dfada8629938854ad2fddff0d01d}\label{group___s_d___u_a_r_t___functions_ga92a2dfada8629938854ad2fddff0d01d}} 
+\index{U\+A\+R\+T Functions@{U\+A\+R\+T Functions}!sd\+\_\+uart\+\_\+rx\+\_\+init@{sd\+\_\+uart\+\_\+rx\+\_\+init}}
+\index{sd\+\_\+uart\+\_\+rx\+\_\+init@{sd\+\_\+uart\+\_\+rx\+\_\+init}!U\+A\+R\+T Functions@{U\+A\+R\+T Functions}}
+\subsubsection{\texorpdfstring{sd\+\_\+uart\+\_\+rx\+\_\+init()}{sd\_uart\_rx\_init()}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group___s_d___u_a_r_t___types_gaff649a266fb34035c10733370c4fd104}{sd\+\_\+uart\+\_\+err}} sd\+\_\+uart\+\_\+rx\+\_\+init (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structsd__uart__dev}{sd\+\_\+uart\+\_\+dev}} $\ast$}]{dev,  }\item[{struct \mbox{\hyperlink{structsd__cbuf}{sd\+\_\+cbuf}} $\ast$}]{rx\+\_\+buff }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\mbox{\hyperlink{sd__uart_8c}{Src/sd\+\_\+uart.\+c}}$>$}
+
+
+
+U\+A\+RT Receive Interrupt Initialization Enable and prepare the U\+A\+RT to receive on interrupt. 
+
+\begin{DoxyNote}{Note}
+This function expects that the U\+A\+RT peripheral and the buffer have already been inititialized and are ready to be used.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em uart\+\_\+dev} & Device to initialize U\+A\+RT and buffer with \\
+\hline
+{\em huart} & U\+A\+RT peripheral handle \\
+\hline
+{\em rx\+\_\+buff} & Buffer to use for U\+A\+RT receive function \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em S\+D\+\_\+\+U\+A\+R\+T\+\_\+\+S\+U\+C\+C\+E\+SS} & on success, error state otherwise \\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyCode}
+319 \{
+320     UART\_HandleTypeDef *huart = dev->\mbox{\hyperlink{structsd__uart__dev_a31b2a452cffe839ac4a3bf86eddc16b0}{uart}};
+321     
+322     \textcolor{keywordflow}{if} ((huart == NULL) || (rx\_buff == NULL))
+323         \textcolor{keywordflow}{return} \mbox{\hyperlink{group___s_d___u_a_r_t___types_ggaff649a266fb34035c10733370c4fd104ad77d98472c0c3bb192d745b3389de08d}{SD\_UART\_ERROR}};
+324                         
+325     dev->\mbox{\hyperlink{structsd__uart__dev_a2bc17c33f4234299b83ba5d98edd5887}{rx\_buff}} = rx\_buff;    \textcolor{comment}{/* Set the RX buffer pointer */}
+326        
+327     \textcolor{comment}{/* Process Locked */}            
+328     \textcolor{keywordflow}{if} (huart->Lock == HAL\_LOCKED) 
+329         \textcolor{keywordflow}{return} \mbox{\hyperlink{group___s_d___u_a_r_t___types_ggaff649a266fb34035c10733370c4fd104a81ad9d26004338f6c20d9a1ed5232662}{SD\_UART\_LOCKED}};
+330     \textcolor{keywordflow}{else}
+331         huart->Lock = HAL\_LOCKED;
+332 
+333     \textcolor{comment}{/* Computation of UART mask to apply to RDR register */}
+334     UART\_MASK\_COMPUTATION(huart);
+335 
+336     huart->ErrorCode = HAL\_UART\_ERROR\_NONE;
+337 
+338     \textcolor{comment}{/* Enable the UART Parity Error Interrupt */}
+339     \_\_HAL\_UART\_ENABLE\_IT(huart, UART\_IT\_PE);
+340 
+341     \textcolor{comment}{/* Enable the UART Error Interrupt: (Frame error, noise error, overrun error) */}
+342     \_\_HAL\_UART\_ENABLE\_IT(huart, UART\_IT\_ERR);
+343 
+344     \textcolor{comment}{/* Process Unlocked */}
+345     huart->Lock = HAL\_UNLOCKED;
+346 
+347     \textcolor{comment}{/* Enable the UART Data Register not empty Interrupt */}
+348     \_\_HAL\_UART\_ENABLE\_IT(huart, UART\_IT\_RXNE);
+349 
+350     \textcolor{keywordflow}{return} \mbox{\hyperlink{group___s_d___u_a_r_t___types_ggaff649a266fb34035c10733370c4fd104a3b6fe085405a5d58c55226fd59f01994}{SD\_UART\_SUCCESS}};
+351 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group___s_d___u_a_r_t___functions_ga8170b7c747d603b269242afa8de67164}\label{group___s_d___u_a_r_t___functions_ga8170b7c747d603b269242afa8de67164}} 
+\index{U\+A\+R\+T Functions@{U\+A\+R\+T Functions}!sd\+\_\+uart\+\_\+transmit@{sd\+\_\+uart\+\_\+transmit}}
+\index{sd\+\_\+uart\+\_\+transmit@{sd\+\_\+uart\+\_\+transmit}!U\+A\+R\+T Functions@{U\+A\+R\+T Functions}}
+\subsubsection{\texorpdfstring{sd\+\_\+uart\+\_\+transmit()}{sd\_uart\_transmit()}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group___s_d___u_a_r_t___types_gaff649a266fb34035c10733370c4fd104}{sd\+\_\+uart\+\_\+err}} sd\+\_\+uart\+\_\+transmit (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structsd__uart__dev}{sd\+\_\+uart\+\_\+dev}} $\ast$}]{dev,  }\item[{uint8\+\_\+t $\ast$}]{buf,  }\item[{uint32\+\_\+t}]{len,  }\item[{uint32\+\_\+t}]{timeout }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+{\ttfamily \#include $<$\mbox{\hyperlink{sd__uart_8c}{Src/sd\+\_\+uart.\+c}}$>$}
+
+
+
+Transmit Data In Blocking Mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dev} & The U\+A\+RT peripheral to trasmit over \\
+\hline
+{\em buf} & Buffer data to trasmit \\
+\hline
+{\em len} & Length of buffer data \\
+\hline
+{\em timeout} & Timeout for transmission activity \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em S\+D\+\_\+\+U\+A\+R\+T\+\_\+\+S\+U\+C\+C\+E\+SS} & on success, error status otherwise \\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyCode}
+440 \{
+441     \textcolor{keywordflow}{if} (HAL\_UART\_Transmit(dev->\mbox{\hyperlink{structsd__uart__dev_a31b2a452cffe839ac4a3bf86eddc16b0}{uart}}, buf, \mbox{\hyperlink{structsd__cbuf_a96bbf959016e4411c9e6b9812a8be60a}{len}}, timeout) == HAL\_OK)
+442         \textcolor{keywordflow}{return} \mbox{\hyperlink{group___s_d___u_a_r_t___types_ggaff649a266fb34035c10733370c4fd104a3b6fe085405a5d58c55226fd59f01994}{SD\_UART\_SUCCESS}};
+443     
+444     \textcolor{keywordflow}{return} \mbox{\hyperlink{group___s_d___u_a_r_t___types_ggaff649a266fb34035c10733370c4fd104ad77d98472c0c3bb192d745b3389de08d}{SD\_UART\_ERROR}};
+445 \}
+\end{DoxyCode}

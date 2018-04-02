@@ -1,0 +1,17 @@
+digraph "ADC"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir=LR;
+  Node2 [label="ADC Exported Variables",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___s_d___a_d_c___exported___variables.html"];
+  Node1 [label="ADC Private Variables",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___s_d___a_d_c___private___variables.html"];
+  Node5 [label="ADC Functions",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___s_d___a_d_c___functions.html"];
+  Node3 [label="ADC Definitions",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___s_d___a_d_c___defines.html"];
+  Node0 [label="ADC",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node4 [label="ADC Types",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___s_d___a_d_c___types.html"];
+  Node0->Node1 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node2 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node3 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node4 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node5 [shape=plaintext, dir="back", style="solid"];
+}

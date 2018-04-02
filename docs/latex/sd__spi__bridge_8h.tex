@@ -1,0 +1,91 @@
+\hypertarget{sd__spi__bridge_8h}{}\section{Inc/sd\+\_\+spi\+\_\+bridge.h File Reference}
+\label{sd__spi__bridge_8h}\index{Inc/sd\+\_\+spi\+\_\+bridge.\+h@{Inc/sd\+\_\+spi\+\_\+bridge.\+h}}
+
+
+S\+PI Slave Peripheral Bridge Control.  
+
+
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structsd__spbr__cmd}{sd\+\_\+spbr\+\_\+cmd}}
+\begin{DoxyCompactList}\small\item\em S\+PI bridge device operation structure. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structsd__spbr__dev}{sd\+\_\+spbr\+\_\+dev}}
+\begin{DoxyCompactList}\small\item\em S\+PI bridge device structure. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structsd__spbr}{sd\+\_\+spbr}}
+\begin{DoxyCompactList}\small\item\em S\+PI bridge structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries S\+D\+\_\+\+S\+P\+B\+R\+\_\+\+N\+D\+EV}~(3)
+\item 
+\#define {\bfseries S\+D\+\_\+\+S\+P\+B\+R\+\_\+\+I2\+C\+\_\+\+S\+T\+A\+T\+US}~((uint8\+\_\+t)(1 $<$$<$ 0))
+\item 
+\#define {\bfseries S\+D\+\_\+\+S\+P\+B\+R\+\_\+\+L\+E\+D\+\_\+\+S\+T\+A\+T\+US}~((uint8\+\_\+t)(1 $<$$<$ 1))
+\item 
+\#define {\bfseries S\+D\+\_\+\+S\+P\+B\+R\+\_\+\+U\+A\+R\+T\+\_\+\+S\+T\+A\+T\+US}~((uint8\+\_\+t)(1 $<$$<$ 2))
+\item 
+\#define {\bfseries S\+D\+\_\+\+S\+P\+B\+R\+\_\+\+D\+E\+V\+\_\+\+M\+A\+SK}~(0x\+F8)
+\item 
+\#define {\bfseries S\+D\+\_\+\+S\+P\+B\+R\+\_\+\+I2\+C\+\_\+\+D\+EV}~(0x80)
+\item 
+\#define {\bfseries S\+D\+\_\+\+S\+P\+B\+R\+\_\+\+C\+M\+D\+\_\+\+M\+A\+SK}~(0x\+E0)
+\item 
+\#define {\bfseries S\+D\+\_\+\+S\+P\+B\+R\+\_\+\+I2\+C\+\_\+\+R\+W\+\_\+\+C\+MD}~(0x\+A0)
+\item 
+\#define {\bfseries S\+D\+\_\+\+S\+P\+B\+R\+\_\+\+I2\+C\+\_\+\+R\+E\+A\+D\+\_\+\+T\+R\+A\+NS}~((uint8\+\_\+t)(1 $<$$<$ 2))
+\item 
+\#define {\bfseries S\+D\+\_\+\+S\+P\+B\+R\+\_\+\+I2\+C\+\_\+\+A\+D\+D\+R\+\_\+10\+B\+IT}~((uint8\+\_\+t)(1 $<$$<$ 3))
+\item 
+\#define {\bfseries S\+D\+\_\+\+S\+P\+B\+R\+\_\+\+I2\+C\+\_\+\+F\+R\+E\+Q\+\_\+400K}~((uint8\+\_\+t)(1 $<$$<$ 4))
+\item 
+\#define {\bfseries S\+D\+\_\+\+S\+P\+B\+R\+\_\+\+N\+U\+L\+L\+\_\+\+D\+EV}~\{ 0, N\+U\+LL, N\+U\+LL \}
+\item 
+\#define {\bfseries S\+D\+\_\+\+S\+P\+B\+R\+\_\+\+N\+U\+L\+L\+\_\+\+OP}~\{ 0, N\+U\+LL, N\+U\+LL \}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___s_d___s_p_i___bridge_ga1fa0fc366d8cfa91ffb1143044ace760}\label{group___s_d___s_p_i___bridge_ga1fa0fc366d8cfa91ffb1143044ace760}} 
+enum {\bfseries sd\+\_\+spbr\+\_\+state} \{ {\bfseries S\+D\+\_\+\+S\+P\+B\+R\+\_\+\+R\+E\+A\+D\+\_\+\+D\+E\+V\+I\+CE}, 
+{\bfseries S\+D\+\_\+\+S\+P\+B\+R\+\_\+\+R\+E\+A\+D\+\_\+\+C\+MD}, 
+{\bfseries S\+D\+\_\+\+S\+P\+B\+R\+\_\+\+I\+N\+\_\+\+P\+R\+O\+C\+E\+SS}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___s_d___s_p_i___bridge_gaea5b9346a7e4095cda1e056ca703ef89}{sd\+\_\+spbr\+\_\+init}} (struct \mbox{\hyperlink{structsd__spbr}{sd\+\_\+spbr}} $\ast$spbr, S\+P\+I\+\_\+\+Handle\+Type\+Def $\ast$spi)
+\begin{DoxyCompactList}\small\item\em S\+PI Bridge Initialize. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_d___s_p_i___bridge_ga0ce7728ffce92e9931c22b9c54675ca7}{sd\+\_\+spbr\+\_\+irqhandler}} (struct \mbox{\hyperlink{structsd__spbr}{sd\+\_\+spbr}} $\ast$spbr)
+\begin{DoxyCompactList}\small\item\em S\+PI Bridge Interrupt Handler Handle interrupt events on the S\+PI peripheral. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+S\+PI Slave Peripheral Bridge Control. 
+
+\begin{DoxyAuthor}{Author}
+R. Bush  \href{mailto:bush@krtkl.com}{\tt bush@krtkl.\+com} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+v1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2016 March 28 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Free\+B\+SD
+\end{DoxyCopyright}
+Copyright (c) 2016, krtkl inc. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+
+
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\end{DoxyEnumerate}
+
+T\+H\+IS S\+O\+F\+T\+W\+A\+RE IS P\+R\+O\+V\+I\+D\+ED BY T\+HE C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+E\+RS A\+ND C\+O\+N\+T\+R\+I\+B\+U\+T\+O\+RS \char`\"{}\+A\+S I\+S\char`\"{} A\+ND A\+NY E\+X\+P\+R\+E\+SS OR I\+M\+P\+L\+I\+ED W\+A\+R\+R\+A\+N\+T\+I\+ES, I\+N\+C\+L\+U\+D\+I\+NG, B\+UT N\+OT L\+I\+M\+I\+T\+ED TO, T\+HE I\+M\+P\+L\+I\+ED W\+A\+R\+R\+A\+N\+T\+I\+ES OF M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+TY A\+ND F\+I\+T\+N\+E\+SS F\+OR A P\+A\+R\+T\+I\+C\+U\+L\+AR P\+U\+R\+P\+O\+SE A\+RE D\+I\+S\+C\+L\+A\+I\+M\+ED. IN NO E\+V\+E\+NT S\+H\+A\+LL T\+HE C\+O\+P\+Y\+R\+I\+G\+HT O\+W\+N\+ER OR C\+O\+N\+T\+R\+I\+B\+U\+T\+O\+RS BE L\+I\+A\+B\+LE F\+OR A\+NY D\+I\+R\+E\+CT, I\+N\+D\+I\+R\+E\+CT, I\+N\+C\+I\+D\+E\+N\+T\+AL, S\+P\+E\+C\+I\+AL, E\+X\+E\+M\+P\+L\+A\+RY, OR C\+O\+N\+S\+E\+Q\+U\+E\+N\+T\+I\+AL D\+A\+M\+A\+G\+ES (I\+N\+C\+L\+U\+D\+I\+NG, B\+UT N\+OT L\+I\+M\+I\+T\+ED TO, P\+R\+O\+C\+U\+R\+E\+M\+E\+NT OF S\+U\+B\+S\+T\+I\+T\+U\+TE G\+O\+O\+DS OR S\+E\+R\+V\+I\+C\+ES; L\+O\+SS OF U\+SE, D\+A\+TA, OR P\+R\+O\+F\+I\+TS; OR B\+U\+S\+I\+N\+E\+SS I\+N\+T\+E\+R\+R\+U\+P\+T\+I\+ON) H\+O\+W\+E\+V\+ER C\+A\+U\+S\+ED A\+ND ON A\+NY T\+H\+E\+O\+RY OF L\+I\+A\+B\+I\+L\+I\+TY, W\+H\+E\+T\+H\+ER IN C\+O\+N\+T\+R\+A\+CT, S\+T\+R\+I\+CT L\+I\+A\+B\+I\+L\+I\+TY, OR T\+O\+RT (I\+N\+C\+L\+U\+D\+I\+NG N\+E\+G\+L\+I\+G\+E\+N\+CE OR O\+T\+H\+E\+R\+W\+I\+SE) A\+R\+I\+S\+I\+NG IN A\+NY W\+AY O\+UT OF T\+HE U\+SE OF T\+H\+IS S\+O\+F\+T\+W\+A\+RE, E\+V\+EN IF A\+D\+V\+I\+S\+ED OF T\+HE P\+O\+S\+S\+I\+B\+I\+L\+I\+TY OF S\+U\+CH D\+A\+M\+A\+GE.
+
+The views and conclusions contained in the software and documentation are those of the authors and should not be interpreted as representing official policies, either expressed or implied, of the Free\+B\+SD Project. 
