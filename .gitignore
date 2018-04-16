@@ -66,3 +66,5 @@
 *.iex
 *.tmp
 *.DS_Store
+
+./build

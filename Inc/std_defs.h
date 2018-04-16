@@ -17,6 +17,7 @@
 
 #ifndef STD_DEFS_H
 #define STD_DEFS_H
+#include <stddef.h>
 
 //#include "compiler.h"
 
