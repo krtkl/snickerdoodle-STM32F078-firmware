@@ -20,13 +20,12 @@
 *.scr  	# define exception below if needed
 
 # Object and HEX files
-*.axf
+#*.axf
 *.b[0-3][0-9]
-*.hex
+#*.hex
 *.d
 *.crf
 *.elf
-*.hex
 *.h86
 *.lib
 *.obj
